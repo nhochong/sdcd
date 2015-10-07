@@ -1,0 +1,51 @@
+<?php $this->titleBlock("Bài báo khoa học");?>
+<div class="bai_bao_detail">
+	<div class="info_overview">
+		<div class="info_overview_header"><?php echo $this->translate('Thông Tin Bài Báo')?></div>
+		<div class="info_overview_content">
+			<div class="ten_san_pham">
+				<div class="title title_left"><?php echo $this->translate('Tên sản phẩm')?></div>
+				<div class="content"><?php echo $this->bai_bao->getTitle()?></div>
+			</div>
+			<div class="thong_tin">
+				<div class="content" style="margin-left: 120px; margin-top: 10px; color: blue; font-weight: bold;">
+					<div class="don_vi">
+						<div class="left"><?php echo $this->translate('Đơn vị: ') . $this->bai_bao->getDonVi()->getTitle();?></div>
+						<div class="right"><?php echo $this->translate('Điểm công trình: ') . $this->bai_bao->diem_cong_trinh;?></div>
+					</div>
+					<div class="noi_dang_ngay_dang">
+						<div class="left"><?php echo $this->translate('Nơi đăng: ') . $this->bai_bao->noi_dang?></div>
+						<div class="right"><?php echo $this->translate('Ngày đăng: ') . date('d-m-Y', strtotime($this->bai_bao->noi_dang))?></div>
+					</div>
+					<div class="so_chi_so">
+						<div class="left"><?php echo $this->translate('Số: ') . $this->bai_bao->so?></div>
+						<div class="right"><?php echo $this->translate('Chỉ số: ') . $this->bai_bao->chi_so?></div>
+					</div>
+				</div>
+			</div>
+			<div class="tac_gias">
+				<div class="title title_left"><?php echo $this->translate('Tác giả')?></div>
+				<div class="content">
+					<ul class="list_tac_gia">
+						<?php foreach($this->giangViens as $giang_vien):?>
+							<li>
+								<div class="ten"><?php echo $giang_vien->getDisplayname();?></div>
+								<div class="don_vi"><?php echo $giang_vien->getDonVi()->ten;?></div>
+							</li>
+						<?php endforeach;?>
+					</ul>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="info_detail">
+		<div class="info_detail_header"><?php echo $this->translate('Thông Tin Chi Tiết')?></div>
+		<?php if(!empty($this->bai_bao->ten_file)):?>
+		<div class="file">
+			<div class="title"><?php echo $this->translate('Sản phẩm : ')?></div>
+			<div class="content"><a href="<?php echo $this->baseUrl() . '/upload/files/bai_bao/' . $this->bai_bao->ten_file?>"><?php echo $this->bai_bao->ten_file?></a></div>
+		</div>
+		<?php endif;?>
+	</div>
+	<div class="content_detail"><?php echo $this->bai_bao->thong_tin;?></div>
+</div>
