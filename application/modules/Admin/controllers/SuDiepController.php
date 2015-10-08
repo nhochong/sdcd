@@ -111,7 +111,6 @@ class Admin_SuDiepController extends Khcn_Controller_Action_Admin
     	$form->removeElement('submitCon');
         $form->submitExit->setLabel('Lưu');
         $form->cancel->setLabel('Không lưu');
-        $form->file->setRequired(false);
         $this->view->form = $form;     
 
 		$id = $this->_getParam('id');
