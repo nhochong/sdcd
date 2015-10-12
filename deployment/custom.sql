@@ -106,3 +106,76 @@ CREATE TABLE `dgh` (
   `loai_dgh_id` int(11) NOT NULL,
   PRIMARY KEY (`dgh_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `loai_bai_viet`;
+CREATE TABLE `loai_bai_viet` (
+  `loai_bai_viet_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ten` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`loai_bai_viet_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO `loai_bai_viet` (`ten`) VALUES
+('Bài của Giám Mục'),
+('Bài của Linh Mục'),
+('Bài của Tu Sĩ'),
+('Bài của giáo dân'),
+('Cha Linh Hướng'),
+('Đức Cha Bùi Tuấn'),
+('Linh Mục Đồng Trung'),
+('Tu Sĩ Hèn mọn');
+
+
+DROP TABLE IF EXISTS `bai_viet`;
+CREATE TABLE `bai_viet` (
+  `bai_viet_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  `loai_bai_viet_id` int(11) NOT NULL,
+  PRIMARY KEY (`bai_viet_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `loai_thong_tin`;
+CREATE TABLE `loai_thong_tin` (
+  `loai_thong_tin_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ten` varchar(255) DEFAULT NULL,
+  `parent_id` tinyint(4) DEFAULT 1,
+  PRIMARY KEY (`loai_thong_tin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `loai_thong_tin` (`ten`, `parent_id`) VALUES
+('Sống Đạo', 0),
+('Công Giáo', 0),
+('Đời Sống', 0),
+('Video', 0),
+('Sống đạo tốt', 1),
+('Kinh nguyện', 1),
+('Cầu nguyện', 1),
+('Tử đạo', 1),
+('Thiên Đàng', 2),
+('Hỏa ngục', 2),
+('Luyện ngục', 2),
+('Phép lạ', 2),
+('Phá thai', 3),
+('Lẽ sống', 3),
+('Tiên tri', 3),
+('Các thánh', 3),
+('Hình ảnh', 4),
+('Liên Hệ', 4),
+('Gương Sáng', 4),
+('Download - Tải về', 4);
+
+
+DROP TABLE IF EXISTS `thong_tin`;
+CREATE TABLE `thong_tin` (
+  `thong_tin_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  `loai_thong_tin_id` int(11) NOT NULL,
+  PRIMARY KEY (`thong_tin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

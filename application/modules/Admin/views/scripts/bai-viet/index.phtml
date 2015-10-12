@@ -1,13 +1,13 @@
 <?php
 	echo $this->doctype();
-	$this->title = "Tin Tức";
+	$this->title = "Bài viết";
 	$this->headTitle($this->title);
 	$baseURL = $this->baseUrl();
 ?>
 <?php echo $this->message()?>
 <div class="content-box-header">
 
-<h3>Danh sách Tin Tức</h3>
+<h3>Danh sách bài viết</h3>
 <div class="clear"></div>
 
 </div>
@@ -17,14 +17,14 @@
 
 <div class="tab-content default-tab" id="tab1">
 <div class="danh_sach_hoi_thao">
-<form action="<?php echo $this->url(array('module' => 'admin','controller' => 'tin-tuc','action' => 'xoas'),null,true)?>" method="post" name="f2">
+<form action="<?php echo $this->url(array('module' => 'admin','controller' => 'bai-viet','action' => 'xoas'),null,true)?>" method="post" name="f2">
 <div class="clear"></div>
 <table class="tbl_bomon" align="center">
 	<thead>
 		<tr class="alt-row">
 			<th><?php echo $this->formCheckbox('deletes',null,array('id' => 'check_all','class' => 'check-all'))?></th>
 			<th class="chu_de" style="width: 35%;">Tên</th>
-			<th class="center">Loại tin tức</th>
+			<th class="center">Loại</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -33,7 +33,7 @@
 			<td colspan="9">
 			<div class="bulk-actions align-left">
 				<?php echo $this->formSubmit('submit','Xóa',array('onclick' => 'if(confirm("Bạn có thật sự muốn xóa không?")==false) return false','class' => 'button'))?>
-				<?php echo $this->formButton('add','Thêm',array('onclick' => 'window.location.href="' . $this->url(array('module' => 'admin','controller' => 'tin-tuc','action' => 'them'),null,true) . '"','class' => 'button'))?>
+				<?php echo $this->formButton('add','Thêm',array('onclick' => 'window.location.href="' . $this->url(array('module' => 'admin','controller' => 'bai-viet','action' => 'them'),null,true) . '"','class' => 'button'))?>
 			</div>
 			<div class="pagination"> 
             	<?php echo $this->paginator?>
@@ -43,17 +43,17 @@
 	</tfoot>
 	<tbody>
     <?php
-    	foreach ($this->paginator as $tin_tuc) 
+    	foreach ($this->paginator as $bai_viet) 
     	{
     ?>
     		<tr>
-			<td><?php echo $this->formCheckbox('item[]',$tin_tuc->getIdentity(),null)?></td>
-			<td><a href="<?php echo $this->url(array('module' => 'admin','controller' => 'tin-tuc','action' => 'sua','id' => $tin_tuc->getIdentity()),null,true)?>" title="<?php echo $tin_tuc->getTitle()?>"><?php echo $tin_tuc->getTitle()?></a></td>		
-			<td class="center"><?php echo $tin_tuc->getLoai()->getTitle();?></td>
+			<td><?php echo $this->formCheckbox('item[]',$bai_viet->getIdentity(),null)?></td>
+			<td><a href="<?php echo $this->url(array('module' => 'admin','controller' => 'bai-viet','action' => 'sua','id' => $bai_viet->getIdentity()),null,true)?>" title="<?php echo $bai_viet->getTitle()?>"><?php echo $bai_viet->getTitle()?></a></td>		
+			<td class="center"><?php echo $bai_viet->getLoai()->getTitle();?></td>
 			<td>
-				<a href="<?php echo $this->url(array('module' => 'admin','controller' => 'tin-tuc','action' => 'sua','id' => $tin_tuc->getIdentity()),null,true)?>" title="Sửa"> 
+				<a href="<?php echo $this->url(array('module' => 'admin','controller' => 'bai-viet','action' => 'sua','id' => $bai_viet->getIdentity()),null,true)?>" title="Sửa"> 
 				<img src="<?php echo $baseURL . '/../application/templates/admin/images/icons/pencil.png'?>" alt="Edit"> </a>
-				<a href="<?php echo $this->url(array('module' => 'admin','controller' => 'tin-tuc','action' => 'xoa','id' => $tin_tuc->getIdentity()),null,true)?>" title="Xóa" onclick="if(confirm('Bạn có thật sự muốn xóa không?')==false) return false ">
+				<a href="<?php echo $this->url(array('module' => 'admin','controller' => 'bai-viet','action' => 'xoa','id' => $bai_viet->getIdentity()),null,true)?>" title="Xóa" onclick="if(confirm('Bạn có thật sự muốn xóa không?')==false) return false ">
 				<img src="<?php echo $baseURL . '/../application/templates/admin/images/icons/cross.png'?>" alt="Delete">
 			</a></td>
 		</tr>

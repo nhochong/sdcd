@@ -13,8 +13,8 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
     {
         // TODO Auto-generated {0}::indexAction() default action
 		$table = Khcn_Api::_()->getDbTable('loai_su_diep', 'default');
-        $loaiSDs = $table->fetchAll($table->select()->order('muc'));
-        $paginator = Zend_Paginator::factory($loaiSDs);
+        $data = $table->fetchAll($table->select()->order('muc'));
+        $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
         $page = $this->_getParam('page');

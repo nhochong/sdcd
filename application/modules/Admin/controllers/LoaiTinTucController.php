@@ -13,8 +13,8 @@ class Admin_LoaiTinTucController extends Khcn_Controller_Action_Admin
     {
         // TODO Auto-generated {0}::indexAction() default action
 		$table = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default');
-        $loaiTTs = $table->fetchAll($table->select()->order('parent_id'));
-        $paginator = Zend_Paginator::factory($loaiTTs);
+        $data = $table->fetchAll($table->select()->order('parent_id'));
+        $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
         $page = $this->_getParam('page');
@@ -76,10 +76,10 @@ class Admin_LoaiTinTucController extends Khcn_Controller_Action_Admin
 		
     	$str = '';
 		foreach($_POST['item'] as $id){
-			$loai_sd = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
-			if($loai_sd != NULL)
+			$loai_tin_tuc = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
+			if($loai_tin_tuc != NULL)
 			{			
-				$loai_sd->delete();
+				$loai_tin_tuc->delete();
 			}			
 		}
 		
@@ -92,9 +92,9 @@ class Admin_LoaiTinTucController extends Khcn_Controller_Action_Admin
     {
     	$id = $this->_getParam('id');
     	if(!empty($id)){
-    		$loai_sd = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
-    		if($loai_sd != null){   			
-    			$loai_sd->delete();
+    		$loai_tin_tuc = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
+    		if($loai_tin_tuc != null){   			
+    			$loai_tin_tuc->delete();
     			$_SESSION['msg'] = 'Thành công !. Dữ liệu đã được xóa .';
 				$_SESSION['type_msg'] = 'success';
 	    		$this->_redirect('/admin/loai-tin-tuc/index');
@@ -117,14 +117,14 @@ class Admin_LoaiTinTucController extends Khcn_Controller_Action_Admin
         $this->view->form = $form;   
 
 		$id = $this->_getParam('id');
-		$loai_sd = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
-		if(!$loai_sd){	     
+		$loai_tin_tuc = Khcn_Api::_()->getItem('default_loai_tin_tuc', $id);
+		if(!$loai_tin_tuc){	     
 			$_SESSION['msg'] = 'Lỗi !. không tồn tại .';
 			$_SESSION['type_msg'] = 'error';
 			$this->_redirect('/admin/loai-tin-tuc/index');
 		}
 		           	
-		$form->populate($loai_sd->toArray());
+		$form->populate($loai_tin_tuc->toArray());
 		
 		if(!$this->getRequest()->isPost()){
 			return;
@@ -134,8 +134,8 @@ class Admin_LoaiTinTucController extends Khcn_Controller_Action_Admin
 		}
 		
         $values = $form->getValues();
-		$loai_sd->setFromArray($values);
-		$loai_sd->save();
+		$loai_tin_tuc->setFromArray($values);
+		$loai_tin_tuc->save();
 		
 		$_SESSION['msg'] = 'Thành công !. Dữ liệu đã được cập nhật .';
 		$_SESSION['type_msg'] = 'success';

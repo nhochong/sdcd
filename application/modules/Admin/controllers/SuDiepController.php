@@ -12,8 +12,8 @@ class Admin_SuDiepController extends Khcn_Controller_Action_Admin
     public function indexAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $suDieps = Khcn_Api::_()->getDbTable('su_diep', 'default')->fetchAll();
-        $paginator = Zend_Paginator::factory($suDieps);
+        $data = Khcn_Api::_()->getDbTable('su_diep', 'default')->fetchAll();
+        $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
         $page = $this->_getParam('page');
