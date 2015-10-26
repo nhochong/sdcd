@@ -19,4 +19,10 @@ class Default_Model_LoaiTinTuc extends Khcn_Model_Item_Abstract
 		}
 		return '';
 	}
+	
+	public function getChilds(){
+		$table = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default');
+		$select = $table->select()->where('parent_id = ?',$this->getIdentity());
+		return $table->fetchAll($select);
+	}
 }

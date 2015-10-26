@@ -68,7 +68,7 @@ class Admin_Form_LoaiTinTuc extends Zend_Form{
         
         $this->setDecorators(array(
 					'FormElements',
-					array('HtmlTag', array('tag' => 'table','class' => 'loai_sd')),
+					array('HtmlTag', array('tag' => 'table','class' => 'loai_tt')),
 					'Form',
 					));
     }

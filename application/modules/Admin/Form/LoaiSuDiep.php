@@ -19,10 +19,10 @@ class Admin_Form_LoaiSuDiep extends Zend_Form{
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
 			->setAttrib('class', 'text-input medium-input');
 
-		$mucOptions = Default_Model_Constraints::muc_su_diep();
-        $muc = new Zend_Form_Element_Select('muc');
-        $muc->setLabel('Mục (*)')
-			 ->addMultiOptions($mucOptions)
+		$parentOptions = Khcn_Api::_()->getDbTable('loai_su_diep', 'default')->getParentListAssoc();
+        $parent_id = new Zend_Form_Element_Select('parent_id');
+        $parent_id->setLabel('Parent')
+			 ->addMultiOptions($parentOptions)
              ->setDecorators(array(
 							    'ViewHelper',
 							    'Errors',
@@ -56,7 +56,7 @@ class Admin_Form_LoaiSuDiep extends Zend_Form{
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $link . '"'));
 			   
-		$this->addElements(array($ten,$muc,$submitCon,$submitExit,$cancel));						
+		$this->addElements(array($ten,$parent_id,$submitCon,$submitExit,$cancel));						
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(
             'decorators' => array(

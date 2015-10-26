@@ -13,7 +13,7 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
     {
         // TODO Auto-generated {0}::indexAction() default action
 		$table = Khcn_Api::_()->getDbTable('loai_su_diep', 'default');
-        $data = $table->fetchAll($table->select()->order('muc'));
+        $data = $table->fetchAll($table->select()->order('parent_id'));
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
@@ -29,13 +29,12 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
         Zend_View_Helper_PaginationControl::setDefaultViewPartial('includes/pagination.phtml');
         $paginator->setView($this->view);
         $this->view->paginator = $paginator;
-		$this->view->mucSDs = $mucSDs = Default_Model_Constraints::muc_su_diep();
     }
 
 	public function themAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $form = new Admin_Form_LoaiSuDiep();
+        $form = new Admin_Form_LoaiTinTuc();
         $form->submitCon->setLabel('Lưu và tiếp tục');
         $form->submitExit->setLabel('Lưu và thoát');
         $form->cancel->setLabel('Không lưu');
@@ -77,10 +76,10 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
 		
     	$str = '';
 		foreach($_POST['item'] as $id){
-			$loai_sd = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
-			if($loai_sd != NULL)
+			$loai_su_diep = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
+			if($loai_su_diep != NULL)
 			{			
-				$loai_sd->delete();
+				$loai_su_diep->delete();
 			}			
 		}
 		
@@ -93,9 +92,9 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
     {
     	$id = $this->_getParam('id');
     	if(!empty($id)){
-    		$loai_sd = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
-    		if($loai_sd != null){   			
-    			$loai_sd->delete();
+    		$loai_su_diep = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
+    		if($loai_su_diep != null){   			
+    			$loai_su_diep->delete();
     			$_SESSION['msg'] = 'Thành công !. Dữ liệu đã được xóa .';
 				$_SESSION['type_msg'] = 'success';
 	    		$this->_redirect('/admin/loai-su-diep/index');
@@ -111,21 +110,21 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
     
 	public function suaAction()
     {
-    	$form = new Admin_Form_LoaiSuDiep();
+    	$form = new Admin_Form_LoaiTinTuc();
     	$form->removeElement('submitCon');
         $form->submitExit->setLabel('Lưu');
         $form->cancel->setLabel('Không lưu');
         $this->view->form = $form;   
 
 		$id = $this->_getParam('id');
-		$loai_sd = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
-		if(!$loai_sd){	     
+		$loai_su_diep = Khcn_Api::_()->getItem('default_loai_su_diep', $id);
+		if(!$loai_su_diep){	     
 			$_SESSION['msg'] = 'Lỗi !. không tồn tại .';
 			$_SESSION['type_msg'] = 'error';
 			$this->_redirect('/admin/loai-su-diep/index');
 		}
 		           	
-		$form->populate($loai_sd->toArray());
+		$form->populate($loai_su_diep->toArray());
 		
 		if(!$this->getRequest()->isPost()){
 			return;
@@ -135,8 +134,8 @@ class Admin_LoaiSuDiepController extends Khcn_Controller_Action_Admin
 		}
 		
         $values = $form->getValues();
-		$loai_sd->setFromArray($values);
-		$loai_sd->save();
+		$loai_su_diep->setFromArray($values);
+		$loai_su_diep->save();
 		
 		$_SESSION['msg'] = 'Thành công !. Dữ liệu đã được cập nhật .';
 		$_SESSION['type_msg'] = 'success';

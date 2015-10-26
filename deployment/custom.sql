@@ -2,11 +2,15 @@ DROP TABLE IF EXISTS `loai_su_diep`;
 CREATE TABLE `loai_su_diep` (
   `loai_su_diep_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `ten` varchar(255) DEFAULT NULL,
-  `muc` tinyint(4) DEFAULT 1,
+  `parent_id` tinyint(4) DEFAULT 1,
   PRIMARY KEY (`loai_su_diep_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO `loai_su_diep` (`ten`, `muc`) VALUES
+INSERT INTO `loai_su_diep` (`ten`, `parent_id`) VALUES
+('Mục 1', 0),
+('Mục 2', 0),
+('Mục 3', 0),
+('Mục 4', 0),
 ('Sứ Điệp Chúa Cha', 1),
 ('Sứ Điệp Chúa Giêsu', 1),
 ('Sứ Điệp Chúa Thánh Thần', 1),

@@ -26,7 +26,7 @@
 		<tr class="alt-row">
 			<th><?php echo $this->formCheckbox('deletes',null,array('id' => 'check_all','class' => 'check-all'))?></th>
 			<th>Tên</th>
-			<th>Mục</th>
+			<th>Thư Mục Cha</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -51,7 +51,7 @@
     		<tr>
 			<td><?php echo $this->formCheckbox('item[]',$loai_sd->getIdentity(),null)?></td>
 			<td><a href="<?php echo $this->url(array('module' => 'admin','controller' => 'loai-su-diep','action' => 'sua','id' => $loai_sd->getIdentity()),null,true)?>"><?php echo $loai_sd->getTitle()?></a></td>
-			<td><?php echo $this->mucSDs[$loai_sd->muc]?></td>
+			<td><?php echo $loai_sd->getParentTitle()?></td>
 			<td>
 				<a href="<?php echo $this->url(array('module' => 'admin','controller' => 'loai-su-diep','action' => 'sua','id' => $loai_sd->getIdentity()),null,true)?>" title="Edit"> 
 				<img src="<?php echo $baseURL . '/../application/templates/admin/images/icons/pencil.png'?>" alt="Edit"> </a>
