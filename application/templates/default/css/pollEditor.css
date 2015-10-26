@@ -1,0 +1,63 @@
+.vote_default div, .vote_1 div, .vote_2 div, .vote_3 div, .vote_4 div, .vote_5 div, .vote_6 div { margin:0px; padding:0px;}
+
+.vote_default { width: 350px; overflow: hidden; }
+.vote_default table {font-family:Arial; font-size:12px;}
+.vote_default .vote_h { height: 31px; background: url(/images/vote/btn1_h.png) no-repeat; width: 100%; }
+.vote_default .vote_b_c { width:348px; border-left:solid 1px white; border-right:solid 1px white; font-family:Arial; font-size:12px;}
+.vote_default .vote_b_c p { font-weight:bold;}
+.vote_default .vote_b { padding:20px; margin:0px 7px; background-image:url(/images/vote/v2/c2.png);}
+.vote_default .vote_b1 { margin-right:30px;}
+.vote_default .vote_btn_c { padding:6px;border-left:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;}
+.vote_default .vote_b1 img, .vote_default .vote_b2 img{ height:29px;width:117px; border:none; background:url(/images/vote/btn1.png) no-repeat;}
+
+.vote_2, .vote_5, .vote_6 {width:302px;}
+
+.vote_2 .vote_h, .vote_5 .vote_h, .vote_6 .vote_h { background:url(/images/vote/v2/h.png) 0px -45px; height:45px; margin:0px; padding:0px;}
+.vote_3 .vote_h { background-position:0px -62px;}
+.vote_4 .vote_h { background-position:0px -93px;}
+.vote_5 .vote_h { background-position:0px 0px;}
+.vote_6 .vote_h { background-position:0px -90px;}
+
+.vote_2 .vote_btn_c, .vote_5 .vote_btn_c, .vote_6 .vote_btn_c { padding:6px; border:none; height:31px; margin:0px;}
+
+.vote_2 .vote_b1 img, .vote_2 .vote_b2 img, .vote_5 .vote_b1 img, .vote_5 .vote_b2 img, .vote_6 .vote_b1 img, .vote_6 .vote_b2 img{height:31px;width:106px; border:none; background:url(/images/vote/v2/b.png) no-repeat; margin:0px; padding:0px;}
+.vote_2 .vote_b1, .vote_5 .vote_b1, .vote_6 .vote_b1 {float:left;}
+.vote_2 .vote_b2, .vote_5 .vote_b2, .vote_6 .vote_b2 {float:right;}
+.vote_2 .vote_f, .vote_5 .vote_f, .vote_6 .vote_f { background:url(/images/vote/v2/f1.png) 0px -5px; width:302px; height:5px; margin:0px; padding:0px;}
+.vote_5 .vote_f { background-position:0px 0px;}
+.vote_6 .vote_f { background-position:0px -10px;}
+
+
+.vote_2 .vote_btn_c, .vote_5 .vote_btn_c, .vote_6 .vote_btn_c {background:url(/images/vote/v2/f2.png) -302px 0px; margin:0px;}
+.vote_5 .vote_btn_c {background:url(/images/vote/v2/f2.png) 0px 0px;}
+.vote_6 .vote_btn_c {background:url(/images/vote/v2/f2.png) -604px 0px;}
+
+.vote_1 .vote_b2 img { background-position:-117px 0px;}
+.vote_2 .vote_b2 img { background-position:-106px -31px;}
+.vote_3 .vote_b2 img { background-position:-117px -58px;}
+.vote_4 .vote_b2 img { background-position:-117px -87px;}
+.vote_5 .vote_b2 img { background-position:-106px 0px;}
+.vote_6 .vote_b2 img { background-position:-106px -62px;}
+
+.vote_1 .vote_b1 img { background-position:0 0px;}
+.vote_2 .vote_b1 img { background-position:0 -31px;}
+.vote_3 .vote_b1 img { background-position:0 -58px;}
+.vote_4 .vote_b1 img { background-position:0 -87px;}
+.vote_5 .vote_b1 img { background-position:0 0px;}
+.vote_6 .vote_b1 img { background-position:0 -62px;}
+
+
+.vote_1 .vote_b_c, .vote_1 .vote_btn_c {  border-color:#8ec1d2; color:#538ca7; margin:0px;}
+.vote_2 .vote_b_c, .vote_5 .vote_b_c, .vote_6 .vote_b_c { border:none; background:url(/images/vote/v2/c1.png) -302px 0px; width:302px; margin:0px; padding:0px;}
+.vote_5 .vote_b_c { background-position:0px 0px;}
+.vote_6 .vote_b_c { background-position:-604px 0px;}
+.vote_3 .vote_b_c, .vote_3 .vote_btn_c {  border-color:#88b560; color:#395b1e;}
+.vote_4 .vote_b_c, .vote_4 .vote_btn_c  {  border-color:#c34d25; color:#a5350d;}
+
+
+.vote_1 table, .vote_1 label { color:#538ca7;}
+.vote_2 table,  .vote_2 label { color:Black;}
+.vote_3 table,  .vote_3 label {  color:#395b1e;}
+.vote_4 table,  .vote_4 label {  color:#a5350d;}
+.vote_5 table,  .vote_5 label {  color:Black;}
+.vote_6 table,  .vote_6 label {  color:Black;}

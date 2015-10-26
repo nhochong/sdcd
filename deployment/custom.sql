@@ -30,6 +30,8 @@ CREATE TABLE `su_diep` (
   `su_diep_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -179,3 +181,50 @@ CREATE TABLE `thong_tin` (
   `loai_thong_tin_id` int(11) NOT NULL,
   PRIMARY KEY (`thong_tin_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `chien_dich_cau_nguyen`;
+CREATE TABLE `chien_dich_cau_nguyen` (
+  `chien_dich_cau_nguyen_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  `ten_file` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`chien_dich_cau_nguyen_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `download`;
+CREATE TABLE `download` (
+  `download_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `ten_file` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`download_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `bai_giang`;
+CREATE TABLE `bai_giang` (
+  `bai_giang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `link_nct` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `link_mp3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`bai_giang_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `searchtypes` (`type`, `title`, `enabled`, `order`) VALUES
+('default_su_diep', 'Sứ điệp', 1, 1),
+('default_tin_tuc', 'Tin tức', 1, 2),
+('default_dgh', 'Đức Giáo Hoàng', 1, 3),
+('default_bai_viet', 'Bài viết', 1, 4),
+('default_thong_tin', 'Thông tin', 1, 5),
+('default_chien_dich_cau_nguyen', 'Chiến dịch cầu nguyện', 1, 6),
+('default_download', 'Download', 1, 7),
+('default_bai_giang', 'Bài giảng', 1, 8);

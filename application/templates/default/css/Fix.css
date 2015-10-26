@@ -1,0 +1,199 @@
+﻿/*Fix padding*/
+
+
+.span61
+{
+    width: 450px !important;
+}
+
+.span31
+{
+    width: 210px !important;
+}
+
+.span650
+{
+    width: 655px;
+}
+
+.span760
+{
+    width: 760px;
+}
+.span205
+{
+    width: 205px;
+}
+.span150
+{
+    width: 150px;
+}
+
+.span440
+{
+    width: 440px;
+}
+
+.span450
+{
+    width: 450px;
+}
+
+.span215
+{
+    width: 215px;
+}
+.span210
+{
+    width: 210px;
+}
+.span265
+{
+    width: 265px;
+}
+.span380
+{
+    width: 380px;
+}
+
+.span185
+{
+    width: 185px;
+}
+
+
+.fixpdTop5
+{
+    padding-top: 5px;
+}
+.fixpdt10
+{
+    padding-top: 10px;
+}
+.fixpdbt10
+{
+    padding-bottom: 10px;
+}
+.fixpdbt12
+{
+    padding-bottom: 12px;
+}
+.fixpdt7
+{
+    padding-top: 7px;
+}
+.fixpdt5
+{
+    padding-top: 5px;
+}
+.fixpdTop50
+{
+    padding-top: 50px;
+}
+.fixpdBt7
+{
+    padding-bottom: 7px !important;
+}
+
+.fixpdr10
+{
+    padding-right: 10px;
+}
+.fixpdr15
+{
+    padding-right: 15px;
+}
+.fixbdt
+{
+    border-top: 1px solid #ccc;
+}
+.fixmgt0
+{
+    margin-top: 0px !important;
+}
+.fixmgt10
+{
+    margin-top: 10px !important;
+}
+.fixmgt5
+{
+    margin-top: 5px;
+}
+.fixmgbt5
+{
+    margin-bottom: 5px;
+}
+.fixmgbt10
+{
+    margin-bottom: 10px !important;
+}
+.fixmgtr10
+{
+    margin-right: 10px;
+}
+.fixmgtr15
+{
+    margin-right: 15px;
+}
+.fixmgt15
+{
+    margin-top: 15px;
+}
+.fixmgtr12
+{
+    margin-right: 12px;
+}
+.fixpdTop0
+{
+    padding-top: 0;
+}
+
+.fixbgrboxsk
+{
+    background: url("../images/linesongkhoe.jpg") no-repeat scroll right bottom #e7e7e7;
+}
+
+.boxsks > div
+{
+    border: none !important;
+}
+
+.span472
+{
+    width: 323px;
+}
+
+.fixlineRow01
+{
+    background: none repeat scroll 0 0 #ccc;
+    height: 1px;
+    margin: 5px 0;
+}
+
+.fixL
+{
+    float: left;
+}
+.fixBoxEmtry
+{
+    height: 10px;
+}
+.fixbdbt
+{
+    height: 1px;
+    border-bottom: 1px dotted #ccc;
+    margin-top: 10px;
+}
+div.fixborder
+{
+    border: 1px solid #ccc;
+}
+
+.activepage
+{
+    background: none repeat scroll 0 0 #ddd;
+   
+    font-weight: bold;
+}
+.fixheight215{ height: 190px;}
+.displaynone{ display: none;}

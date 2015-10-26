@@ -1,146 +1,279 @@
 <?php $viewer = Khcn_Api::_()->getViewer();?>
-<?php $loaiTbs = Khcn_Api::_()->getDbTable('loai_thong_bao', 'default')->getDanhSachLTB(array('he_cao_hoc' => false));?>
-<div class="art-nav">
-<div class="l"></div>
-<div class="r"></div>
-<div class="art-nav-center">
-<ul class="art-menu nav">
-	<li>
-		<a id="index-index" parent="index-index" href="<?php echo $this->url(array('controller' => 'index','action' => 'index'),null,true);?>">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Trang chủ ')?></span>
-		</a>
-	</li>
-	<li>
-		<a id="gioi-thieu" parent="index-gioi-thieu" href="<?php echo $this->url(array('controller' => 'gioi-thieu','action' => 'index'),null,true);?>">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Giới thiệu ')?></span>
-		</a>
-		<ul>
-			<li><a id="gioi-thieu-index" parent="gioi-thieu" href="<?php echo $this->url(array('controller' => 'gioi-thieu','action' => 'index'),null,true);?>"><?php echo $this->translate('Giới thiệu')?></a></li>
-			<li><a id="gioi-thieu-nhan-su" parent="gioi-thieu" href="<?php echo $this->url(array('controller' => 'gioi-thieu','action' => 'nhan-su'),null,true);?>"><?php echo $this->translate('Nhân sự')?></a></li>			
-			<li><a id="gioi-thieu-hinh-anh" parent="gioi-thieu" href="<?php echo $this->url(array('controller' => 'gioi-thieu','action' => 'hinh-anh'),null,true);?>"><?php echo $this->translate('Hình ảnh')?></a></li>
-		</ul>
-	</li>
-	<li>
-		<a id="dao-tao-sdh" parent="de-tai" href="javascript:void(0)">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Đào tạo Sau đại học ')?></span>
-		</a>
-		<ul>
-			<li>
-				<a id="dao-tao-index" parent="dao-tao-sdh" href="javascript:void(0)"><?php echo $this->translate('Hệ cao học ĐH Sài Gòn')?></a>
-				<ul>
-					<li><a id="dao-tao-thong-bao" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'dao-tao','action' => 'thong-bao','loai' => Default_Model_DbTable_LoaiThongBao::HE_CAO_HOC_DHSG),null,true);?>"><?php echo $this->translate('Thông báo')?></a></li>
-					<li><a id="lich-hoc-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'lich-hoc','action' => 'index','loai' => 'dhsg'),null,true);?>"><?php echo $this->translate('Lịch học')?></a></li>
-					<li><a id="lich-thi-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'lich-thi','action' => 'index','loai' => 'dhsg'),null,true);?>"><?php echo $this->translate('Lịch thi')?></a></li>
-					<li><a id="danh-sach-lop-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'danh-sach-lop','action' => 'index','loai' => 'dhsg'),null,true);?>"><?php echo $this->translate('Danh sách lớp')?></a></li>
-				</ul>
-			</li>
-			<li>
-				<a id="dao-tao-dhvinh" parent="dao-tao-sdh" href="javascript:void(0)"><?php echo $this->translate('Hệ cao học liên kết ĐH Vinh')?></a>
-				<ul>
-					<li><a id="dao-tao-thong-bao" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'dao-tao','action' => 'thong-bao','loai' => Default_Model_DbTable_LoaiThongBao::HE_CAO_HOC_DHVINH),null,true);?>"><?php echo $this->translate('Thông báo')?></a></li>
-					<li><a id="lich-hoc-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'lich-hoc','action' => 'index','loai' => 'dhvinh'),null,true);?>"><?php echo $this->translate('Lịch học')?></a></li>
-					<li><a id="lich-thi-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'lich-thi','action' => 'index','loai' => 'dhvinh'),null,true);?>"><?php echo $this->translate('Lịch thi')?></a></li>
-					<li><a id="danh-sach-lop-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'danh-sach-lop','action' => 'index','loai' => 'dhvinh'),null,true);?>"><?php echo $this->translate('Danh sách lớp')?></a></li>
-				</ul>
-			</li>
-			<!--<li><a id="tuyen-sinh-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'tuyen-sinh','action' => 'index'),null,true);?>"><?php echo $this->translate('Lịch tuyển sinh SĐH')?></a></li>			
-			<li><a id="lich-bieu-index" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'lich-bieu','action' => 'index'),null,true);?>"><?php echo $this->translate('Lịch biểu SĐH')?></a></li>
-			<li><a id="bieu-mau-danh-sach" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'bieu-mau','action' => 'danh-sach','loai' => Khcn_Api::_()->getItem('default_loai_bieu_mau', Default_Model_DbTable_LoaiBieuMau::ID_DTSDH)->getIdentity()),null,true);?>"><?php echo $this->translate('Biểu mẫu')?></a></li>-->
-		</ul>
-	</li>
-	<li>
-		<a id="hoi-thao-bai-bao" href="javascript:void(0)">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Hội nghị - Hội thảo ')?></span>
-		</a>
-		<ul>
-			<li><a id="dao-tao-thong-bao" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'dao-tao','action' => 'thong-bao','loai' => Default_Model_DbTable_LoaiThongBao::HOI_NGHI_HOI_THAO),null,true);?>"><?php echo $this->translate('Thông báo')?></a></li>
-			<li><a id="hoi-thao-index" parent="hoi-thao-bai-bao" href="<?php echo $this->url(array('controller' => 'hoi-thao','action' => 'index'),null,true);?>"><?php echo $this->translate('Hội nghị - Hội thảo')?></a></li>
-			<li><a id="tai-lieu-index" parent="hoi-thao-bai-bao" href="<?php echo $this->url(array('controller' => 'sinh-hoat-chuyen-de','action' => 'index'),null,true);?>"><?php echo $this->translate('Sinh hoạt chuyên đề')?></a></li>
-			<li><a id="tai-lieu-index" parent="hoi-thao-bai-bao" href="<?php echo $this->url(array('controller' => 'tai-lieu','action' => 'index'),null,true);?>"><?php echo $this->translate('Phổ biến Kiến thức')?></a></li>
-		</ul>
-	</li>
-	<li>
-		<a id="quan-ly-khoa-hoc" href="javascript:void(0)">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Quản lý Khoa học ')?></span>
-		</a>
-		<ul>
-			<li><a id="dao-tao-thong-bao" parent="dao-tao-sdh" href="<?php echo $this->url(array('controller' => 'dao-tao','action' => 'thong-bao','loai' => Default_Model_DbTable_LoaiThongBao::NGHIEN_CUU_KHOA_HOC),null,true);?>"><?php echo $this->translate('Thông báo')?></a></li>
-			<li><a id="de-tai-index" parent="quan-ly-khoa-hoc" href="<?php echo $this->url(array('controller' => 'de-tai','action' => 'index'),null,true);?>"><?php echo $this->translate('Đề tài nghiên cứu khoa học')?></a></li>
-			<li><a id="de-tai-giao-trinh" parent="quan-ly-khoa-hoc" href="<?php echo $this->url(array('controller' => 'de-tai','action' => 'giao-trinh'),null,true);?>"><?php echo $this->translate('Giáo trình')?></a></li>
-			<li><a id="de-tai-tai-lieu" parent="quan-ly-khoa-hoc" href="<?php echo $this->url(array('controller' => 'de-tai','action' => 'tai-lieu'),null,true);?>"><?php echo $this->translate('Tài liệu tham khảo')?></a></li>
-			<li><a id="bai-bao-index" parent="quan-ly-khoa-hoc" href="<?php echo $this->url(array('controller' => 'bai-bao','action' => 'index'),null,true);?>"><?php echo $this->translate('Bài báo khoa học')?></a></li>
-			<li><a id="de-tai-thong-ke" parent="quan-ly-khoa-hoc" href="<?php echo $this->url(array('controller' => 'de-tai','action' => 'thong-ke'),null,true);?>"><?php echo $this->translate('Thống kê')?></a></li>
-		</ul>
-	</li>
-	<li>
-		<a id="danh-muc" href="javascript:void(0)">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Qui định & Biểu mẫu ')?></span>
-		</a>
-		<ul>
-			<li>
-				<a href="<?php echo $this->url(array('controller' => 'qui-dinh','action' => 'index'),null,true);?>" id="qui-dinh-index" parent="danh-muc"><?php echo $this->translate('Qui định')?></a>
-				<ul>
-				<?php 
-					$quiDinhs = Default_Model_Constraints::quidinh_loai();
-					foreach ($quiDinhs as $k=>$v){
-				?>
-					<li><a id="qui-dinh-danh-sach" parent="danh-muc" href="<?php echo $this->url(array('controller' => 'qui-dinh','action' => 'danh-sach','loai' => $k),null,true);?>"><?php echo $this->translate($v)?></a></li>
-				<?php }?>
-				</ul>
-			</li>
-			<li>
-				<a href="<?php echo $this->url(array('controller' => 'bieu-mau','action' => 'index'),null,true);?>" id="bieu-mau-index" parent="danh-muc"><?php echo $this->translate('Biểu mẫu')?></a>
-				<ul>
-				<?php 
-					$loaiBMs = Khcn_Api::_()->getDbTable('loai_bieu_mau', 'default')->getList(array('parent_id' => 0, 'is_dtsdh' => 0));
-					foreach ($loaiBMs as $loai_bm){
-				?>
-					<li><a id="bieu-mau-danh-sach" parent="danh-muc" href="<?php echo $this->url(array('controller' => 'bieu-mau','action' => 'danh-sach','loai' => $loai_bm->getIdentity()),null,true);?>"><?php echo $loai_bm->getTitle()?></a></li>
-				<?php }?>
-				</ul>
-			</li>
-			<li>
-				<a href="<?php echo $this->url(array('controller' => 'ho-so','action' => 'index'),null,true);?>" id="ho-so-index" parent="danh-muc"><?php echo $this->translate('Hồ sơ')?></a>
-				<ul>
-				<?php 
-					$loaiHSs = Khcn_Api::_()->getDbTable('loai_ho_so', 'default')->getAll();
-					foreach ($loaiHSs as $loai_hs){
-				?>
-					<li><a id="ho-so-danh-sach" parent="danh-muc" href="<?php echo $this->url(array('controller' => 'ho-so','action' => 'danh-sach', 'ma_loai' => $loai_hs->getIdentity()),null,true);?>"><?php echo $loai_hs->getTitle()?></a></li>
-				<?php }?>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<a id="lich-cong-tac" parent="lich-cong-tac" href="<?php echo $this->url(array('controller' => 'lich-cong-tac','action' => 'index'),null,true);?>">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Lịch công tác ')?></span>
-		</a>
-	</li>
-	<li>
-		<a id="tin-tuc" parent="tin-tuc" href="<?php echo $this->url(array('controller' => 'gioi-thieu','action' => 'lien-he'),null,true);?>">
-			<span class="l"></span>
-			<span class="r"></span>
-			<span class="t"><?php echo $this->translate('Liên hệ ')?></span>
-		</a>
-	</li>
-</ul>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/menu.css'?>">
+	
+<div class="headerBlue">
+    <div class="container">
+        <!--<div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="iconhome activenav"><a href="<?php echo $this->baseUrl()?>">
+                            <img src="<?php echo $this->baseUrl()?>/images/icHome.png"></a></li>
+                        <li class=""><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>" title="Sứ điệp" class="ts1001">SỨ ĐIỆP</a>
+                            <ul style="display: none;">
+                                
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index'),null,true);?>" title="Điểm nhìn" class="dn1159">TIN TỨC</a>
+                            <ul style="display: none;">
+                                
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="<?php echo $this->url(array('controller' => 'duc-giao-hoang','action' => 'index'),null,true);?>" class="kd1034">ĐỨC GIÁO HOÀNG</a>
+                            <ul style="display: none;">
+                                <li>
+									<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>" title="Thị trường">Thị trường</a></li><li><a href="http://tintuconline.com.vn/doanh-nghiep/p1034c1037.vnn" title="Doanh nghiệp">Doanh nghiệp</a></li><li><a href="http://tintuconline.com.vn/khoi-nghiep/p1034c1038.vnn" title="Khởi nghiệp">Khởi nghiệp</a>
+									<ul style="display: none;">
+										<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>" title="Thị trường">Thị trường</a></li><li><a href="http://tintuconline.com.vn/doanh-nghiep/p1034c1037.vnn" title="Doanh nghiệp">Doanh nghiệp</a></li><li><a href="http://tintuconline.com.vn/khoi-nghiep/p1034c1038.vnn" title="Khởi nghiệp">Khởi nghiệp</a></li>
+									</ul>
+								</li>
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index'),null,true);?>" class="gd1092">BÀI VIẾT</a>
+                            <ul style="display: none;">
+                                <li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>" title="Giá trị">Giá trị</a></li><li><a href="http://tintuconline.com.vn/ky-nang/p1092c1163.vnn" title="Kỹ năng">Kỹ năng</a></li><li><a href="http://tintuconline.com.vn/du-hoc/p1092c1164.vnn" title="Du học">Du học</a></li>
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="http://tintuconline.com.vn/doi-song/p0c1087.vnn" class="ds1087">MỌI THỨ</a>
+                            <ul style="display: none;">
+                                <li><a href="http://tintuconline.com.vn/gia-dinh/p1087c1073.vnn" title="Gia đình">Gia đình</a></li><li><a href="http://tintuconline.com.vn/tinh-yeu/p1087c1071.vnn" title="Tình yêu">Tình yêu</a></li><li><a href="http://tintuconline.com.vn/nhip-song-tre/p1087c1074.vnn" title="Nhịp sống trẻ">Nhịp sống trẻ</a></li><li><a href="http://tintuconline.com.vn/cong-so/p1087c1072.vnn" title="Công sở">Công sở</a></li>
+
+                                <li><a href="http://tintuconline.com.vn/song-khoe/p0c1069.vnn" title="Sống khỏe">Sống khỏe</a></li>
+                                <li><a href="http://tintuconline.com.vn/di-an-choi/p0c1078.vnn" title="Đi Ăn Chơi">Đi ăn chơi</a></li>
+                                <li><a href="http://tintuconline.com.vn/lam-dep/p0c1068.vnn" title="Làm đẹp">Làm đẹp</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="http://tintuconline.com.vn/giai-tri/p0c1086.vnn" title="Giải trí" class="gt1086">VIDEO-AUDIO</a>
+                            <ul style="display: none;">
+                                <li class=""><a href="http://tintuconline.com.vn/showbiz/p1086c1044.vnn" title="Showbiz">Showbiz</a></li><li><a href="http://tintuconline.com.vn/thoi-trang/p1086c1067.vnn" title="Thời trang">Thời trang</a></li><li><a href="http://tintuconline.com.vn/dien-anh/p1086c1046.vnn" title="Điện ảnh">Điện ảnh</a></li><li><a href="http://tintuconline.com.vn/am-nhac/p1086c1045.vnn" title="Âm nhạc">Âm nhạc</a></li>
+
+                                <li><a href="http://tintuconline.com.vn/hot-face/p0c1158.vnn" title="Hot Face">HOT FACE</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="http://tintuconline.com.vn/buon-chuyen/p0c1079.vnn" title="Buôn chuyện" class="bc1079">CHIẾN DỊCH CẦU NGUYỆN</a>
+                            <ul style="display: none;">
+                                
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="http://tintuconline.com.vn/photo/p0c1084.vnn" class="pt1084">ẢNH HOT</a></li>
+                        <li><a href="http://tintuconline.com.vn/video/p0c1085.vnn" class="vd1085">DOWNLOAD</a></li>
+                        <li class=""><a href="http://tintuconline.com.vn/the-gioi/p0c1051.vnn" title="Thế giới" class="tg1051">BÀI GIẢNG</a>
+                            <ul style="display: none;">
+                                <li><a href="http://tintuconline.com.vn/tin-tuc/p1051c1054.vnn" title="Tin tức">Tin tức</a></li><li><a href="http://tintuconline.com.vn/xfile/p1051c1053.vnn" title="X-File">X-File</a></li><li><a href="http://tintuconline.com.vn/chuyen-4-phuong/p1051c1052.vnn" title="Chuyện 4 phương">Chuyện 4 phương</a></li>
+
+                            </ul>
+                        </li>
+                        <li class=""><a href="http://tintuconline.com.vn/cong-nghe/p0c1056.vnn" class="cn1056">LIÊN HỆ</a>
+                            <ul style="display: none;">
+                                
+
+                            </ul>
+                        </li>
+                    </ul>
+				</div>
+            </div>
+        </div>-->
+		<nav class="nav">
+			<ul class="menu" id="menuhlng1">
+				<li class="mhome"><a href="<?php echo $this->baseUrl()?>">Home</a></li>
+				<li id="menu-item">
+					<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>">Sứ Điệp</a>
+					<ul class="mega-nav links">
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Su Diep Tu Troi">Mục 1</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sứ Điệp Chúa Cha">Sứ Điệp Chúa Cha </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sứ Điệp Chúa Giêsu">Sứ Điệp Chúa Giêsu </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sứ Điệp Chúa Thánh Thần">Sứ Điệp Chúa Thánh Thần </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sứ Điệp Đức Mẹ">Sứ Điệp Đức Mẹ </a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Mục 2</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/An Tin">Ấn Tín </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Me Cuu Roi">Mẹ Cứu Rỗi </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Con Chip 666">Con Chíp 666</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Cuoc Canh Bao">Cuộc Cảnh Báo </a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Audio">Mục 3</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Phan Kito">Phản Kitô </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tien Tri Gia">Tiên Tri Giả </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Đọc Sách">Tân Phúc Âm Hóa</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Âm Nhạc">Tôn Giáo Mới</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Video">Mục 4</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Chiến Dịch Cầu Nguyện">Chiến Dịch Cầu Nguyện</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sứ Điệp Từ Trời Ứng Nghiệm">Sứ Điệp Ứng Nghiệm </a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sách Khải Huyền">Sách Khải Huyền</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Thiên Đàng">Trời Mới Đất Mới</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li id="menu-item">
+					<a href="http://www.sudiepchuaden.com/search/label/2015">Tin Tức</a>
+					<ul class="mega-nav links">
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Giáo Hội</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng">Đức Giáo Hoàng</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Vatican">Vatican</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Giáo Hội Hoàn Vũ">Giáo Hội Hoàn Vũ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Giáo Hội Việt Nam">Giáo Hội Việt Nam</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Xã Hội</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tin Thế Giới">Tin Thế Giới</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tin Việt Nam">Tin Việt Nam</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Chiến Tranh">Chiến Tranh</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Thiên Tai">Thiên Tai</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Audio">Tin Chính</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/2015">Tin Tức 2015</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/2014">Tin Tức 2014</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Tin Công Giáo</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tin Xã Hội">Tin Xã Hội</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Video">Tổng Hợp</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Kỳ Lạ">Kỳ Lạ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Hoi Tam Diem">Hội Tam Điểm</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/HỘI TAM ĐIỂM">Hội Thờ Quỷ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Bí Ẩn">Bí Ẩn</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng">Đức Giáo Hoàng</a>
+					<ul class="sub-menu">
+						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng Phanxicô">Đức Giáo Hoàng Phanxicô 1</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang Phanxico">Đức Giáo Hoàng Phanxicô 2</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng Benedict XVI">Đức Giáo Hoàng Benedicto 1</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang Benedict XVI">Đức Giáo Hoàng Benedicto 2</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang">Các Vị Khác</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.sudiepchuaden.com/search/label/Bài Viết Công Giáo">Bài Viết</a>
+					<ul class="sub-menu">
+						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Cha Bùi Tuần">Bài Của Giám Mục </a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Linh Mục">Bài Của Linh Mục </a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Tu Sĩ">Bài Của Tu Sĩ </a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Giáo Dân">Bài Của Giáo Dân </a></li>
+						<li><a href="http://www.sudiepchuaden.com/2014/12/lm-khiem-hien-nhan-inh-ve-bai-bao-cao.html">Cha Linh Hướng</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Cha Bùi Tuần">Đức Cha Bùi Tuần</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Linh Mục Đồng Trung">Linh Mục Đồng Trung</a></li>
+						<li><a href="http://www.sudiepchuaden.com/search/label/Tu Sĩ Hèn Mọn">Tu Sĩ Hèn Mọn</a></li>
+					</ul>
+				</li>
+				<li id="menu-item">
+					<a href="http://www.sudiepchuaden.com/search/label/Tong Hop">Mọi Thứ</a>
+					<ul class="mega-nav links">
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Sống Đạo</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Sống Đạo">Sống Đạo Tốt</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Kinh Nguyện">Kinh Nguyện</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Cầu Nguyện">Cầu Nguyện</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tử Đạo">Tử Đạo</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Công Giáo</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Thiên Đàng">Thiên Đàng</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Hoa Nguc">Hỏa Ngục</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Luyện Ngục">Luyện Ngục</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Phép Lạ">Phép Lạ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Audio">Đời Sống</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Pha Thai">Phá Thai</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Le Song">Lẽ Sống</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Tiên Tri">Tiên Tri</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Truyện Các Thánh">Các Thánh</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Video">Video</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Hình Ảnh">Hình Ảnh</a></li>
+								<li><a href="http://www.sudiepchuaden.com/p/lien-he-gop-y-chia-se-goi-bai.html">Liên Hệ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Guong Sang">Gương Sáng</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Download">Download - Tải Về</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li id="menu-item">
+					<a href="#">Video-Audio</a>
+					<ul class="mega-nav links">
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Video 1</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.blogspot.com">Video Hot 1</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Video">Video Hot 2</a></li>
+								<li><a href="https://www.youtube.com/channel/UCYb-_FPIYqkBwXBZMP1Ji0Q/videos">Video Hot 3</a></li>
+								<li><a href="https://www.youtube.com/channel/UCBxnRDj2jhY6GzWny4vm5Ow/videos">Video Hot 4</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Video 2</a>
+							<ul class="sub-menu">
+								<li><a href="https://www.youtube.com/channel/UCkhVQtUWAri7v5TOaOfF6mw">Video Tổng Hợp</a></li>
+								<li><a href="https://www.youtube.com/channel/UCyqK1mlfiBp9mzHLV4C7_Ug">Video Sứ Điệp Cũ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Video Sứ Điệp">Video Sứ Điệp Mới</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Phép Lạ">Video Bài Giảng</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Audio">Audio</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Sứ Điệp">Audio Sứ Điệp</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Bài Giảng">Audio Bài Giảng</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Đọc Sách">Audio Đọc Sách</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Nên Thánh">Audio Nên Thánh</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="http://www.sudiepchuaden.com/search/label/Video">Video</a>
+							<ul class="sub-menu">
+								<li><a href="http://www.sudiepchuaden.com/search/label/Hình Ảnh">Hình Ảnh</a></li>
+								<li><a href="http://www.sudiepchuaden.com/p/lien-he-gop-y-chia-se-goi-bai.html">Liên Hệ</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Guong Sang">Gương Sáng</a></li>
+								<li><a href="http://www.sudiepchuaden.com/search/label/Download">Download - Tải Về</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+    </div>
 </div>
-</div>
+
 <?php $request = Zend_Controller_Front::getInstance()->getRequest();?>
 <?php $controller_action = $request->getControllerName() . '-' . $request->getActionName();?>
 <script type="text/javascript">

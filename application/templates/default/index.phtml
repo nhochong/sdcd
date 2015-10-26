@@ -68,18 +68,15 @@
   <meta property="article:publisher" content="https://www.facebook.com/tintuconlinevnn" />
   <meta property="article:author" content="https://www.facebook.com/tintuconlinevnn" />
   <link rel="shortcut icon" href="http://tintuconline.com.vn/Images/favicon.gif" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="http://tintuconline.com.vn/styles/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="http://tintuconline.com.vn/styles/extension.css" />
-  <link rel="stylesheet" type="text/css" href="http://tintuconline.com.vn/styles/Fix.css" />
-  <link rel="stylesheet" href="http://tintuconline.com.vn/styles/SlideImage.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="http://tintuconline.com.vn/styles/flexslider.css" type="text/css" media="screen" />
-  <link href="http://tintuconline.com.vn/Styles/pollEditor.css" rel="stylesheet" type="text/css" />
-  <link href="http://tintuconline.com.vn/Styles/css.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/bootstrap.css'?>" />
+  <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/extension.css'?>" />
+  <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/Fix.css'?>" />
+  <link rel="stylesheet" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/SlideImage.css'?>" type="text/css" media="screen" />
+  <link rel="stylesheet" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/flexslider.css'?>" type="text/css" media="screen" />
+  <link href="<?php echo $this->baseUrl() . '/../application/templates/default/css/pollEditor.css'?>" rel="stylesheet" type="text/css" />
+  <link href="<?php echo $this->baseUrl() . '/../application/templates/default/css/css.css'?>" rel="stylesheet" type="text/css" />
   
-  <script src="http://tintuconline.com.vn/Scripts/jquery-1.4.1.js" type="text/javascript"></script>
-    <script src="http://tintuconline.com.vn/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="http://tintuconline.com.vn/Scripts/jquery.writeCapture.js" type="text/javascript"></script>
-    <script src="http://tintuconline.com.vn/Scripts/basic.js" type="text/javascript"></script>
+  
     <script src="http://tintuconline.com.vn/Scripts/jquery.simplemodal.js" type="text/javascript"></script>
     <script src="http://tintuconline.com.vn/Scripts/jssor.slider.js" type="text/javascript"></script>
     <script src="http://tintuconline.com.vn/Scripts/jssor.js" type="text/javascript"></script>
@@ -88,7 +85,7 @@
     <script src="http://tintuconline.com.vn/Scripts/Common.v2.js" type="text/javascript"></script>
     <script src="http://tintuconline.com.vn/Scripts/clip-media.js" type="text/javascript"></script>
     <script src="http://tintuconline.com.vn/Scripts/swfobject.js" type="text/javascript"></script>
-    <script src="http://tintuconline.com.vn/Scripts/npm.js" type="text/javascript"></script>
+    <!-- <script src="http://tintuconline.com.vn/Scripts/npm.js" type="text/javascript"></script>-->
     <script type="text/javascript">
         function vmcLoadScript(selector, scriptUrl) {
             $(selector).writeCapture().html("<script type='text/javascript' language='javascript' src='" + scriptUrl + "'><\/script>");
@@ -112,8 +109,11 @@
 </head>
 <body id="global_page_<?php echo $identity ?>">
 	<div id="global_header">
+		<!-- Begin header -->
 		<?php echo $this->render('includes/header.phtml') ?>
+		<!-- End header -->
 	</div>
+	
 	<div id='global_wrapper'>
 		<div id='global_content'>
 			<?php echo $this->layout()->content ?>

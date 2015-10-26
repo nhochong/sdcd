@@ -62,6 +62,26 @@ class Admin_Form_SuDiep extends Zend_Form{
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
 				->setAttribs(array('id' => 'noi_dung','class' => 'text-input textarea'));
 		
+		$soundcloud_embed = new Zend_Form_Element_Text('soundcloud_embed');       
+        $soundcloud_embed->setLabel('SoundCloud')
+        		->setDecorators(array(
+							    'ViewHelper',
+							    'Errors',
+							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
+							    array('Label', array('tag' => 'td')),
+							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
+				->setAttrib('class', 'text-input large-input');
+				
+		$youtube_embed = new Zend_Form_Element_Text('youtube_embed');       
+        $youtube_embed->setLabel('Youtube')
+        		->setDecorators(array(
+							    'ViewHelper',
+							    'Errors',
+							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
+							    array('Label', array('tag' => 'td')),
+							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
+				->setAttrib('class', 'text-input large-input');
+				
 		$submitCon = new Zend_Form_Element_Submit('submitCon');
         $submitCon->setDecorators(array(
 							        'ViewHelper',
@@ -86,7 +106,7 @@ class Admin_Form_SuDiep extends Zend_Form{
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $_SERVER['HTTP_REFERER'] . '"'));
 			   
-		$this->addElements(array($loai_su_diep_id, $tieu_de, $noi_dung, $trang_thai, $submitCon, $submitExit, $cancel));						
+		$this->addElements(array($loai_su_diep_id, $tieu_de, $noi_dung, $soundcloud_embed, $youtube_embed, $trang_thai, $submitCon, $submitExit, $cancel));						
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(
             'decorators' => array(

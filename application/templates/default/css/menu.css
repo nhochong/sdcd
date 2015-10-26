@@ -1,0 +1,227 @@
+/* mini reset */
+.nav,
+.nav a,
+.nav form,
+.nav input,
+.nav li,
+.nav ul {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  text-decoration: none;
+}
+.nav li {
+  list-style: none;
+}
+
+/* menu container */
+.nav,
+input {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.nav {
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  z-index: 500;
+}
+
+/* menu list */
+.nav > li {
+  float: left;
+}
+
+/* --------------------------------------- */
+.nav {
+    background-color: #136189;
+    background-repeat: repeat-x;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 13px;
+    font-family: 'Archivo Narrow',Sans-Serif;
+    font-weight: 600;
+    height: 44px;
+    position: relative;
+}
+.nav ul {
+    line-height: 2;
+    list-style: none;
+    position: relative;
+}
+.selectnav {
+    display: none;
+}
+#selectnav2 {
+    padding: 8px;
+    margin-left: 7px;
+    font-size: 13px;
+    height: 34px;
+    border: 1px solid #ccc;
+    position: absolute;
+    bottom: 8px;
+    left: 5%;
+    width: 70%;
+    background: #252525;
+    color: #FFF;
+    outline: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.nav ul li {
+    float: left;
+}
+.nav .menu>li:first-child>a {
+    border-left: 0;
+    box-shadow: none;
+}
+.nav .menu>li>a {
+    line-height: 44px;
+    text-decoration: none;
+}
+.nav .menu li>a {
+    float: left;
+    padding: 0 18px;
+}
+.nav .mhome a {
+    color: #fff;
+}
+.nav a {
+    color: #fff;
+}
+.nav .mega-nav {
+    position: absolute;
+    background-color: #2c2c2c;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    display: block;
+    opacity: 0;
+    top: 44px;
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+    z-index: 100;
+    padding: 30px 0;
+    left: 0;
+    margin: 0;
+}
+.nav .menu ul {
+    position: absolute;
+    overflow: visible;
+    padding: 0;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    background-color: #2e2e2e;
+    z-index: 100;
+}
+.nav .menu>li>ul {
+    border: 0;
+    border-radius: 0;
+    top: 44px;
+}
+.nav li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+.nav .mega-nav.links {
+    padding: 30px 0;
+}
+.nav li:hover .mega-nav {
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+}
+.nav .menu ul li {
+    position: relative;
+    min-width: 220px;
+    border-top: 0;
+    padding: 0;
+    float: none;
+}
+.nav .mega-nav .sub-menu li, .nav .menu .mega-nav>li {
+    min-width: 0;
+}
+.nav .mega-nav.links>li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: inherit;
+    padding: 0 25px;
+    float: left;
+    border: 0;
+    width: 25%;
+}
+.nav .menu>li li a {
+    font-size: 12px;
+    font-family: 'arial',Sans-Serif;
+    padding: 5px 25px;
+    border-top: 1px solid #333;
+    float: none;
+    display: block;
+    text-decoration: none;
+    text-transform: none;
+}
+.nav .mega-nav.links>li>a {
+    font-size: 14px;
+    font-family: 'arial',Sans-Serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 6px 4px 8px;
+    background-color: #111;
+    border: 0;
+}
+.nav .menu>li li:first-child a {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-top: 0;
+}
+.nav .menu ul ul {
+    top: 0;
+    left: 100%;
+}
+.nav .mega-nav.links>li ul {
+    opacity: 1;
+    position: static;
+    visibility: inherit;
+}
+.nav .mega-nav.links>li li a {
+    font-family: 'arial',Sans-Serif;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 10px;
+    border-bottom: 1px solid #333;
+    border-top: 0;
+}
+.nav .mega-nav.links>li li a:before {
+    font-family: FontAwesome;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: .9;
+}
+.nav .menu li>a:after {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0 1px #efefef;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: .9;
+}

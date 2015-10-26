@@ -1,0 +1,29 @@
+.grdpoll { width:380px;}
+.grdpoll .btnsel {padding-left:21px; background:url(/images/icons/no.png) no-repeat left center; color:Black; text-decoration:none;}
+.grdpoll .sel { background-color:#ffffcc;color:Black; text-decoration:none;}
+.grdpoll .sel .btnsel { padding-left:21px; background:url(/images/icons/yes.png) no-repeat left center; color:Black; text-decoration:none;}
+.cvb { background-color:#606060; color:White; padding:3px 5px; text-decoration:none; margin-top:20px;}
+.vote_chonlayout img { height:16px; width:16px; margin:5px; background-image:url(/images/vote/btn1_c.png); cursor:pointer;}
+.vote_chonlayout .cl1 { background-position:0 0;}
+.vote_chonlayout .cl2 { background-position:-16px 0;}
+.vote_chonlayout .cl3 { background-position:-32px 0;}
+.vote_chonlayout .cl4 { background-position:-48px 0;}
+.vote_chonlayout .cl5 { background-position:-64px 0;}
+.vote_chonlayout .cl6 { background-position:-80px 0;}
+
+
+.vcnt_1 {color:#333333; border-left: solid 1px #d1d1d1; border-right: solid 1px #d1d1d1; float: left; width: 173px; background:#eeeedd; font-size:12pt; font-family:Times New Roman;}
+.vcnt_2 {color:#333333;border-left: solid 1px #d1d1d1; border-right: solid 1px #d1d1d1; float: left; width: 173px; background:#eadf90; font-size:12pt; font-family:Times New Roman;}
+.vcnt_3 {color:#fff;border-left: solid 1px #d1d1d1; border-right: solid 1px #d1d1d1; float: left; width: 173px; background:#01cdc7; font-size:12pt; font-family:Times New Roman;}
+.vcnt_4 {color:#fff;border-left: solid 1px #d1d1d1; border-right: solid 1px #d1d1d1; float: left; width: 173px; background:#b957ae; font-size:12pt; font-family:Times New Roman;}
+.lanvander{float: left; width: 177px; text-align:left; margin:0px 10px; }
+.lanvander p{font-weight:bold;padding-left:7px; text-align:left;margin:0px;}
+
+.embedvcnt_1 {color:#333333;background:#eeeedd;  font-size:12pt; font-family:Times New Roman;}
+.embedvcnt_2 {color:#333333;background:#eadf90;  font-size:12pt; font-family:Times New Roman;}
+.embedvcnt_3 {color:#fff;background:#01cdc7;  font-size:12pt; font-family:Times New Roman;}
+.embedvcnt_4 {color:#fff;background:#b957ae;  font-size:12pt; font-family:Times New Roman;}
+.voteembed{width:98%; overflow:hidden;border: solid 1px #d1d1d1;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.voteembed .h3votetitle{font:700 12px/18px Tahoma; color:#9f0100; margin:5px 0px 0px 10px; padding:0px; height:10px;}
+.voteembed p{font-weight:bold;padding-left:7px;}
+.voteembed .bottomroom{width:98%; overflow:hidden}

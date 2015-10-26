@@ -15,25 +15,7 @@ class Default_IndexController extends Khcn_Controller_Action_Standard
 		$form = new Default_Form_Search();
 		$this->_helper->layout()->assign('isMultiBlock', true);
 		
-		// Tin tuc
-		$tinTucs = Khcn_Api::_()->getDbTable('tin_tuc', 'default')->danhsachhienthi(array('limit' => 7));
-		$this->view->tinTucs = $tinTucs;
 		
-		// Thong bao tuyen sinh SDH
-		$nam = date('Y');
-		$loaiTbs = Khcn_Api::_()->getDbTable('loai_thong_bao', 'default')->getDanhSachLTB(array('he_cao_hoc' => true));
-		$arr_loaiTbs = array();
-		foreach($loaiTbs as $loai_tb){
-			$arr_loaiTbs[] = $loai_tb->getIdentity();
-		}
-		$params = array(
-			'trang_thai' => true,
-			'loais' => $arr_loaiTbs,
-			'noi_bat' => true,
-			'order' => 'noi_bat',
-			'limit' => 7
-		);
-		$this->view->thongBaoSDH = $thongBaoSDH =  Khcn_Api::_()->getDbTable('thong_bao', 'default')->getDSThongBaos($params);
     }
     
     public function auth($username,$password)
