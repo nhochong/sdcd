@@ -223,7 +223,80 @@ CREATE TABLE `bai_giang` (
   PRIMARY KEY (`bai_giang_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `searchtypes` (`type`, `title`, `enabled`, `order`) VALUES
+DROP TABLE IF EXISTS `loai_audio`;
+CREATE TABLE `loai_audio` (
+  `loai_audio_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ten` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`loai_audio_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT IGNORE INTO `loai_audio` (`ten`) VALUES
+('Audio Sứ Điệp'),
+('Audio Bài Giảng'),
+('Audio Đọc Sách'),
+('Audio Nên Thánh');
+
+DROP TABLE IF EXISTS `audio`;
+CREATE TABLE `audio` (
+  `audio_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  `loai_audio_id` int(11) NOT NULL,
+  PRIMARY KEY (`audio_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `loai_video`;
+CREATE TABLE `loai_video` (
+  `loai_video_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ten` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`loai_video_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT IGNORE INTO `loai_video` (`ten`) VALUES
+('Video Sứ Điệp Mới'),
+('Video Bài Giảng');
+
+DROP TABLE IF EXISTS `video`;
+CREATE TABLE `video` (
+  `video_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  `so_lan_xem` int(10) NOT NULL DEFAULT '1',
+  `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
+  `loai_video_id` int(11) NOT NULL,
+  PRIMARY KEY (`video_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `youtube_channel`;
+CREATE TABLE `youtube_channel` (
+  `youtube_channel_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  PRIMARY KEY (`youtube_channel_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `video_lien_ket`;
+CREATE TABLE `video_lien_ket` (
+  `video_lien_ket_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_tao` datetime NOT NULL,
+  PRIMARY KEY (`video_lien_ket_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT IGNORE INTO `youtube_channel` (`tieu_de`, `link`) VALUES
+('Video Sứ Điệp Chúa Đến', 'https://www.youtube.com/channel/UCYb-_FPIYqkBwXBZMP1Ji0Q/videos'),
+('Video Sứ Điệp Chúa Đến', 'https://www.youtube.com/channel/UCYb-_FPIYqkBwXBZMP1Ji0Q/videos'),
+('Video Sứ Điệp Chúa Đến', 'https://www.youtube.com/channel/UCYb-_FPIYqkBwXBZMP1Ji0Q/videos'),
+;
+
+INSERT IGNORE INTO `searchtypes` (`type`, `title`, `enabled`, `order`) VALUES
 ('default_su_diep', 'Sứ điệp', 1, 1),
 ('default_tin_tuc', 'Tin tức', 1, 2),
 ('default_dgh', 'Đức Giáo Hoàng', 1, 3),
@@ -231,4 +304,5 @@ INSERT INTO `searchtypes` (`type`, `title`, `enabled`, `order`) VALUES
 ('default_thong_tin', 'Thông tin', 1, 5),
 ('default_chien_dich_cau_nguyen', 'Chiến dịch cầu nguyện', 1, 6),
 ('default_download', 'Download', 1, 7),
-('default_bai_giang', 'Bài giảng', 1, 8);
+('default_bai_giang', 'Bài giảng', 1, 8),
+('default_audio', 'Bài giảng', 1, 9);

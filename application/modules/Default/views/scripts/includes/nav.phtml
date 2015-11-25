@@ -2,7 +2,9 @@
 <?php 
 $loaiSuDieps = Khcn_Api::_()->getDbTable('loai_su_diep', 'default')->getParents();
 $loaiTinTucs = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default')->getParents();
-
+$loaiDghs = Khcn_Api::_()->getDbTable('loai_dgh', 'default')->getListAssoc();
+$loaiBaiViets = Khcn_Api::_()->getDbTable('loai_bai_viet', 'default')->getListAssoc();
+$loaiThongTins = Khcn_Api::_()->getDbTable('loai_thong_tin', 'default')->getParents();
 
 ?>
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
@@ -50,67 +52,37 @@ $loaiTinTucs = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default')->getParents(
 					</ul>
 				</li>
 				<li>
-					<a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng">Đức Giáo Hoàng</a>
+					<a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index'),null,true);?>">Đức Giáo Hoàng</a>
 					<ul class="sub-menu">
-						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng Phanxicô">Đức Giáo Hoàng Phanxicô 1</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang Phanxico">Đức Giáo Hoàng Phanxicô 2</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Giáo Hoàng Benedict XVI">Đức Giáo Hoàng Benedicto 1</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang Benedict XVI">Đức Giáo Hoàng Benedicto 2</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Duc Giao Hoang">Các Vị Khác</a></li>
+						<?php foreach($loaiDghs as $key => $value):?>
+							<li><a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+						<?php endforeach;?>
 					</ul>
 				</li>
 				<li>
-					<a href="http://www.sudiepchuaden.com/search/label/Bài Viết Công Giáo">Bài Viết</a>
+					<a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index'),null,true);?>">Bài Viết</a>
 					<ul class="sub-menu">
-						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Cha Bùi Tuần">Bài Của Giám Mục </a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Linh Mục">Bài Của Linh Mục </a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Tu Sĩ">Bài Của Tu Sĩ </a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Bài Của Giáo Dân">Bài Của Giáo Dân </a></li>
-						<li><a href="http://www.sudiepchuaden.com/2014/12/lm-khiem-hien-nhan-inh-ve-bai-bao-cao.html">Cha Linh Hướng</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Đức Cha Bùi Tuần">Đức Cha Bùi Tuần</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Linh Mục Đồng Trung">Linh Mục Đồng Trung</a></li>
-						<li><a href="http://www.sudiepchuaden.com/search/label/Tu Sĩ Hèn Mọn">Tu Sĩ Hèn Mọn</a></li>
+						<?php foreach($loaiBaiViets as $key => $value):?>
+							<li><a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+						<?php endforeach;?>
 					</ul>
 				</li>
 				<li id="menu-item">
-					<a href="http://www.sudiepchuaden.com/search/label/Tong Hop">Mọi Thứ</a>
+					<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index'),null,true);?>">Mọi Thứ</a>
 					<ul class="mega-nav links">
-						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Sống Đạo</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Sống Đạo">Sống Đạo Tốt</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Kinh Nguyện">Kinh Nguyện</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Cầu Nguyện">Cầu Nguyện</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Tử Đạo">Tử Đạo</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Công Giáo</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Thiên Đàng">Thiên Đàng</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Hoa Nguc">Hỏa Ngục</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Luyện Ngục">Luyện Ngục</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Phép Lạ">Phép Lạ</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Audio">Đời Sống</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Pha Thai">Phá Thai</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Le Song">Lẽ Sống</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Tiên Tri">Tiên Tri</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Truyện Các Thánh">Các Thánh</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Video">Video</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Hình Ảnh">Hình Ảnh</a></li>
-								<li><a href="http://www.sudiepchuaden.com/p/lien-he-gop-y-chia-se-goi-bai.html">Liên Hệ</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Guong Sang">Gương Sáng</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Download">Download - Tải Về</a></li>
-							</ul>
-						</li>
+						<?php foreach($loaiThongTins as $loaiThongTin):?>
+							<li>
+								<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $loaiThongTin->getIdentity()),null,true);?>"><?php echo $loaiThongTin->getTitle()?></a>
+								<?php $subCats = $loaiThongTin->getChilds();?>
+								<?php if(count($subCats) > 0):?>
+									<ul class="sub-menu">
+										<?php foreach($subCats as $subCat): ?>
+											<li><a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
+										<?php endforeach;?>
+									</ul>
+								<?php endif;?>
+							</li>
+						<?php endforeach;?>
 					</ul>
 				</li>
 				<li id="menu-item">
@@ -153,6 +125,21 @@ $loaiTinTucs = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default')->getParents(
 							</ul>
 						</li>
 					</ul>
+				</li>
+				<li>
+					<a href="<?php echo $this->url(array('controller' => 'chien-dich-cau-nguyen','action' => 'index'),null,true);?>">Chiến Dịch Cầu Nguyện</a>
+				</li>
+				<li>
+					<a href="http://sudiepchuadenanh.blogspot.com/">Ảnh Hot</a>
+				</li>
+				<li>
+					<a href="<?php echo $this->url(array('controller' => 'download','action' => 'index'),null,true);?>">Download</a>
+				</li>
+				<li>
+					<a href="<?php echo $this->url(array('controller' => 'bai-giang','action' => 'index'),null,true);?>">Bài Giảng</a>
+				</li>
+				<li>
+					<a href="<?php echo $this->url(array('controller' => 'lien-he','action' => 'index'),null,true);?>">Liên Hệ</a>
 				</li>
 			</ul>
 		</nav>

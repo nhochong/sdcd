@@ -1,5 +1,5 @@
 <?php
-class Admin_Form_BaiGiang extends Zend_Form{
+class Admin_Form_Video extends Zend_Form{
 	public function init()
     {  	
         $this->setName('f2')
@@ -23,7 +23,19 @@ class Admin_Form_BaiGiang extends Zend_Form{
 							    array('Label', array('tag' => 'td')),
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
 				->setAttrib('class', 'text-input large-input');
-							    
+		
+		$cateOptions = Khcn_Api::_()->getDbTable('loai_video', 'default')->getListAssoc();
+        $loai_video_id = new Zend_Form_Element_Select('loai_video_id');
+        $loai_video_id->setLabel('Loại (*)')
+			 ->addMultiOptions($cateOptions)
+             ->setDecorators(array(
+							    'ViewHelper',
+							    'Errors',
+							    array(array('data' => 'HtmlTag'), array('tag' => 'td')),
+							    array('Label', array('tag' => 'td')),
+							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
+			 ->setAttrib('class', 'text-input');
+			 
 		$noi_dung = new Zend_Form_Element_Textarea('noi_dung');       
         $noi_dung->setLabel('Nội dung (*)')
                	 ->setRequired(true)
@@ -35,50 +47,6 @@ class Admin_Form_BaiGiang extends Zend_Form{
 							    array('Label', array('tag' => 'td')),
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
 				->setAttribs(array('id' => 'noi_dung','class' => 'text-input textarea'));
-		
-		$soundcloud_embed = new Zend_Form_Element_Text('soundcloud_embed');       
-        $soundcloud_embed->setLabel('Embed SoundCloud')
-				->setDescription('How to get SoundCloud embed code? <a href="http://help.soundcloud.com/customer/portal/articles/243751-how-can-i-put-my-track-or-playlist-on-my-site-or-blog-" target="_blank">Click here</a>')
-        		->setDecorators(array(
-							    'ViewHelper',
-							    'Errors',
-								array('Description', array('tag' => 'div','escape' => false, 'placement' => 'append')),
-							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
-							    array('Label', array('tag' => 'td')),
-								array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
-				->setAttrib('class', 'text-input large-input');
-				
-		$youtube_embed = new Zend_Form_Element_Text('youtube_embed');       
-        $youtube_embed->setLabel('Embed Youtube')
-				->setDescription('How to get Youtube embed code? <a href="https://support.google.com/youtube/answer/171780?hl=en" target="_blank">Click here</a>')
-				->setDecorators(array(
-							    'ViewHelper',
-							    'Errors',
-								array('Description', array('tag' => 'div','escape' => false, 'placement' => 'append')),
-							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
-							    array('Label', array('tag' => 'td')),
-							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
-				->setAttrib('class', 'text-input large-input');
-				
-		$link_nct = new Zend_Form_Element_Text('link_nct');       
-        $link_nct->setLabel('Nhac cua tui')
-        		->setDecorators(array(
-							    'ViewHelper',
-							    'Errors',
-							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
-							    array('Label', array('tag' => 'td')),
-							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
-				->setAttrib('class', 'text-input large-input');
-				
-		$link_mp3 = new Zend_Form_Element_Text('link_mp3');       
-        $link_mp3->setLabel('Mp3')
-        		->setDecorators(array(
-							    'ViewHelper',
-							    'Errors',
-							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
-							    array('Label', array('tag' => 'td')),
-							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
-				->setAttrib('class', 'text-input large-input');
 				
 		$statusOptions = array(
         "multiOptions" => Default_Model_Constraints::trang_thai());	
@@ -118,7 +86,7 @@ class Admin_Form_BaiGiang extends Zend_Form{
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $_SERVER['HTTP_REFERER'] . '"'));
 			   
-		$this->addElements(array($tieu_de, $noi_dung, $soundcloud_embed, $youtube_embed, $link_nct, $link_mp3, $trang_thai, $submitCon, $submitExit, $cancel));						
+		$this->addElements(array($tieu_de, $loai_video_id, $noi_dung, $trang_thai, $submitCon, $submitExit, $cancel));						
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(
             'decorators' => array(

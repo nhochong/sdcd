@@ -43,4 +43,9 @@ class Default_Model_DbTable_LoaiThongTin extends Khcn_Db_Table
 		}
 		return $results;
 	}
+	
+	public function getParents(){
+		$select = $this->select()->where('parent_id = 0');
+		return $this->fetchAll($select);
+	}
 }

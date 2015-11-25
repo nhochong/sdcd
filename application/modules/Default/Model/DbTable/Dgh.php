@@ -14,4 +14,5 @@ class Default_Model_DbTable_Dgh extends Khcn_Db_Table{
 		
 		return $this->fetchAll($select);
 	}
+	
 }

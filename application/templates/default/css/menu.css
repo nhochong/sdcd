@@ -12,10 +12,19 @@
 .nav a {
   text-decoration: none;
 }
-.nav li {
+.nav > ul > li {
   list-style: none;
+  border-left: 1px solid #a8d1f4;
+  border-right: 1px solid #014775;
 }
-
+.nav > ul > li:first-child {
+    border-left: none;
+    border-right: 1px solid #0e76bc;
+}
+.nav li:last-child {
+    padding-right: 0;
+    border-right: none !important;
+}
 /* menu container */
 .nav,
 input {
@@ -84,7 +93,7 @@ input {
 }
 .nav .menu li>a {
     float: left;
-    padding: 0 18px;
+    padding: 0 5px;
 }
 .nav .mhome a {
     color: #fff;
