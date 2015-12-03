@@ -659,3 +659,60 @@ Stack trace:
 #11 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
 #12 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
 #13 {main}
+2015-10-26T16:29:03+00:00 CRIT (2): 
+Error Code: c65df0
+exception 'Zend_Db_Table_Row_Exception' with message 'Specified column "muc" is not in the row' in D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php:179
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\application\modules\Admin\views\scripts\loai-su-diep\index.phtml(54): Zend_Db_Table_Row_Abstract->__get('muc')
+#1 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('loai-su-diep/in...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('loai-su-diep/in...', NULL)
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#11 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#12 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#13 {main}
+2015-11-25T14:29:59+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireAdmin failed check for: admin.index.index
+2015-11-25T14:29:59+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: admin.index.index
+2015-11-25T14:29:59+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: default.error.requireuser
+2015-11-25T14:30:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireAdmin failed check for: admin.index.index
+2015-11-25T14:30:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: admin.index.index
+2015-11-25T14:30:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: default.error.requireuser
+2015-11-25T14:44:15+00:00 CRIT (2): 
+Error Code: ec9800
+exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'noi_bat' in 'order clause'' in D:\xampp\htdocs\sdcd\library\Zend\Db\Statement\Mysqli.php:77
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\Db\Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `tin_tuc...')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `tin_tuc...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT `tin_tuc...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1529): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select))
+#4 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1344): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#5 D:\xampp\htdocs\sdcd\application\modules\Default\Model\DbTable\TinTuc.php(25): Zend_Db_Table_Abstract->fetchAll(Object(Zend_Db_Table_Select))
+#6 D:\xampp\htdocs\sdcd\application\modules\Default\controllers\TinTucController.php(15): Default_Model_DbTable_TinTuc->danhsachhienthi()
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(516): Default_TinTucController->indexAction()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#11 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#12 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#13 {main}
+2015-11-25T16:13:14+00:00 CRIT (2): 
+Error Code: 2ef3d3
+exception 'Zend_Form_Exception' with message 'Elements specified by string must have an accompanying name' in D:\xampp\htdocs\sdcd\library\Zend\Form.php:1024
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\Form.php(1132): Zend_Form->addElement('/sdcd/public/ad...', NULL)
+#1 D:\xampp\htdocs\sdcd\application\modules\Admin\Form\Youtube.php(61): Zend_Form->addElements(Array)
+#2 D:\xampp\htdocs\sdcd\library\Zend\Form.php(240): Admin_Form_Youtube->init()
+#3 D:\xampp\htdocs\sdcd\application\modules\Admin\controllers\VideoController.php(166): Zend_Form->__construct()
+#4 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(516): Admin_VideoController->youtubeAddAction()
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('youtubeAddActio...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#7 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#8 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#9 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#10 {main}

@@ -97,7 +97,7 @@ class Admin_Form_Audio extends Zend_Form{
 							        array(array('row' => 'HtmlTag'), array('tag' => 'span')),
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $_SERVER['HTTP_REFERER'] . '"'));
-			   
+			
 		$this->addElements(array($tieu_de, $loai_audio_id, $noi_dung, $soundcloud_embed, $trang_thai, $submitCon, $submitExit, $cancel));						
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(

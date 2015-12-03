@@ -46,9 +46,28 @@ class Admin_SuDiepController extends Khcn_Controller_Action_Admin
 			return;
 		}
 		
-		$values = $form->getValues();
 		$table = Khcn_Api::_()->getDbTable('su_diep', 'default');
 		$su_diep = $table->createRow();
+		if($form->photo->getFileName(null,false) != null){
+			//determine filename and extension 
+			$info = pathinfo($form->photo->getFileName(null,false)); 
+			$filename = $info['filename']; 
+			$ext = $info['extension']?".".$info['extension']:""; 
+			//filter for renaming.. prepend with current time 
+			$file = time(). '_' . Default_Model_Functions::convert_vi_to_en($filename) .$ext;
+			$form->photo->addFilter(new Zend_Filter_File_Rename(array( 
+							"target"=>$file, 
+							"overwrite"=>true)))
+					   ->addFilter(new Khcn_Filter_File_Resize(array(
+							'width' => 720,
+							'height' => 720,
+							'keepRatio' => true,
+						)));
+			$form->getValue('photo');
+			$su_diep->file = $file;
+		}
+		
+		$values = $form->getValues();
 		$su_diep->setFromArray($values);
 		$su_diep->save();
 		
@@ -129,6 +148,32 @@ class Admin_SuDiepController extends Khcn_Controller_Action_Admin
 		if(!$form->isValid($this->getRequest()->getPost())){
 			return;
 		}	
+		
+		if($form->photo->getFileName(null,false) != null)
+		{
+			//determine filename and extension 
+			$info = pathinfo($form->photo->getFileName(null,false)); 
+			$filename = $info['filename']; 
+			$ext = $info['extension']?".".$info['extension']:""; 
+			//filter for renaming.. prepend with current time 
+			$file = time(). '_' . Default_Model_Functions::convert_vi_to_en($filename) .$ext;
+			$form->photo->addFilter(new Zend_Filter_File_Rename(array( 
+							"target"=>$file, 
+							"overwrite"=>true)))
+					   ->addFilter(new Khcn_Filter_File_Resize(array(
+								'width' => 720,
+								'height' => 720,
+								'keepRatio' => true,
+							)));
+			$form->getValue('photo');
+			
+			// Remove old file
+			$oldFile = $su_diep->file;
+			if($oldFile != '' && file_exists( APPLICATION_PATH . '/../public/upload/files/su_diep/' . $oldFile))
+				unlink(APPLICATION_PATH . '/../public/upload/files/su_diep/' . $oldFile);
+			
+			$su_diep->file = $file;
+		}
 		
         $values = $form->getValues();
 		$su_diep->setFromArray($values);

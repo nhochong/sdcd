@@ -28,7 +28,6 @@ INSERT INTO `loai_su_diep` (`ten`, `parent_id`) VALUES
 ('Sách Khải Huyền', 4),
 ('Trời Mới Đất Mới', 4);
 
-
 DROP TABLE IF EXISTS `su_diep`;
 CREATE TABLE `su_diep` (
   `su_diep_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -36,6 +35,8 @@ CREATE TABLE `su_diep` (
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
   `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -70,7 +71,7 @@ INSERT INTO `loai_tin_tuc` (`ten`, `parent_id`) VALUES
 ('Tin xã hội', 3),
 ('Kỳ lạ', 4),
 ('Hội tam điểm', 4),
-('HỘi thờ quỷ', 4),
+('Hội thờ quỷ', 4),
 ('Bí ẩn', 4);
 
 
@@ -79,6 +80,8 @@ CREATE TABLE `tin_tuc` (
   `tin_tuc_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -100,12 +103,13 @@ INSERT INTO `loai_dgh` (`ten`) VALUES
 ('Đức Giáo Hoàng Benedicto 2'),
 ('Các vị khác');
 
-
 DROP TABLE IF EXISTS `dgh`;
 CREATE TABLE `dgh` (
   `dgh_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -130,12 +134,13 @@ INSERT INTO `loai_bai_viet` (`ten`) VALUES
 ('Linh Mục Đồng Trung'),
 ('Tu Sĩ Hèn mọn');
 
-
 DROP TABLE IF EXISTS `bai_viet`;
 CREATE TABLE `bai_viet` (
   `bai_viet_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
