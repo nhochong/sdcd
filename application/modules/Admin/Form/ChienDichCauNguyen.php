@@ -37,21 +37,36 @@ class Admin_Form_ChienDichCauNguyen extends Zend_Form{
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
 				->setAttribs(array('id' => 'noi_dung','class' => 'text-input textarea'));
 				
-		$file = new Zend_Form_Element_File('file');
-		$file->setLabel('Upload file')
-			 ->setDescription('(*.doc, *.docx, *.pdf , < 10MB )')
-			 ->setDestination(BASE_PATH . '/upload/files/chien_dich_cau_nguyen')
-			 ->addValidator(new Zend_Validate_File_Extension(array('doc,docx,pdf')))
-			 ->addValidator(new Zend_Validate_File_FilesSize(array('min' => 1, 
-            													   'max' => 10485760,
-            													   'bytestring' => true)))
-			 ->setDecorators(array(
-							    'File',
-							    'Errors',	
-			 					array('Description', array('escape' => false, 'tag' => 'div', 'placement' => 'append')),		 					
-							    array('HtmlTag', array('tag' => 'td')),
-							    array('Label', array('tag' => 'td')),
-							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));			
+		$noi_bat = new Zend_Form_Element_Select('noi_bat');
+		$noi_bat->setLabel('Nổi Bật')
+				->setRequired(true)
+				->setValue(0)
+				->addMultiOptions(array(
+						0 => 'Không',
+						1 => 'Có'
+				))
+				->setDecorators(array(
+						'ViewHelper',
+						'Errors',
+						array(array('data' => 'HtmlTag'), array('tag' => 'td')),
+						array('Label', array('tag' => 'td')),
+						array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));
+
+		$photo = new Zend_Form_Element_File('photo');
+		$photo->setLabel('Upload hình')
+				->setDescription('(*.jgp, *.gif, *.png , < 10MB )')
+				->setDestination(BASE_PATH . '/upload/files/chien_dich_cau_nguyen')
+				->addValidator(new Zend_Validate_File_Extension(array('jpg,gif,png')))
+				->addValidator(new Zend_Validate_File_FilesSize(array('min' => 1,
+						'max' => 10485760,
+						'bytestring' => true)))
+				->setDecorators(array(
+						'File',
+						'Errors',
+						array('Description', array('escape' => false, 'tag' => 'div', 'placement' => 'append')),
+						array('HtmlTag', array('tag' => 'td')),
+						array('Label', array('tag' => 'td')),
+						array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));		
 		
 		$statusOptions = array(
         "multiOptions" => Default_Model_Constraints::trang_thai());	
@@ -96,7 +111,7 @@ class Admin_Form_ChienDichCauNguyen extends Zend_Form{
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $link . '"'));
 			   
-		$this->addElements(array($tieu_de, $noi_dung, $file, $trang_thai, $submitCon, $submitExit, $cancel));						
+		$this->addElements(array($tieu_de, $noi_dung, $trang_thai, $noi_bat, $photo, $submitCon, $submitExit, $cancel));						
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(
             'decorators' => array(

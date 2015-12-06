@@ -27,3 +27,15 @@
 .voteembed .h3votetitle{font:700 12px/18px Tahoma; color:#9f0100; margin:5px 0px 0px 10px; padding:0px; height:10px;}
 .voteembed p{font-weight:bold;padding-left:7px;}
 .voteembed .bottomroom{width:98%; overflow:hidden}
+
+#global_header .container.header {
+	margin-top: 0px;
+    padding-top: 8px;
+}
+#global_page_default-index-index .swiper-container .swiper-pagination {
+	position: absolute;
+    right: -180px;
+    left: inherit;
+    top: 10px;
+    bottom: inherit;
+}

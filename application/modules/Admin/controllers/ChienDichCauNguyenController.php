@@ -38,14 +38,14 @@ class Admin_ChienDichCauNguyenController extends Khcn_Controller_Action_Admin
 		$db->beginTransaction();
 		try {
 			$chien_dich_cau_nguyen = $table->createRow();			
-			if($form->file->getFileName(null,false) != null){
+			if($form->photo->getFileName(null,false) != null){
 				//determine filename and extension 
-				$info = pathinfo($form->file->getFileName(null,false)); 
+				$info = pathinfo($form->photo->getFileName(null,false)); 
 				$filename = $info['filename']; 
 				$ext = $info['extension']?".".$info['extension']:""; 
 				//filter for renaming.. prepend with current time 
 				$file = time(). '_' . Default_Model_Functions::convert_vi_to_en($filename) .$ext;
-				$form->file->addFilter(new Zend_Filter_File_Rename(array( 
+				$form->photo->addFilter(new Zend_Filter_File_Rename(array( 
 								"target"=>$file, 
 								"overwrite"=>true)))
 						   ->addFilter(new Khcn_Filter_File_Resize(array(
@@ -53,8 +53,8 @@ class Admin_ChienDichCauNguyenController extends Khcn_Controller_Action_Admin
 								'height' => 720,
 								'keepRatio' => true,
 							)));
-				$form->getValue('file');
-				$chien_dich_cau_nguyen->ten_file = $file;
+				$form->getValue('photo');
+				$chien_dich_cau_nguyen->file = $file;
 			}
 			$values = $form->getValues();
 			$chien_dich_cau_nguyen -> setFromArray($values);
@@ -134,16 +134,16 @@ class Admin_ChienDichCauNguyenController extends Khcn_Controller_Action_Admin
 		$db = $table->getAdapter();
 		$db->beginTransaction();
 		try {	
-			if($form->file->getFileName(null,false) != null)
+			if($form->photo->getFileName(null,false) != null)
 			{
 				//determine filename and extension 
-				$info = pathinfo($form->file->getFileName(null,false)); 
+				$info = pathinfo($form->photo->getFileName(null,false)); 
 				$filename = $info['filename']; 
 				$ext = $info['extension']?".".$info['extension']:""; 
 				//filter for renaming.. prepend with current time 
 				$file = time(). '_' . Default_Model_Functions::convert_vi_to_en($filename) .$ext;
 				
-				$form->file->addFilter(new Zend_Filter_File_Rename(array( 
+				$form->photo->addFilter(new Zend_Filter_File_Rename(array( 
 								"target"=>$file, 
 								"overwrite"=>true)))
 						   ->addFilter(new Khcn_Filter_File_Resize(array(
@@ -151,8 +151,8 @@ class Admin_ChienDichCauNguyenController extends Khcn_Controller_Action_Admin
 									'height' => 720,
 									'keepRatio' => true,
 								)));
-				$form->getValue('file');	
-				$chien_dich_cau_nguyen->ten_file = $file;
+				$form->getValue('photo');	
+				$chien_dich_cau_nguyen->file = $file;
 			}
 			$values = $form->getValues();
 			$chien_dich_cau_nguyen -> setFromArray($values);

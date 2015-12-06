@@ -1,679 +1,824 @@
-<div class="container marketing fix">
-        
-<div class="row">
-    <div class="fixpdTop5 fixpdBt7 fixL vmcadszone" id="zone1" data="http://tracking.vietnamnetad.vn/Dout/tracking.ashx?action=0e9043c1-4f14-4cc5-ac07-b832adf03391&amp;ext=5580991b-9fb4-473a-9e0e-c49cd1cf7473&amp;domain=http://tintuconline.com.vn/cat0"><style> #vmccatfish {bottom: 0;left: 0;margin: 0 !important;width:320px;height:50px;background-color:#fff; padding: 0 !important;position: fixed;} .vmc_ads_viewport {position:relative;} .vadslogo{position:absolute;bottom:0;right:0;}</style><div style="width:980px; margin:auto;"><div class="vmc_ads_viewport" advid="2276" style="z-index:555; margin:0 0 5px 0; padding:0;width:468px; float:left;;float:left;"><iframe src="http://ads.vnnshop.vn/Pages/boxqc/boxbannerEmbed.aspx?top=3&amp;widthd=465&amp;heightd=90&amp;type=9&amp;source=vietnamnet.vn&amp;start=1&amp;end=3" style="width:468px; height:90px;overflow:hidden" scrolling="no" frameborder="0"></iframe><a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a></div><div class="vmc_ads_viewport" advid="2143" style="z-index:555; margin:0 0 5px 0; padding:0;width:468px; float:right;;float:right"><iframe src="http://ads.vnnshop.vn/Pages/boxqc/boxbannerEmbed.aspx?top=3&amp;widthd=465&amp;heightd=90&amp;type=9&amp;source=vietnamnet.vn&amp;start=4&amp;end=6" style="width:468px; height:90px;overflow:hidden" scrolling="no" frameborder="0"></iframe><a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a></div></div>
-</div>
-</div>
-
-
-        <div class="row">
-            <div class="span85">
-                <div class="row">
-                    <div class="span85">
-                        
-                        
-<div class="span61 fixpdr10">
-    
-    
-<script>
-    jssor_slider1_starter = function (containerId) {
-
-        var options = {
-            $AutoPlay: true,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-            $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-
-            $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-                $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                $SpacingX: 10,                                  //[Optional] Horizontal space between each item in pixel, default value is 0
-                $SpacingY: 10,                                  //[Optional] Vertical space between each item in pixel, default value is 0
-                $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-            }
-        };
-
-        var jssor_slider1 = new $JssorSlider$(containerId, options);
+<?php 
+	$this->headLink()->prependStylesheet($this->layout()->staticBaseUrl . '../application/templates/default/js/swiper/css/swiper.min.css');
+	$this->headScript()->appendFile($this->layout()->staticBaseUrl . '../application/templates/default/js/swiper/js/swiper.min.js');
+	$tinTucNoiBat = Khcn_Api::_()->default()->getTinTucNoiBat();
+	$countTinTucNoiBat = count($tinTucNoiBat);
+	$tinNongs = array_slice($tinTucNoiBat, 0, 7);
+	$tinHots = array_slice($tinTucNoiBat, 7, 2);
+	$slideshow = array_slice($tinTucNoiBat, 9);
+?>
+<style>
+	.AboxSlHot {
+		color: #0e76bc;
+		float: left;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 24px;
+		padding: 5px 0;
+		width: 448px;
+	}
+	.pboxslhot {
+		color: #222;
+		float: left;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 10px;
+		width: 448px;
+	}
+	.swiper-container {
+        width: 100%;
+        height: 100%;
     }
-    </script>
-<!-- Jssor Slider Begin -->
-<!-- You can move inline styles to css file or css block. -->
-<div class="itsimages">
-    <div id="slider2_container" style="width: 448px; height: 360px; overflow: hidden;">
-        
-        
-        <!-- bullet navigator container -->
-        
-        <div style="position: absolute; top: 0px; left: 0px; width: 448px; height: 360px; transform-origin: 0px 0px 0px; transform: scale(1);"><div class="" style="width: 448px; height: 360px; overflow: visible; display: block; position: relative; top: 0px; left: 0px;"><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 448px; height: 360px; overflow: hidden; z-index: 0;"><div debug-id="slide_container" style="position: absolute; z-index: 0; pointer-events: none; left: -448px; top: 0px;"></div></div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 448px; height: 360px; overflow: hidden; z-index: 0;" debug-id="slide-board"><div style="width: 448px; height: 360px; top: 0px; left: 0px; position: absolute; opacity: 0; background-color: rgb(0, 0, 0);"></div>
-            <div class="imgSlHot" debug-id="slide-0" style="width: 448px; height: 360px; top: 0px; left: -448px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="Sao Việt cực sexy với váy... khoét lưng" href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/30/12/58/vay.jpg" alt="Sao Việt cực sexy với váy... khoét lưng" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn" title="Sao Việt cực sexy với váy... khoét lưng" style="transform: perspective(2000px);">Sao Việt cực sexy với váy... khoét lưng</a><p class="pboxslhot" style="transform: perspective(2000px);">Nếu như váy xẻ đùi, khoét ngực khơi nét đẹp gợi cảm thì những bộ cánh khoét lưng cũng quyến rũ không kém.</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlHot" debug-id="slide-1" style="width: 448px; height: 360px; top: 0px; left: -448px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/30/20/24/congphuongkhongthesang.jpg" alt="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn" title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" style="transform: perspective(2000px);">"Quả ngọt" Công Phượng và giấc mơ còn dang dở của "bầu" Đức</a><p class="pboxslhot" style="transform: perspective(2000px);"> Mục tiêu đào tạo cầu thủ để "xuất khẩu" của "bầu" Đức đã có thành quả ban đầu khi Nguyễn Công Phượng được CLB Mito (J-League 2) mượn với giá 100.000 USD trong mùa 2016.
-</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlHot" debug-id="slide-2" style="width: 448px; height: 360px; top: 0px; left: -448px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/30/19/57/trangtien.jpg" alt="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn" title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" style="transform: perspective(2000px);">Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng</a><p class="pboxslhot" style="transform: perspective(2000px);">Phía sau ánh sáng thành công hào nhoáng của tập đoàn hàng hiệu lớn, có không ít chuyện thú vị về cuộc đời kinh doanh của ông Johnathan Hạnh Nguyễn</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlHot" debug-id="slide-3" style="width: 448px; height: 360px; top: 0px; left: 0px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/30/18/43/tu-tu.jpg" alt="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn" title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" style="transform: perspective(2000px);">Bố không cho tiền mua điện thoại, con trai uống thuốc độc</a><p class="pboxslhot" style="transform: perspective(2000px);">Được bố hứa cho 2,5 triệu đồng mua điện thoại nhưng sau đó chỉ đưa 1,5 triệu, tức giận thanh niên 23 tuổi uống thuốc cỏ tự tử.</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlHot" debug-id="slide-4" style="width: 448px; height: 360px; top: 0px; left: 448px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/30/01/06/thongminh.jpg" alt="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn" title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" style="transform: perspective(2000px);">Tiết lộ 5 cung Hoàng đạo "thông minh vốn sẵn tính trời"</a><p class="pboxslhot" style="transform: perspective(2000px);">Thông minh luôn có thể đem lại rất nhiều lợi thế cho mỗi người. Hãy cùng xem bạn có lọt top 5 cung Hoàng đạo thông minh nhất không nhé!</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlHot" debug-id="slide-5" style="width: 448px; height: 360px; top: 0px; left: -448px; position: absolute; overflow: hidden; transform: perspective(2000px);"><div class="fixborder" style="transform: perspective(2000px);"><span style="transform: perspective(2000px);"><a title="Xúc động với tình mẫu tử tuyệt vời của động vật" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/2015/09/29/16/58/dv.jpg" alt="Xúc động với tình mẫu tử tuyệt vời của động vật" style="transform: perspective(2000px);"></a></span> </div><a class="AboxSlHot" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" title="Xúc động với tình mẫu tử tuyệt vời của động vật" style="transform: perspective(2000px);">Xúc động với tình mẫu tử tuyệt vời của động vật</a><p class="pboxslhot" style="transform: perspective(2000px);">Tình yêu của cha mẹ dành cho con cái là vô bờ bến và thế giới động vật cũng không phải ngoại lệ.</p><div style="width: 448px; height: 360px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div>
-        </div><style>
-            .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av
-            {
-                filter: alpha(opacity=70);
-                opacity: .7;
-                overflow: hidden;
-                cursor: pointer;
-                border: #000 1px solid;
-            }
-            .imgSlHot img
-            {
-                width: 448px !important;
-                max-height: 252px !important;
-            }
-            .AboxSlHot
-            {
-                color: #0e76bc;
-                float: left;
-                font-size: 18px;
-                font-weight: bold;
-                line-height: 24px;
-                padding: 5px 0;
-                width: 448px;
-            }
-            
-            .pboxslhot
-            {
-                color: #222;
-                float: left;
-                font-size: 14px;
-                line-height: 18px;
-                margin-bottom: 10px;
-                width: 448px;
-            }
-            .jssorb01 div
-            {
-                background-color: #d3d3d3;
-            }
-            .acjssorb01 div:hover, .jssorb01 .av:hover
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .acjssorb01 .av
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .acjssorb01 .dn, .jssorb01 .dn:hover
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .jssorb01.acjssorb01
-            {
-                left: 315px !important;
-            }
-        </style><div u="navigator" class="jssorb01 acjssorb01" style="position: absolute; top: 12px; left: 163px; width: 122px; height: 12px;">
-            <!-- bullet navigator item prototype -->
-            
-        <div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 0px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 22px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 44px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 66px; top: 0px;" class="av">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 88px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 110px; top: 0px;" class="">
-            </div></div><script>
-            jssor_slider1_starter('slider2_container');
-        </script></div></div>
-    </div>
-</div>
-
-    <ul class="nav11">
-        <li> <span><a title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/45/lag_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f45%2flag.jpg&amp;width=96')" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" alt="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ">Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ</a><p>Phần lớn đàn ông của ngôi làng Peddakunta tử vong vì tai nạn giao thông khi chạy ngang qua quốc lộ.</p></div></li><li> <span><a title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/58/sn_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f58%2fsn.jpg&amp;width=96')" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" alt=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt"> 8 diễn viên nhí tiềm năng của màn ảnh Việt</a><p>Trọng Khang, Thanh Mỹ, Hoài Linh... là những những nhân tố mới hứa hẹn tiến xa trong thời gian tới.</p></div></li>
-    </ul>
-</div>
-<div class="span31 fixleft">
-    <div class="newhot newhots">
-        <span>TIN NÓNG </span>
-    </div>
-    <ul class="nav1">
-        <li> <span><a title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/16/56/38_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f16%2f56%2f38.jpg&amp;width=96')" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" alt="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu">Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu</a></div></li><li> <span><a title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/17/sinh_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f17%2fsinh.jpg&amp;width=96')" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" alt="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước">Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước</a></div></li><li> <span><a title="Lộ chi tiết khiến Công Phượng không thể sang Nhật " href="http://tintuconline.com.vn/trong-nuoc/lo-chi-tiet-khien-cong-phuong-khong-the-sang-nhat-p1047c1161n20150930153752744.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/31/congphuong%20(2)_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f31%2fcongphuong+(2).jpg&amp;width=96')" title="Lộ chi tiết khiến Công Phượng không thể sang Nhật " alt="Lộ chi tiết khiến Công Phượng không thể sang Nhật " border="0"></a></span> <div> <a href="http://tintuconline.com.vn/trong-nuoc/lo-chi-tiet-khien-cong-phuong-khong-the-sang-nhat-p1047c1161n20150930153752744.vnn" title="Lộ chi tiết khiến Công Phượng không thể sang Nhật ">Lộ chi tiết khiến Công Phượng không thể sang Nhật </a></div></li><li> <span><a title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/04/gaysoc_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f04%2fgaysoc.jpg&amp;width=96')" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" alt="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!">40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!</a></div></li><li> <span><a title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/46/tuanhung_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f46%2ftuanhung.jpg&amp;width=96')" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " alt="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " border="0"></a></span> <div> <a href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng ">Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng </a></div></li><li> <span><a title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/32/andam_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f32%2fandam.jpg&amp;width=96')" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" alt="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con">Những món ăn mẹ vẫn tưởng bổ mà hóa hại con</a></div></li><li> <span><a title="Xót xa cảnh 6 mẹ con sắp… quên mùi thịt" href="http://tintuconline.com.vn/thoi-su/xot-xa-canh-6-me-con-sap-quen-mui-thit-p0c1001n20150930143121649.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/30/xot-xa_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f30%2fxot-xa.jpg&amp;width=96')" title="Xót xa cảnh 6 mẹ con sắp… quên mùi thịt" alt="Xót xa cảnh 6 mẹ con sắp… quên mùi thịt" border="0"></a></span> <div> <a href="http://tintuconline.com.vn/thoi-su/xot-xa-canh-6-me-con-sap-quen-mui-thit-p0c1001n20150930143121649.vnn" title="Xót xa cảnh 6 mẹ con sắp… quên mùi thịt">Xót xa cảnh 6 mẹ con sắp… quên mùi thịt</a></div></li>
-    </ul>
-</div>
-
-                        
-                        <div class="span650 views">
-                            
-<div class="span380 fixmgtr10 boxtoancanh">
-    <h4>
-        <a href="http://tintuconline.com.vn/event.vnn" title="Toàn cảnh">Toàn cảnh</a></h4>
-    <div class="span185 fixpdr10">
-        <div class="fixborder"><span><a alt="Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc" href="http://tintuconline.com.vn/event/cai-chet-bi-an-cua-nu-doanh-nhan-ha-thuy-linh-o-trung-quoc-e182.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/12/Hathuylinh%20(2)_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f12%2fHathuylinh+(2).jpg&amp;width=213')" alt="Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc" border="0"></a></span></div><a href="http://tintuconline.com.vn/event/cai-chet-bi-an-cua-nu-doanh-nhan-ha-thuy-linh-o-trung-quoc-e182.vnn" class="aThread">Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc</a><a href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn" class="arelate" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc">Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc</a>
-    </div>
-    <div class="span185">
-        <div class="fixborder"><span><a alt="EVN thay đổi cách tính giá điện" href="http://tintuconline.com.vn/event/evn-thay-doi-cach-tinh-gia-dien-e181.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/23/11/11/giadien_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f23%2f11%2f11%2fgiadien.jpg&amp;width=213')" alt="EVN thay đổi cách tính giá điện" border="0"></a></span></div><a href="http://tintuconline.com.vn/event/evn-thay-doi-cach-tinh-gia-dien-e181.vnn" class="aThread">EVN thay đổi cách tính giá điện</a><a href="http://tintuconline.com.vn/thi-truong/chuyen-gia-phan-doi-gia-dien-dong-gia-p1034c1094n20150922160421151.vnn" class="arelate" title="Chuyên gia phản đối giá điện đồng giá">Chuyên gia phản đối giá điện đồng giá</a>
-    </div>
-</div>
-
-                            <div class="span265 fixleft">
-                                <div class="bgrr">
-                                    <div class="newhot">
-                                        <a href="http://tintuconline.com.vn/diem-nhin/p0c1159.vnn">Điểm nhìn</a>
-                                    </div>
-                                    
-<ul class="nav13">
-    <li>
-        <span><a title="Loay hoay tìm quốc phục" href="http://tintuconline.com.vn/diem-nhin/loay-hoay-tim-quoc-phuc-p0c1159n20150930113803747.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/11/37/32_126.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f11%2f37%2f32.jpg&amp;width=126')" title="Loay hoay tìm quốc phục" alt="Loay hoay tìm quốc phục" border="0"></a></span><div><a href="http://tintuconline.com.vn/diem-nhin/loay-hoay-tim-quoc-phuc-p0c1159n20150930113803747.vnn" title="Loay hoay tìm quốc phục">Loay hoay tìm quốc phục</a></div>
-    </li>
-</ul>
-
-                                </div>
-                                <div class="bgrr">
-                                    <div class="newhot">
-                                        <a href="http://tintuconline.com.vn/hot-face/p0c1158.vnn">HOT FACE</a>
-                                    </div>
-                                    
-                                    
-<ul class="nav13">
-    <li>
-        <span><a title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" href="http://tintuconline.com.vn/hot-face/dao-dien-victor-vu-tinh-cam-voi-dinh-ngoc-diep-la-that-p0c1158n20150930143216810.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/31/hoavang_126.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f31%2fhoavang.jpg&amp;width=126')" title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" alt="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" border="0"></a></span><div><a href="http://tintuconline.com.vn/hot-face/dao-dien-victor-vu-tinh-cam-voi-dinh-ngoc-diep-la-that-p0c1158n20150930143216810.vnn" title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'">Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'</a></div>
-    </li>
-</ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-<div class="span471 ">
-    <div class="lineRow">
-    </div>
-    <div class="boxThoisu">
-        <div>
-            <a href="http://tintuconline.com.vn/thoi-su/p0c1001.vnn" title="Thời sự">Thời sự</a>
-        </div>
-    </div>
-    <div class="span47 fixtop fixbdt fixmgt5">
-        <div class="fixborder"><span><a title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/18/43/tu-tu_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f18%2f43%2ftu-tu.jpg&amp;width=321')" title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" alt="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn" title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc">Bố không cho tiền mua điện thoại, con trai uống thuốc độc</a></h4><p>Được bố hứa cho 2,5 triệu đồng mua điện thoại nhưng sau đó chỉ đưa 1,5 triệu, tức giận thanh niên 23 tuổi uống ...</p>
-        <ul class="nav14">
-            <li><span><a title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" href="http://tintuconline.com.vn/thoi-su/vung-que-xon-xao-vu-be-gai-5-tuoi-nghi-bi-thieu-nien-14-tuoi-xam-hai-tinh-duc-p0c1001n20150930154000992.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/38/xam-hai_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f38%2fxam-hai.jpg&amp;width=96')" title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" alt="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" border="0"></a></span><div><a href="http://tintuconline.com.vn/thoi-su/vung-que-xon-xao-vu-be-gai-5-tuoi-nghi-bi-thieu-nien-14-tuoi-xam-hai-tinh-duc-p0c1001n20150930154000992.vnn" title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục">Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục</a></div></li><li><span><a title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" href="http://tintuconline.com.vn/thoi-su/vua-phat-hien-mot-hang-dong-moi-o-phong-nha-ke-bang-p0c1001n20150930153222460.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/31/hang-moi_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f31%2fhang-moi.jpg&amp;width=96')" title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" alt="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" border="0"></a></span><div><a href="http://tintuconline.com.vn/thoi-su/vua-phat-hien-mot-hang-dong-moi-o-phong-nha-ke-bang-p0c1001n20150930153222460.vnn" title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng">Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng</a></div></li><li><span><a title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/17/sinh_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f17%2fsinh.jpg&amp;width=96')" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" alt="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" border="0"></a></span><div><a href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước">Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước</a></div></li>
-        </ul>
-    </div>
-</div>
-
-                    
-                    
-<div class="span471 fixleft">
-    <div class="lineRow">
-    </div>
-    <div class="boxThoisu">
-        <div>
-            <a href="http://tintuconline.com.vn/kinh-doanh/p0c1034.vnn" title="Kinh doanh">Kinh doanh</a>
-        </div>
-        <ul class="nav10">
-            <li><a href="http://tintuconline.com.vn/thi-truong/p1034c1094.vnn" title="Thị trường">Thị trường</a></li><li><a href="http://tintuconline.com.vn/doanh-nghiep/p1034c1037.vnn" title="Doanh nghiệp">Doanh nghiệp</a></li><li><a href="http://tintuconline.com.vn/khoi-nghiep/p1034c1038.vnn" title="Khởi nghiệp">Khởi nghiệp</a></li>           
-        </ul>
-    </div>
-    <div class="span47 fixtop fixbdt fixmgt5">
-        <div class="fixborder"><span><a title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" href="http://tintuconline.com.vn/thi-truong/gia-gas-tang-10000-dongbinh-12-kg-tu-110-p1034c1094n20150930202120222.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/20/giaga_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f20%2fgiaga.jpg&amp;width=321')" title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" alt="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/thi-truong/gia-gas-tang-10000-dongbinh-12-kg-tu-110-p1034c1094n20150930202120222.vnn" title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10">Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10</a></h4><p>Hôm nay 30/9, một số doanh nghiệp gas tại TPHCM thông báo giá gas bán lẻ tới tay người tiêu dùng áp dụng từ ...</p>
-        <ul class="nav14">
-             <li><span><a title="Bánh trung thu 15.000 đồng bán ở hàng trà đá" href="http://tintuconline.com.vn/thi-truong/banh-trung-thu-15000-dong-ban-o-hang-tra-da-p1034c1094n20150930201305498.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/12/banhtrungthu_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f12%2fbanhtrungthu.jpg&amp;width=96')" title="Bánh trung thu 15.000 đồng bán ở hàng trà đá" alt="Bánh trung thu 15.000 đồng bán ở hàng trà đá" border="0"></a></span><div><a href="http://tintuconline.com.vn/thi-truong/banh-trung-thu-15000-dong-ban-o-hang-tra-da-p1034c1094n20150930201305498.vnn" title="Bánh trung thu 15.000 đồng bán ở hàng trà đá">Bánh trung thu 15.000 đồng bán ở hàng trà đá</a></div></li><li><span><a title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/19/57/trangtien_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f19%2f57%2ftrangtien.jpg&amp;width=96')" title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" alt="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" border="0"></a></span><div><a href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn" title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng">Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng</a></div></li><li><span><a title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/12/40/balinh_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f12%2f40%2fbalinh.jpg&amp;width=96')" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" alt="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" border="0"></a></span><div><a href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc">Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc</a></div></li>
-        </ul>
-    </div>
-</div>
-
-                </div>
-                <div class="row">
-                    
-<div class="span471 fixbgrboxsk fixmgt10">
-    <div class="boxsk">
-        <div>
-            <a href="http://tintuconline.com.vn/song-khoe/p0c1069.vnn">SỐNG KHỎE</a>
-        </div>
-    </div>
-    <div class="span47 boxsks">
-        <ul class="nav15">           
-            <li><span><a title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" href="http://tintuconline.com.vn/song-khoe/xu-ly-the-nao-khi-cho-tre-uong-nham-thuoc-tay-p0c1069n20150930154301937.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/41/thuoc_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f41%2fthuoc.jpg&amp;width=135')" title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" alt="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/xu-ly-the-nao-khi-cho-tre-uong-nham-thuoc-tay-p0c1069n20150930154301937.vnn" title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" class="askhoe">Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?</a></li><li><span><a title="Nghiền thuốc thành bột: Rất nguy hiểm" href="http://tintuconline.com.vn/song-khoe/nghien-thuoc-thanh-bot-rat-nguy-hiem-p0c1069n20150930151716286.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/16/nghien_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f16%2fnghien.jpg&amp;width=135')" title="Nghiền thuốc thành bột: Rất nguy hiểm" alt="Nghiền thuốc thành bột: Rất nguy hiểm" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nghien-thuoc-thanh-bot-rat-nguy-hiem-p0c1069n20150930151716286.vnn" title="Nghiền thuốc thành bột: Rất nguy hiểm" class="askhoe">Nghiền thuốc thành bột: Rất nguy hiểm</a></li><li><span><a title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/32/andam_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f32%2fandam.jpg&amp;width=135')" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" alt="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" class="askhoe">Những món ăn mẹ vẫn tưởng bổ mà hóa hại con</a></li><li><span><a title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " href="http://tintuconline.com.vn/song-khoe/muoi-tu-bien-va-nhung-ung-dung-trong-cham-soc-suc-khoe-p0c1069n20150930142915366.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/28/muoi_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f28%2fmuoi.jpg&amp;width=135')" title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " alt="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/muoi-tu-bien-va-nhung-ung-dung-trong-cham-soc-suc-khoe-p0c1069n20150930142915366.vnn" title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " class="askhoe">Muối từ biển và những ứng dụng trong chăm sóc sức khỏe </a></li><li><span><a title="Nghệ đen trị đầy bụng, ăn không tiêu " href="http://tintuconline.com.vn/song-khoe/nghe-den-tri-day-bung-an-khong-tieu-p0c1069n20150930142623407.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/25/nghe_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f25%2fnghe.jpg&amp;width=135')" title="Nghệ đen trị đầy bụng, ăn không tiêu " alt="Nghệ đen trị đầy bụng, ăn không tiêu " border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nghe-den-tri-day-bung-an-khong-tieu-p0c1069n20150930142623407.vnn" title="Nghệ đen trị đầy bụng, ăn không tiêu " class="askhoe">Nghệ đen trị đầy bụng, ăn không tiêu </a></li>            
-        </ul>
-        <div>
-            <ul class="nav16">
-                <li><a href="http://2sao.vn/">
-                    <img src="http://tintuconline.com.vn/images/logo2sao.png">
-                </a></li>
-                <li class="logottol"><a href="index.html">
-                    <img src="http://tintuconline.com.vn/images/logottol.png">
-                </a></li>
-                <li><a href="http://vietnamnet.vn/">
-                    <img src="http://tintuconline.com.vn/images/vland finnal(1).png">
-                </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-                    
-                    
-<div class="span471 fixleft">
-    <div class="lineRow">
-    </div>
-    <div class="boxThoisu">
-        <div>
-            <a href="http://tintuconline.com.vn/giai-tri/p0c1086.vnn" title="Giải trí">Giải trí</a>
-        </div>
-        <ul class="nav10">
-            <li><a href="http://tintuconline.com.vn/showbiz/p1086c1044.vnn" title="Showbiz">Showbiz</a></li><li><a href="http://tintuconline.com.vn/thoi-trang/p1086c1067.vnn" title="Thời trang">Thời trang</a></li><li><a href="http://tintuconline.com.vn/dien-anh/p1086c1046.vnn" title="Điện ảnh">Điện ảnh</a></li><li><a href="http://tintuconline.com.vn/am-nhac/p1086c1045.vnn" title="Âm nhạc">Âm nhạc</a></li>           
-        </ul>
-    </div>
-    <div class="span47 fixtop fixbdt fixmgt5">
-        <div class="fixborder"><span><a title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/46/tuanhung_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f46%2ftuanhung.jpg&amp;width=321')" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " alt="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng ">Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng </a></h4><p>Sau nhiều lùm xùm cá nhân, Tuấn Hưng "đánh tan" tin đồn khi tậu xe mới tiền tỷ. </p>
-        <ul class="nav14">
-             <li><span><a title="Sao Việt cực sexy với váy... khoét lưng" href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/12/58/vay_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f12%2f58%2fvay.jpg&amp;width=96')" title="Sao Việt cực sexy với váy... khoét lưng" alt="Sao Việt cực sexy với váy... khoét lưng" border="0"></a></span><div><a href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn" title="Sao Việt cực sexy với váy... khoét lưng">Sao Việt cực sexy với váy... khoét lưng</a></div></li><li><span><a title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/58/sn_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f58%2fsn.jpg&amp;width=96')" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" alt=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" border="0"></a></span><div><a href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt"> 8 diễn viên nhí tiềm năng của màn ảnh Việt</a></div></li><li><span><a title="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" href="http://tintuconline.com.vn/showbiz/bi-va-bom-hien-tuong-cua-bo-oi-minh-di-dau-the-2-mua-p1086c1044n20150930152808648.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/27/bibao_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f27%2fbibao.jpg&amp;width=96')" title="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" alt="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" border="0"></a></span><div><a href="http://tintuconline.com.vn/showbiz/bi-va-bom-hien-tuong-cua-bo-oi-minh-di-dau-the-2-mua-p1086c1044n20150930152808648.vnn" title="Bi và Bờm - " hiện="" tượng"="" của="" "bố="" ơi="" mình="" đi="" đâu="" thế?"="" 2="" mùa"="">Bi và Bờm - "hiện tượng" của "Bố ơi mình đi đâu thế?" 2 mùa</a></div></li>
-        </ul>
-    </div>
-</div>
-
-                    
-                </div>
-                <div class="row">
-                    
-<div class="lineRow">
-</div>
-<div class="span85 boxDSong">
-    <div class="boxDSongMenu">
-        <div>
-            <a href="http://tintuconline.com.vn/doi-song/p0c1087.vnn" title="Đời sống">Đời sống</a>
-        </div>
-        <ul class="nav101">
-            <li><a href="http://tintuconline.com.vn/gia-dinh/p1087c1073.vnn" title="Gia đình">Gia đình</a></li><li><a href="http://tintuconline.com.vn/tinh-yeu/p1087c1071.vnn" title="Tình yêu">Tình yêu</a></li><li><a href="http://tintuconline.com.vn/nhip-song-tre/p1087c1074.vnn" title="Nhịp sống trẻ">Nhịp sống trẻ</a></li><li><a href="http://tintuconline.com.vn/cong-so/p1087c1072.vnn" title="Công sở">Công sở</a></li>
-        </ul>
-    </div>
-    <div class="span85">
-        <div class="fixlineRow01">
-        </div>
-        <div class="row">
-            <div class="span47 fixpdt5">
-                <div class="fixborder"><span><a title="Cách giải phóng nỗi đau bị vợ phản bội " href="http://tintuconline.com.vn/gia-dinh/cach-giai-phong-noi-dau-bi-vo-phan-boi-p1087c1073n20150930145203068.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/51/phanboi_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f51%2fphanboi.jpg&amp;width=321')" title="Cách giải phóng nỗi đau bị vợ phản bội " alt="Cách giải phóng nỗi đau bị vợ phản bội " border="0"></a></span></div><h4 class="fixpdBt7 boxTheGioi"><a href="http://tintuconline.com.vn/gia-dinh/cach-giai-phong-noi-dau-bi-vo-phan-boi-p1087c1073n20150930145203068.vnn" title="Cách giải phóng nỗi đau bị vợ phản bội ">Cách giải phóng nỗi đau bị vợ phản bội </a></h4><p>Đàn ông hiếm người biết tha thứ cho “tội lỗi” của vợ, bởi họ không nhận ra được nguyên nhân sâu xa khiến cho ...</p>                
-            </div>
-            <div class="span472 fixleft">
-                <ul class="nav17">
-                    <li><span><a title="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" href="http://tintuconline.com.vn/gia-dinh/chieu-ha-hoa-con-nong-gian-cua-chong-chi-trong-vai-phut-p1087c1073n20150930153411458.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/33/hahoa_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f33%2fhahoa.jpg&amp;width=96')" title="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" alt="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" border="0"></a></span><div><a href="http://tintuconline.com.vn/gia-dinh/chieu-ha-hoa-con-nong-gian-cua-chong-chi-trong-vai-phut-p1087c1073n20150930153411458.vnn" title="Chiêu " hạ="" hỏa"="" cơn="" nóng="" giận="" của="" chồng="" chỉ="" trong="" vài="" phút"="">Chiêu "hạ hỏa" cơn nóng giận của chồng chỉ trong vài phút</a></div></li><li><span><a title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/04/gaysoc_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f04%2fgaysoc.jpg&amp;width=96')" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" alt="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" border="0"></a></span><div><a href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!">40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!</a></div></li><li><span><a title="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" href="http://tintuconline.com.vn/nhip-song-tre/nguoi-xem-tim-mat-vi-clip-nu-sinh-danh-ban-roi-lot-ao-giua-duong-p1087c1074n20150930152252108.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/22/danhghen_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f22%2fdanhghen.jpg&amp;width=96')" title="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" alt="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" border="0"></a></span><div><a href="http://tintuconline.com.vn/nhip-song-tre/nguoi-xem-tim-mat-vi-clip-nu-sinh-danh-ban-roi-lot-ao-giua-duong-p1087c1074n20150930152252108.vnn" title="Người xem " tím="" mặt"="" vì="" clip="" nữ="" sinh="" đánh="" bạn="" rồi="" lột="" áo="" giữa="" đường"="">Người xem "tím mặt" vì clip nữ sinh đánh bạn rồi lột áo giữa đường</a></div></li><li><span><a title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" href="http://tintuconline.com.vn/gia-dinh/con-om-nam-vien-chong-van-tranh-thu-di-voi-bo-p1087c1073n20150930143140572.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/30/namvien_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f30%2fnamvien.jpg&amp;width=96')" title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" alt="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" border="0"></a></span><div><a href="http://tintuconline.com.vn/gia-dinh/con-om-nam-vien-chong-van-tranh-thu-di-voi-bo-p1087c1073n20150930143140572.vnn" title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ">Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ</a></div></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-                    
-                </div>
-                <div class="row">
-                    <div class="span215 itemsbox fixmgtr12">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/buon-chuyen/p0c1079.vnn" title="Buôn chuyện">Buôn chuyện</a>
-</h3>
-<div><span><a title="Mẹ chồng ơi, đừng biến con thành người ngoài" href="http://tintuconline.com.vn/buon-chuyen/me-chong-oi-dung-bien-con-thanh-nguoi-ngoai-p0c1079n20150930084612581.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/08/45/mechong_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f08%2f45%2fmechong.jpg&amp;width=321')" title="Mẹ chồng ơi, đừng biến con thành người ngoài" alt="Mẹ chồng ơi, đừng biến con thành người ngoài" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/buon-chuyen/me-chong-oi-dung-bien-con-thanh-nguoi-ngoai-p0c1079n20150930084612581.vnn" title="Mẹ chồng ơi, đừng biến con thành người ngoài">Mẹ chồng ơi, đừng biến con thành người ngoài</a></h4><p></p>
-
-                        
-                    </div>
-                    <div class="span215 itemsbox ">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/di-an-choi/p0c1078.vnn" title="Đi - Ăn - Chơi">Đi - Ăn - Chơi</a>
-</h3>
-<div><span><a title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" href="http://tintuconline.com.vn/di-an-choi/ngay-ngat-voi-4-hon-dao-nho-hoang-so-it-biet-o-viet-nam-p0c1078n20150930145659687.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/54/dao_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f54%2fdao.jpg&amp;width=321')" title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" alt="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/di-an-choi/ngay-ngat-voi-4-hon-dao-nho-hoang-so-it-biet-o-viet-nam-p0c1078n20150930145659687.vnn" title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam">Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam</a></h4><p></p>
-
-                        
-                    </div>
-                    <div class="span215 itemsbox fixleft">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/lam-dep/p0c1068.vnn" title="Làm đẹp">Làm đẹp</a>
-</h3>
-<div><span><a title="12 cách mặc gợi cảm mà không phô trương" href="http://tintuconline.com.vn/lam-dep/12-cach-mac-goi-cam-ma-khong-pho-truong-p0c1068n20150930111743949.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/11/16/trevai1_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f11%2f16%2ftrevai1.jpg&amp;width=321')" title="12 cách mặc gợi cảm mà không phô trương" alt="12 cách mặc gợi cảm mà không phô trương" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/lam-dep/12-cach-mac-goi-cam-ma-khong-pho-truong-p0c1068n20150930111743949.vnn" title="12 cách mặc gợi cảm mà không phô trương">12 cách mặc gợi cảm mà không phô trương</a></h4><p></p>
-
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    
-<div class="lineRow">
-</div>
-<div class="span85 boxDSong">
-    <div class="boxDSongMenu">
-        <div>
-            <a href="http://tintuconline.com.vn/the-gioi/p0c1051.vnn" title="Thế giới">Thế giới</a>
-        </div>
-        <ul class="nav101">
-            <li><a href="http://tintuconline.com.vn/tin-tuc/p1051c1054.vnn" title="Tin tức">Tin tức</a></li><li><a href="http://tintuconline.com.vn/xfile/p1051c1053.vnn" title="X-File">X-File</a></li><li><a href="http://tintuconline.com.vn/chuyen-4-phuong/p1051c1052.vnn" title="Chuyện 4 phương">Chuyện 4 phương</a></li>
-        </ul>
-    </div>
-    <div class="span85">
-        <div class="fixlineRow01">
-        </div>
-        <div class="row">
-            <div class="span47 fixpdt5">
-                <div class="fixborder"><span><a title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" href="http://tintuconline.com.vn/chuyen-4-phuong/nu-sinh-14-tuoi-bi-danh-da-man-suot-3-tieng-dong-ho-p1051c1052n20150930094958956.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/09/48/danh_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f09%2f48%2fdanh.jpg&amp;width=321')" title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" alt="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" border="0"></a></span></div><h4 class="fixpdBt7 boxTheGioi"><a href="http://tintuconline.com.vn/chuyen-4-phuong/nu-sinh-14-tuoi-bi-danh-da-man-suot-3-tieng-dong-ho-p1051c1052n20150930094958956.vnn" title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ">Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ</a></h4><p>Trong clip, có một bé gái chưa rõ danh tính đã tát Li Xiaoyan 32 lần chỉ trong vòng 99 giây</p>                
-            </div>
-            <div class="span472 fixleft">
-                <ul class="nav17">
-                    <li><span><a title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/45/lag_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f45%2flag.jpg&amp;width=96')" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" alt="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" border="0"></a></span><div><a href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ">Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ</a></div></li><li><span><a title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" href="http://tintuconline.com.vn/chuyen-4-phuong/co-be-15-tuoi-lam-trau-bo-ngoai-duong-pho-de-kiem-tien-cuu-cha-p1051c1052n20150930003342791.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/00/32/trau_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f00%2f32%2ftrau.jpg&amp;width=96')" title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" alt="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" border="0"></a></span><div><a href="http://tintuconline.com.vn/chuyen-4-phuong/co-be-15-tuoi-lam-trau-bo-ngoai-duong-pho-de-kiem-tien-cuu-cha-p1051c1052n20150930003342791.vnn" title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha">Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha</a></div></li><li><span><a title="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" href="http://tintuconline.com.vn/chuyen-4-phuong/phai-dep-me-met-chang-nam-lun-co-bap-cuon-cuon-p1051c1052n20150930143450283.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/33/chag_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f33%2fchag.jpg&amp;width=96')" title="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" alt="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" border="0"></a></span><div><a href="http://tintuconline.com.vn/chuyen-4-phuong/phai-dep-me-met-chang-nam-lun-co-bap-cuon-cuon-p1051c1052n20150930143450283.vnn" title="Phái đẹp mê mệt chàng " nấm="" lùn"="" cơ="" bắp="" cuồn="" cuộn"="">Phái đẹp mê mệt chàng "nấm lùn" cơ bắp cuồn cuộn</a></div></li><li><span><a title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" href="http://tintuconline.com.vn/chuyen-4-phuong/nguoi-mau-bikini-nhan-nheo-nhu-ba-gia-o-tuoi-39-p1051c1052n20150930143017470.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/29/xapxe_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f29%2fxapxe.jpg&amp;width=96')" title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" alt="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" border="0"></a></span><div><a href="http://tintuconline.com.vn/chuyen-4-phuong/nguoi-mau-bikini-nhan-nheo-nhu-ba-gia-o-tuoi-39-p1051c1052n20150930143017470.vnn" title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39">Người mẫu bikini nhăn nheo như bà già ở tuổi 39</a></div></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-                    
-                </div>
-                <!--Box giáo dục-->
-                <div class="row">
-                    
-<div class="lineRow">
-</div>
-<div class="span85 boxDSong">
-    <div class="boxDSongMenu">
-        <div>
-            <a href="http://tintuconline.com.vn/giao-duc/p0c1092.vnn" title="Giáo dục">Giáo dục</a>
-        </div>
-        <ul class="nav101">
-            <li><a href="http://tintuconline.com.vn/gia-tri/p1092c1162.vnn" title="Giá trị">Giá trị</a></li><li><a href="http://tintuconline.com.vn/ky-nang/p1092c1163.vnn" title="Kỹ năng">Kỹ năng</a></li><li><a href="http://tintuconline.com.vn/du-hoc/p1092c1164.vnn" title="Du học">Du học</a></li>            
-        </ul>
-    </div>
-    <div class="span85">
-        <div class="fixlineRow01 fixmgbt10">
-        </div>
-        <div class="row">
-            <div class="span215 itemsbox fixmgtr12"><div><span><a title="Luyện thói quen tốt cho con từ những ngày đầu tiên" href="http://tintuconline.com.vn/ky-nang/luyen-thoi-quen-tot-cho-con-tu-nhung-ngay-dau-tien-p1092c1163n20150930082625310.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/08/22/30_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f08%2f22%2f30.jpg&amp;width=213')" title="Luyện thói quen tốt cho con từ những ngày đầu tiên" alt="Luyện thói quen tốt cho con từ những ngày đầu tiên" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/ky-nang/luyen-thoi-quen-tot-cho-con-tu-nhung-ngay-dau-tien-p1092c1163n20150930082625310.vnn" title="Luyện thói quen tốt cho con từ những ngày đầu tiên">Luyện thói quen tốt cho con từ những ngày đầu tiên</a></h4></div><div class="span215 itemsbox fixmgtr12"><div><span><a title="Những thói quen cần thiết giúp trẻ trở thành người giàu có" href="http://tintuconline.com.vn/giao-duc/nhung-thoi-quen-can-thiet-giup-tre-tro-thanh-nguoi-giau-co-p0c1092n20150930164850491.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/16/47/37_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f16%2f47%2f37.jpg&amp;width=213')" title="Những thói quen cần thiết giúp trẻ trở thành người giàu có" alt="Những thói quen cần thiết giúp trẻ trở thành người giàu có" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/giao-duc/nhung-thoi-quen-can-thiet-giup-tre-tro-thanh-nguoi-giau-co-p0c1092n20150930164850491.vnn" title="Những thói quen cần thiết giúp trẻ trở thành người giàu có">Những thói quen cần thiết giúp trẻ trở thành người giàu có</a></h4></div><div class="span215 itemsbox fixmgtr12"><div><span><a title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/16/56/38_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f16%2f56%2f38.jpg&amp;width=213')" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" alt="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu">Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu</a></h4></div>           
-        </div>
-    </div>
-</div>
-
-                </div>
-                <!--Box Công nghệ-->
-                <div class="row">
-                    
-<div class="lineRow">
-</div>
-<div class="span85 boxDSong">
-    <div class="boxDSongMenu">
-        <div>
-            <a href="http://tintuconline.com.vn/cong-nghe/p0c1056.vnn" title="Công nghệ">Công nghệ</a>
-        </div>
-    </div>
-    <div class="span85">
-        <div class="fixlineRow01 fixmgbt10">
-        </div>
-        <div class="row">
-            <div class="span215 itemsbox fixmgtr12"><div><span><a title="Nhiều người Việt ác cảm với iPhone?" href="http://tintuconline.com.vn/cong-nghe/nhieu-nguoi-viet-ac-cam-voi-iphone-p0c1056n20150930201800401.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/16/iPhone6S_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f16%2fiPhone6S.jpg&amp;width=213')" title="Nhiều người Việt ác cảm với iPhone?" alt="Nhiều người Việt ác cảm với iPhone?" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/nhieu-nguoi-viet-ac-cam-voi-iphone-p0c1056n20150930201800401.vnn" title="Nhiều người Việt ác cảm với iPhone?">Nhiều người Việt ác cảm với iPhone?</a></h4></div><div class="span215 itemsbox fixmgtr12"><div><span><a title="Cách tắt tính năng tự chạy video của Facebook" href="http://tintuconline.com.vn/cong-nghe/cach-tat-tinh-nang-tu-chay-video-cua-facebook-p0c1056n20150930195312486.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/19/52/anh5_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f19%2f52%2fanh5.jpg&amp;width=213')" title="Cách tắt tính năng tự chạy video của Facebook" alt="Cách tắt tính năng tự chạy video của Facebook" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/cach-tat-tinh-nang-tu-chay-video-cua-facebook-p0c1056n20150930195312486.vnn" title="Cách tắt tính năng tự chạy video của Facebook">Cách tắt tính năng tự chạy video của Facebook</a></h4></div><div class="span215 itemsbox fixmgtr12"><div><span><a title="Những status phản cảm và bị ghét nhất trên Facebook" href="http://tintuconline.com.vn/cong-nghe/nhung-status-phan-cam-va-bi-ghet-nhat-tren-facebook-p0c1056n20150929225328185.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/29/22/52/fb_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f29%2f22%2f52%2ffb.jpg&amp;width=213')" title="Những status phản cảm và bị ghét nhất trên Facebook" alt="Những status phản cảm và bị ghét nhất trên Facebook" border="0"></a></span></div><h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/nhung-status-phan-cam-va-bi-ghet-nhat-tren-facebook-p0c1056n20150929225328185.vnn" title="Những status phản cảm và bị ghét nhất trên Facebook">Những status phản cảm và bị ghét nhất trên Facebook</a></h4></div>
-        </div>
-    </div>
-</div>
-
-                </div>
-                <div class="row">
-                    <div class="fixBoxEmtry">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span215 itemsbox fixmgtr12">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/the-thao/p0c1047.vnn" title="Thể thao">Thể thao</a>
-</h3>
-<div class="fixborder"><span><a title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/24/congphuongkhongthesang_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f24%2fcongphuongkhongthesang.jpg&amp;width=213')" title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" alt="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn" title="" quả="" ngọt"="" công="" phượng="" và="" giấc="" mơ="" còn="" dang="" dở="" của="" "bầu"="" Đức"="">"Quả ngọt" Công Phượng và giấc mơ còn dang dở của "bầu" Đức</a></h4>
-<ul class="nav18">
-    <li><div><a href="http://tintuconline.com.vn/quoc-te/messi-chan-thuong-ronaldo-huong-toi-sieu-ky-luc-p1047c1048n20150930202126836.vnn" title="Messi chấn thương, Ronaldo hướng tới “siêu kỷ lục”">Messi chấn thương, Ronaldo hướng tới “siêu kỷ lục”</a></div></li><li><div><a href="http://tintuconline.com.vn/hau-truong/goc-cua-sao-309-sieu-mau-nga-tung-‘anh-nong’-dong-vien-james-rodriguez-p1047c1049n20150930201907840.vnn" title="Góc của Sao (30.9): Siêu mẫu Nga tung ‘ảnh nóng’ động viên James Rodriguez">Góc của Sao (30.9): Siêu mẫu Nga tung ‘ảnh nóng’ động viên ...</a></div></li><li><div><a href="http://tintuconline.com.vn/trong-nuoc/lo-chi-tiet-khien-cong-phuong-khong-the-sang-nhat-p1047c1161n20150930153752744.vnn" title="Lộ chi tiết khiến Công Phượng không thể sang Nhật ">Lộ chi tiết khiến Công Phượng không thể sang Nhật </a></div></li><li><div><a href="http://tintuconline.com.vn/video/soc-trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu-p0c1085n20150930152131861.vnn" title="Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ">Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ</a></div></li>    
-</ul>
-
-                        
-                    </div>
-                    <div class="span215 itemsbox ">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/phap-luat/p0c1002.vnn" title="Pháp luật">Pháp luật</a>
-</h3>
-<div class="fixborder"><span><a title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" href="http://tintuconline.com.vn/phap-luat/hanh-trinh-pha-vu-an-thi-the-trong-bao-nylon-o-mien-tay-p0c1002n20150930185209147.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/18/49/1_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f18%2f49%2f1.jpg&amp;width=213')" title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" alt="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/phap-luat/hanh-trinh-pha-vu-an-thi-the-trong-bao-nylon-o-mien-tay-p0c1002n20150930185209147.vnn" title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây">Hành trình phá vụ án thi thể trong bao nylon ở miền Tây</a></h4>
-<ul class="nav18">
-    <li><div><a href="http://tintuconline.com.vn/thoi-su/ke-giet-4-nguoi-than-nhien-cuoi-truoc-gio-den-toi-p0c1001n20150930112335699.vnn" title="Kẻ giết 4 người thản nhiên cười trước giờ đền tội">Kẻ giết 4 người thản nhiên cười trước giờ đền tội</a></div></li><li><div><a href="http://tintuconline.com.vn/phap-luat/lo-man-kich-lam-nguoi-vo-dung-cam-dem-cuoi-nam-p0c1002n20150930103445109.vnn" title="Lộ màn kịch làm người vợ " dũng="" cảm"="" đêm="" cuối="" năm"="">Lộ màn kịch làm người vợ "dũng cảm" đêm cuối năm</a></div></li><li><div><a href="http://tintuconline.com.vn/thoi-su/tuyen-tu-hinh-ke-giet-4-nguoi-o-nghe-an-p0c1001n20150930094514458.vnn" title="Tuyên tử hình kẻ giết 4 người ở Nghệ An">Tuyên tử hình kẻ giết 4 người ở Nghệ An</a></div></li><li><div><a href="http://tintuconline.com.vn/phap-luat/nhieu-quy-ba-dinh-lua-chang-trai-ngoai-quoc-p0c1002n20150930064505917.vnn" title="Nhiều quý bà dính lừa chàng trai ngoại quốc">Nhiều quý bà dính lừa chàng trai ngoại quốc</a></div></li>    
-</ul>
-
-                        
-                    </div>
-                    <div class="span215 itemsbox fixleft">
-                        
-<h3 class="fixmgbt5">
-    <a href="http://tintuconline.com.vn/v-quiz/p0c1160.vnn" title="V-quiz">V-quiz</a>
-</h3>
-<div class="fixborder"><span><a title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/01/06/thongminh_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f01%2f06%2fthongminh.jpg&amp;width=213')" title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" alt="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" border="0"></a></span></div><h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn" title="Tiết lộ 5 cung Hoàng đạo " thông="" minh="" vốn="" sẵn="" tính="" trời""="">Tiết lộ 5 cung Hoàng đạo "thông minh vốn sẵn tính trời"</a></h4>
-<ul class="nav18">
-    <li><div><a href="http://tintuconline.com.vn/v-quiz/top-5-con-giap-nam-coi-gia-dinh-la-so-1-p0c1160n20150929140539162.vnn" title="Top 5 con giáp nam coi gia đình là số 1">Top 5 con giáp nam coi gia đình là số 1</a></div></li><li><div><a href="http://tintuconline.com.vn/v-quiz/top-5-co-nang-hoang-dao-khien-dan-ong-me-met-p0c1160n20150928143755840.vnn" title="Top 5 cô nàng Hoàng đạo khiến đàn ông " mê="" mệt""="">Top 5 cô nàng Hoàng đạo khiến đàn ông "mê mệt"</a></div></li><li><div><a href="http://tintuconline.com.vn/v-quiz/diem-danh-5-cung-hoang-dao-nuoc-den-chan-moi-nhay-p0c1160n20150925104054117.vnn" title="Điểm danh 5 cung Hoàng đạo " nước="" đến="" chân="" mới="" nhảy""="">Điểm danh 5 cung Hoàng đạo "nước đến chân mới nhảy"</a></div></li><li><div><a href="http://tintuconline.com.vn/v-quiz/diem-mat-top-5-cung-hoang-dao-sinh-ra-de-giau-co-p0c1160n20150924100448222.vnn" title="" Điểm="" mặt"="" top="" 5="" cung="" hoàng="" đạo="" sinh="" ra="" để="" giàu="" có"="">"Điểm mặt" top 5 cung Hoàng đạo sinh ra để giàu có</a></div></li>    
-</ul>
-
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span85">
-                        <div style="width: 100%; float: left; margin: 10px 0; padding-bottom: 0;">
-                            <div class="lineRow">
-                            </div>
-                            <p style="margin: 0; background: url('../public/upload/2sao.vn/images/dienanh.png') no-repeat scroll left 0 transparent;
-                                height: 32px; float: left; width: 100%;">
-                                <a href="http://2sao.vn/" class="ttolalink" target="_blank">2Sao</a></p>
-                            <div id="divClip" class="ttolline2sao"><div style="width:100%;float:left; background-color:#ededed; padding-top: 3px;"><div style="width:651px; margin:0 auto; padding-left:10px;" class="clipEmbed ttolclipEmbed"><div><div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/sao/con-trai-khanh-thi-duoc-dua-ve-tham-ong-ba-noi-p0c1000n20150930201434291.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/22/15/ok.jpg"></a></div><p><a target="_blank" href="http://2sao.vn/sao/con-trai-khanh-thi-duoc-dua-ve-tham-ong-ba-noi-p0c1000n20150930201434291.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">Con trai Khánh Thi được đưa về thăm ông bà nội?</a></p></div><div><div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/gioi-tre/hot-girl-tra-sua-bat-ngo-cuoi-dai-gia-tai-uc-p0c1049n20150930222417571.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/22/24/resize7041746131634528ava.jpg"></a></div><p><a target="_blank" href="http://2sao.vn/gioi-tre/hot-girl-tra-sua-bat-ngo-cuoi-dai-gia-tai-uc-p0c1049n20150930222417571.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">“Hot girl trà sữa” bất ngờ cưới đại gia tại Úc</a></p></div><div><div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/sao/cuoc-song-sau-anh-den-san-khau-cua-cac-ba-me-bim-sua-v-biz-p0c1000n20150929120138360.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/06/59/ava.jpg"></a></div><p><a target="_blank" href="http://2sao.vn/sao/cuoc-song-sau-anh-den-san-khau-cua-cac-ba-me-bim-sua-v-biz-p0c1000n20150929120138360.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">Cuộc sống sau ánh đèn sân khấu của các "bà mẹ bỉm sữa" V-biz</a></p></div></div></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="span4 fixleft  ">
-                <div class="row fixpdBt7">
-                    
-<div class="span205 icsendUser">
-    <a href="http://tintuconline.com.vn/upload.vnn">
-        <img src="http://tintuconline.com.vn/Images/docgiaguibaiviet.gif" alt="Độc giả gửi bài viết"></a>
-</div>
-
-                    <div class="span1 icRss">
-                        <a href="http://tintuconline.com.vn/rss.vnn" title="RSS">RSS</a>
-                    </div>
-                </div>
-                <div class="row">
-                    
- <div class="vmcadszone" id="data67" data="http://tracking.vietnamnetad.vn/Dout/tracking.ashx?action=0e9043c1-4f14-4cc5-ac07-b832adf03391&amp;ext=8e269091-a362-4b97-a59d-9c122d4dc25a&amp;domain=http://tintuconline.com.vn/cat0"><div class="vmc_ads_viewport" advid="2332" style="z-index:555; margin:0 0 0px 0; padding:0;width:300px;"><iframe id="ifr" width="300" height="250" src="http://img.vietnamnetad.vn/html/2015/09/mobifone/300x250_mobifone.html" marginwidth="0" allowtransparency="true" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe><a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a></div>
-<div class="vmc_ads_viewport" advid="1053" style="z-index:555; margin:0 0 0px 0; padding:0;width:300px;">
-<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div style="display: none" id="__document_write_ajax_div-22"></div>
-<!-- Google adsend_VNN_300x250 -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0771410550134874" data-ad-slot="7487373184"></ins>
-<div style="display: none" id="__document_write_ajax_div-23"></div>
-<a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a></div>
-<div style="display: none" id="__document_write_ajax_div-15"></div><div style="display: none" id="__document_write_ajax_div-16"></div><div style="display: none" id="__document_write_ajax_div-17"></div>
-</div>
- 
-
-                </div>
-                <div class="row">
-                    
-<div class="itVideo">
-    <h4 class="icvideo fixpdTop0">
-        <a href="http://tintuconline.com.vn/video/p0c1085.vnn">VIDEO</a></h4>
-    <div id="videoDeck_wrapper" style="position: relative; width: 300px; height: 240px;"><object type="application/x-shockwave-flash" data="http://clip.vietnamnetjsc.vn/Images/swfplayer.swf" width="100%" height="100%" bgcolor="#000000" id="videoDeck" name="videoDeck" tabindex="0"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="seamlesstabbing" value="true"><param name="wmode" value="opaque"><param name="flashvars" value="netstreambasepath=file%3A%2F%2F%2FC%3A%2FUsers%2FJames%2FDesktop%2Ftin%2520tuc%2520online%2Ftintuconline%2Ftintuconline.com.vn%2Findex.html&amp;id=videoDeck&amp;className=videoDeck&amp;starttime=0&amp;autostart=false&amp;skin=%2FImages%2Fnewtubedark%2Fnewtubedark.xml&amp;image=..%2Fttol.vietnamnetjsc.vn%2F2015%2F09%2F30%2F15%2F20%2Ftrithuc.jpg&amp;file=http%3A%2F%2Fttol.vietnamnetjsc.vn%2F2015%2F09%2F30%2F15%2F20%2FSoc-Trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu.mp4&amp;plugins=http%3A%2F%2Fplugins.longtailvideo.com%2F5%2Fova%2Fova-jw.swf&amp;ova.canFireEventAPICalls=true&amp;ova.ads=%5B%5BJSON%5D%5D%7B%22skipAd%22%3A%7B%22enabled%22%3A%22true%22%2C%22minimumAdDuration%22%3A6%2C%22showAfterSeconds%22%3A3%2C%22image%22%3A%22http%3A%2F%2Fclip.vietnamnetjsc.vn%2FImages%2Fskip-ad.png%22%2C%22width%22%3A75%2C%22height%22%3A20%7D%2C%22schedule%22%3A%5B%7B%22position%22%3A%22pre-roll%22%2C%22tag%22%3A%22http%3A%2F%2Fclient.vads.net.vn%2Fvast.ashx%3Fflash%3Dtrue%26posid%3D23%26catid%3D0%26vnncatname%3Dhttp%3A%2F%2Ftintuconline.com.vn%2Fcat1085%26webid%3D17%26width%3D300%26height%3D385%26json%3Dtrue%26items%3D4%26ref%3Dhttp%253A%252F%252Fvietnamnet.vn%252F%26host%3Dvietnamnet.vn%26url%3Dhttp%253A%252F%252Fvietnamnet.vn%252F%26iframe%3Dfalse%26time%3D815%26d%3DWed%20Sep%2030%202015%2022%3A30%3A22%20GMT%2B0700%20(SE%20Asia%20Standard%20Time)%22%7D%5D%7D&amp;ova.pluginmode=HYBRID&amp;controlbar.position=bottom&amp;playlist.position=none&amp;playlist.size=0&amp;logo.file=http%3A%2F%2Fvietnamnettv.vn%2FImages%2Flogo-player.png&amp;logo.link=http%3A%2F%2Fvietnamnettv.vn&amp;logo.hide=false&amp;logo.position=top-left"></object></div>
-    <a href="http://tintuconline.com.vn/video/soc-trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu-p0c1085n20150930152131861.vnn" class="tvideo" title="Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ">Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ</a>
-    <ul class="nav12">
-        <li><span><a title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" href="http://tintuconline.com.vn/video/meo-hoc-thuoc-bang-cuu-chuong-9-danh-cho-cac-be-p0c1085n20150930145649609.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/56/cuoi_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f56%2fcuoi.jpg&amp;width=96')" title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" alt="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" border="0"></a></span><div><a href="http://tintuconline.com.vn/video/meo-hoc-thuoc-bang-cuu-chuong-9-danh-cho-cac-be-p0c1085n20150930145649609.vnn" title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé">Mẹo học thuộc bảng cửu chương 9 dành cho các bé</a></div></li><li><span><a title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" href="http://tintuconline.com.vn/video/clip-9x-nguoi-viet-cong-khai-toan-bo-qua-trinh-chuyen-gioi-tu-nu-sang-nam-p0c1085n20150930150402884.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/03/choang_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f03%2fchoang.jpg&amp;width=96')" title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" alt="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" border="0"></a></span><div><a href="http://tintuconline.com.vn/video/clip-9x-nguoi-viet-cong-khai-toan-bo-qua-trinh-chuyen-gioi-tu-nu-sang-nam-p0c1085n20150930150402884.vnn" title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam">Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam</a></div></li><li><span><a title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" href="http://tintuconline.com.vn/video/dan-mang-tranh-cai-thi-sinh-hoa-hau-hvvn-vi-minh-giong-cho-p0c1085n20150930141440221.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/14/lacho_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f14%2flacho.jpg&amp;width=96')" title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" alt="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" border="0"></a></span><div><a href="http://tintuconline.com.vn/video/dan-mang-tranh-cai-thi-sinh-hoa-hau-hvvn-vi-minh-giong-cho-p0c1085n20150930141440221.vnn" title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó">Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó</a></div></li>
-    </ul>
-</div>
-
-                </div>
-                <!--Box Slide Image-->
-                <div class="row">
-                    
-<script>
-    jssor_slider1_starter = function (containerId) {
-
-        var options = {
-            $AutoPlay: true,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-            $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-
-            $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-                $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                $SpacingX: 10,                                  //[Optional] Horizontal space between each item in pixel, default value is 0
-                $SpacingY: 10,                                  //[Optional] Vertical space between each item in pixel, default value is 0
-                $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-            }
-        };
-
-        var jssor_slider1 = new $JssorSlider$(containerId, options);
+    .swiper-slide {
+		width: 448px;
+		height: 360px;
+		overflow: hidden;
+		transform: perspective(2000px);
     }
-    </script>
-<!-- Jssor Slider Begin -->
-<!-- You can move inline styles to css file or css block. -->
-<div class="itsimages">
-    <a href="http://tintuconline.com.vn/photo/p0c1084.vnn" class="APhoto">PHOTO</a>
-    <div class="lineRow1">
-    </div>
-    <h3 class="fixpdTop0">
-    </h3>
-    <div id="slider1_container" style="width: 300px; height: 280px; overflow: hidden;">
-        
-        
-        <!-- bullet navigator container -->
-        
-        <div style="position: absolute; top: 0px; left: 0px; width: 300px; height: 280px; transform-origin: 0px 0px 0px; transform: scale(1);"><div class="" style="width: 300px; height: 280px; overflow: visible; display: block; position: relative; top: 0px; left: 0px;"><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 40px; width: 300px; height: 280px; overflow: hidden; z-index: 0;"><div debug-id="slide_container" style="position: absolute; z-index: 0; pointer-events: none; left: -300px; top: 0px;"></div></div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 40px; width: 300px; height: 280px; overflow: hidden; z-index: 0;" debug-id="slide-board"><div style="width: 300px; height: 280px; top: 0px; left: 0px; position: absolute; opacity: 0; background-color: rgb(0, 0, 0);"></div>
-            <div class="imgSlide" debug-id="slide-0" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);"><a title="Xúc động với tình mẫu tử tuyệt vời của động vật" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/29/16/58/dv_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f29%2f16%2f58%2fdv.jpg&amp;width=300')" title="Xúc động với tình mẫu tử tuyệt vời của động vật" alt="Xúc động với tình mẫu tử tuyệt vời của động vật" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" title="Xúc động với tình mẫu tử tuyệt vời của động vật" style="transform: perspective(2000px);">Xúc động với tình mẫu tử tuyệt vời của động vật</a><div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlide" debug-id="slide-1" style="width: 300px; height: 280px; top: 0px; left: 0px; position: absolute; overflow: hidden; transform: perspective(2000px);"><a title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" href="http://tintuconline.com.vn/photo/kim-ly-dien-trai-lanh-lung-hut-hon-phai-nu-p0c1084n20150930142122592.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/20/1j_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f20%2f1j.jpg&amp;width=300')" title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" alt="Kim Lý điển trai lạnh lùng hút hồn phái nữ" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/kim-ly-dien-trai-lanh-lung-hut-hon-phai-nu-p0c1084n20150930142122592.vnn" title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" style="transform: perspective(2000px);">Kim Lý điển trai lạnh lùng hút hồn phái nữ</a><div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlide" debug-id="slide-2" style="width: 300px; height: 280px; top: 0px; left: 300px; position: absolute; overflow: hidden; transform: perspective(2000px);"><a title="10 Đường Tăng điển trai nhất màn ảnh" href="http://tintuconline.com.vn/photo/10-duong-tang-dien-trai-nhat-man-anh-p0c1084n20150930141746438.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/14/1f_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f14%2f1f.jpg&amp;width=300')" title="10 Đường Tăng điển trai nhất màn ảnh" alt="10 Đường Tăng điển trai nhất màn ảnh" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/10-duong-tang-dien-trai-nhat-man-anh-p0c1084n20150930141746438.vnn" title="10 Đường Tăng điển trai nhất màn ảnh" style="transform: perspective(2000px);">10 Đường Tăng điển trai nhất màn ảnh</a><div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlide" debug-id="slide-3" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);"><a title="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" href="http://tintuconline.com.vn/photo/ngan-ngo-ngam-eo-con-kien-cua-hoa-hau-ky-duyen-p0c1084n20150930100128836.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/10/00/2a_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f10%2f00%2f2a.jpg&amp;width=300')" title="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" alt="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/ngan-ngo-ngam-eo-con-kien-cua-hoa-hau-ky-duyen-p0c1084n20150930100128836.vnn" title="Ngẩn ngơ ngắm eo " con="" kiến"="" của="" hoa="" hậu="" kỳ="" duyên"="" style="transform: perspective(2000px);">Ngẩn ngơ ngắm eo "con kiến" của hoa hậu Kỳ Duyên</a><div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div><div class="imgSlide" debug-id="slide-4" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);"><a title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" href="http://tintuconline.com.vn/photo/nguoi-vo-nong-bong-tung-khong-dam-cong-bo-cua-dang-khoi-p0c1084n20150930095631624.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/09/54/3s_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f09%2f54%2f3s.jpg&amp;width=300')" title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" alt="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/nguoi-vo-nong-bong-tung-khong-dam-cong-bo-cua-dang-khoi-p0c1084n20150930095631624.vnn" title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" style="transform: perspective(2000px);">Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi</a><div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div></div>
-        </div><style>
-            /*
-            .jssorb01 div           (normal)
-            .jssorb01 div:hover     (normal mouseover)
-            .jssorb01 .av           (active)
-            .jssorb01 .av:hover     (active mouseover)
-            .jssorb01 .dn           (mousedown)
-            */.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av
-            {
-                filter: alpha(opacity=70);
-                opacity: .7;
-                overflow: hidden;
-                cursor: pointer;
-                border: #000 1px solid;
-            }
-            .imgSlide img
-            {
-                width: 300px;
-                max-height: 200px;
-            }
-            .AboxSm300
-            {
-                color: #222;
-                float: left;
-                font-size: 15px;
-                font-weight: bold;
-                line-height: 20px;
-                margin-top: 5px;
-                width: 300px;
-            }
-            .jssorb01 div
-            {
-                background-color: #d3d3d3;
-            }
-            .jssorb01 div:hover, .jssorb01 .av:hover
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .jssorb01 .av
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .jssorb01 .dn, .jssorb01 .dn:hover
-            {
-                background-color: rgba(55, 162, 234, 0.9);
-            }
-            .jssorb01
-            {
-                left: 198px !important;
-            }
-        </style><div u="navigator" class="jssorb01" style="position: absolute; top: 12px; left: 100px; width: 100px; height: 12px;">
-            <!-- bullet navigator item prototype -->
-            
-        <div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 0px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 22px; top: 0px;" class="av">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 44px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 66px; top: 0px;" class="">
-            </div><div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 88px; top: 0px;" class="">
-            </div></div><script>
-            jssor_slider1_starter('slider1_container');
-        </script></div></div>
-    </div>
+	.swiper-slide > .fixborder > span > a > img {
+		transform: none !important;
+	}
+	.swiper-slide img {
+		width: 448px !important;
+		max-height: 252px !important;
+	}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="span85">
+			<div class="row">
+				<div class="span85">
+					<div class="span61 fixpdr10">
+						<!-- Jssor Slider Begin -->
+						<!-- You can move inline styles to css file or css block. -->
+						<div class="itsimages">
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<?php foreach($slideshow as $key => $data):?>
+									<div class="swiper-slide">
+										<div class="fixborder">
+											<span><a title="<?php echo $data['item']->getTitle()?>" href="<?php echo $data['item']->getHref();?>">
+												<img src="<?php echo $data['item']->getPhotoUrl();?>" >
+											</a></span>
+										</div>
+										<a class="AboxSlHot" href="<?php echo $data['item']->getHref();?>" title="<?php echo $data['item']->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($data['item']->getTitle(), 100);?></a>
+										<p class="pboxslhot"><?php echo Khcn_Api::_()->default()->subPhrase($data['item']->getDescription(), 200);?></p>
+									</div>
+									<?php endforeach;?>
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+							<script>
+								var swiper = new Swiper('.swiper-container', {
+									pagination: '.swiper-pagination',
+									nextButton: '.swiper-button-next',
+									prevButton: '.swiper-button-prev',
+									paginationClickable: true,
+									spaceBetween: 30,
+									centeredSlides: true,
+									autoplay: 2500,
+									autoplayDisableOnInteraction: false
+								});
+							</script>
+						</div>
+						<ul class="nav11">
+							<?php foreach($tinHots as $key => $data):?>
+								<li>
+									<span><a title="<?php echo $data['item']->getTitle()?>" href="<?php echo $data['item']->getHref();?>"><img src="<?php echo $data['item']->getPhotoUrl();?>" title="<?php echo $data['item']->getTitle()?>" border="0"></a></span> 
+									<div>
+										<a href="<?php echo $data['item']->getHref();?>" title="<?php echo $data['item']->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($data['item']->getTitle(), 60);?></a>
+										<p><?php echo Khcn_Api::_()->default()->subPhrase($data['item']->getDescription(), 200);?></p>
+									</div>
+								</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+					<div class="span31 fixleft">
+						<div class="newhot newhots">
+							<span>TIN NÓNG </span>
+						</div>
+						<ul class="nav1">
+							<?php foreach($tinNongs as $key => $data):?>
+							<li>
+								<span><a title="<?php echo $data['item']->getTitle()?>" href="<?php echo $data['item']->getHref();?>"><img src="<?php echo $data['item']->getPhotoUrl();?>" border="0"></a></span> 
+								<div><a href="<?php echo $data['item']->getHref();?>" title="<?php echo $data['item']->getTitle();?>"><?php echo Khcn_Api::_()->default()->subPhrase($data['item']->getTitle(), 80);?></a></div>
+							</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+					<div class="span650 views">
+						<div class="span380 fixmgtr10 boxtoancanh">
+							<h4>
+								<a href="http://tintuconline.com.vn/event.vnn" title="Toàn cảnh">Toàn cảnh</a>
+							</h4>
+							<div class="span185 fixpdr10">
+								<div class="fixborder"><span><a alt="Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc" href="http://tintuconline.com.vn/event/cai-chet-bi-an-cua-nu-doanh-nhan-ha-thuy-linh-o-trung-quoc-e182.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/12/Hathuylinh%20(2)_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f12%2fHathuylinh+(2).jpg&amp;width=213')" alt="Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc" border="0"></a></span></div>
+								<a href="http://tintuconline.com.vn/event/cai-chet-bi-an-cua-nu-doanh-nhan-ha-thuy-linh-o-trung-quoc-e182.vnn" class="aThread">Cái chết bí ẩn của nữ doanh nhân Hà Thúy Linh ở Trung Quốc</a><a href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn" class="arelate" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc">Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc</a>
+							</div>
+							<div class="span185">
+								<div class="fixborder"><span><a alt="EVN thay đổi cách tính giá điện" href="http://tintuconline.com.vn/event/evn-thay-doi-cach-tinh-gia-dien-e181.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/23/11/11/giadien_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f23%2f11%2f11%2fgiadien.jpg&amp;width=213')" alt="EVN thay đổi cách tính giá điện" border="0"></a></span></div>
+								<a href="http://tintuconline.com.vn/event/evn-thay-doi-cach-tinh-gia-dien-e181.vnn" class="aThread">EVN thay đổi cách tính giá điện</a><a href="http://tintuconline.com.vn/thi-truong/chuyen-gia-phan-doi-gia-dien-dong-gia-p1034c1094n20150922160421151.vnn" class="arelate" title="Chuyên gia phản đối giá điện đồng giá">Chuyên gia phản đối giá điện đồng giá</a>
+							</div>
+						</div>
+						<div class="span265 fixleft">
+							<div class="bgrr">
+								<div class="newhot">
+									<a href="http://tintuconline.com.vn/diem-nhin/p0c1159.vnn">Điểm nhìn</a>
+								</div>
+								<ul class="nav13">
+									<li>
+										<span><a title="Loay hoay tìm quốc phục" href="http://tintuconline.com.vn/diem-nhin/loay-hoay-tim-quoc-phuc-p0c1159n20150930113803747.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/11/37/32_126.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f11%2f37%2f32.jpg&amp;width=126')" title="Loay hoay tìm quốc phục" alt="Loay hoay tìm quốc phục" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/diem-nhin/loay-hoay-tim-quoc-phuc-p0c1159n20150930113803747.vnn" title="Loay hoay tìm quốc phục">Loay hoay tìm quốc phục</a></div>
+									</li>
+								</ul>
+							</div>
+							<div class="bgrr">
+								<div class="newhot">
+									<a href="http://tintuconline.com.vn/hot-face/p0c1158.vnn">HOT FACE</a>
+								</div>
+								<ul class="nav13">
+									<li>
+										<span><a title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" href="http://tintuconline.com.vn/hot-face/dao-dien-victor-vu-tinh-cam-voi-dinh-ngoc-diep-la-that-p0c1158n20150930143216810.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/31/hoavang_126.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f31%2fhoavang.jpg&amp;width=126')" title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" alt="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/hot-face/dao-dien-victor-vu-tinh-cam-voi-dinh-ngoc-diep-la-that-p0c1158n20150930143216810.vnn" title="Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'">Đạo diễn Victor Vũ: 'Tình cảm với Đinh Ngọc Diệp là thật'</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="span471 ">
+					<div class="lineRow">
+					</div>
+					<div class="boxThoisu">
+						<div>
+							<a href="http://tintuconline.com.vn/thoi-su/p0c1001.vnn" title="Thời sự">Thời sự</a>
+						</div>
+					</div>
+					<div class="span47 fixtop fixbdt fixmgt5">
+						<div class="fixborder"><span><a title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/18/43/tu-tu_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f18%2f43%2ftu-tu.jpg&amp;width=321')" title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" alt="Bố không cho tiền mua điện thoại, con trai uống thuốc độc" border="0"></a></span></div>
+						<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/thoi-su/bo-khong-cho-tien-mua-dien-thoai-con-trai-uong-thuoc-doc-p0c1001n20150930184345563.vnn" title="Bố không cho tiền mua điện thoại, con trai uống thuốc độc">Bố không cho tiền mua điện thoại, con trai uống thuốc độc</a></h4>
+						<p>Được bố hứa cho 2,5 triệu đồng mua điện thoại nhưng sau đó chỉ đưa 1,5 triệu, tức giận thanh niên 23 tuổi uống ...</p>
+						<ul class="nav14">
+							<li>
+								<span><a title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" href="http://tintuconline.com.vn/thoi-su/vung-que-xon-xao-vu-be-gai-5-tuoi-nghi-bi-thieu-nien-14-tuoi-xam-hai-tinh-duc-p0c1001n20150930154000992.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/38/xam-hai_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f38%2fxam-hai.jpg&amp;width=96')" title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" alt="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/thoi-su/vung-que-xon-xao-vu-be-gai-5-tuoi-nghi-bi-thieu-nien-14-tuoi-xam-hai-tinh-duc-p0c1001n20150930154000992.vnn" title="Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục">Vùng quê xôn xao vụ bé gái 5 tuổi nghi bị thiếu niên 14 tuổi xâm hại tình dục</a></div>
+							</li>
+							<li>
+								<span><a title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" href="http://tintuconline.com.vn/thoi-su/vua-phat-hien-mot-hang-dong-moi-o-phong-nha-ke-bang-p0c1001n20150930153222460.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/31/hang-moi_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f31%2fhang-moi.jpg&amp;width=96')" title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" alt="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/thoi-su/vua-phat-hien-mot-hang-dong-moi-o-phong-nha-ke-bang-p0c1001n20150930153222460.vnn" title="Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng">Vừa phát hiện một hang động mới ở Phong Nha - Kẻ Bàng</a></div>
+							</li>
+							<li>
+								<span><a title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/17/sinh_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f17%2fsinh.jpg&amp;width=96')" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" alt="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/thoi-su/vo-hoan-sinh-chong-3-ngay-khong-tam-vi-mat-nuoc-p0c1001n20150930151816362.vnn" title="Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước">Vợ hoãn sinh, chồng 3 ngày không tắm vì mất nước</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="span471 fixleft">
+					<div class="lineRow">
+					</div>
+					<div class="boxThoisu">
+						<div>
+							<a href="http://tintuconline.com.vn/kinh-doanh/p0c1034.vnn" title="Kinh doanh">Kinh doanh</a>
+						</div>
+						<ul class="nav10">
+							<li><a href="http://tintuconline.com.vn/thi-truong/p1034c1094.vnn" title="Thị trường">Thị trường</a></li>
+							<li><a href="http://tintuconline.com.vn/doanh-nghiep/p1034c1037.vnn" title="Doanh nghiệp">Doanh nghiệp</a></li>
+							<li><a href="http://tintuconline.com.vn/khoi-nghiep/p1034c1038.vnn" title="Khởi nghiệp">Khởi nghiệp</a></li>
+						</ul>
+					</div>
+					<div class="span47 fixtop fixbdt fixmgt5">
+						<div class="fixborder"><span><a title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" href="http://tintuconline.com.vn/thi-truong/gia-gas-tang-10000-dongbinh-12-kg-tu-110-p1034c1094n20150930202120222.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/20/giaga_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f20%2fgiaga.jpg&amp;width=321')" title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" alt="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10" border="0"></a></span></div>
+						<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/thi-truong/gia-gas-tang-10000-dongbinh-12-kg-tu-110-p1034c1094n20150930202120222.vnn" title="Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10">Giá gas tăng 10.000 đồng/bình 12 kg từ 1/10</a></h4>
+						<p>Hôm nay 30/9, một số doanh nghiệp gas tại TPHCM thông báo giá gas bán lẻ tới tay người tiêu dùng áp dụng từ ...</p>
+						<ul class="nav14">
+							<li>
+								<span><a title="Bánh trung thu 15.000 đồng bán ở hàng trà đá" href="http://tintuconline.com.vn/thi-truong/banh-trung-thu-15000-dong-ban-o-hang-tra-da-p1034c1094n20150930201305498.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/12/banhtrungthu_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f12%2fbanhtrungthu.jpg&amp;width=96')" title="Bánh trung thu 15.000 đồng bán ở hàng trà đá" alt="Bánh trung thu 15.000 đồng bán ở hàng trà đá" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/thi-truong/banh-trung-thu-15000-dong-ban-o-hang-tra-da-p1034c1094n20150930201305498.vnn" title="Bánh trung thu 15.000 đồng bán ở hàng trà đá">Bánh trung thu 15.000 đồng bán ở hàng trà đá</a></div>
+							</li>
+							<li>
+								<span><a title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/19/57/trangtien_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f19%2f57%2ftrangtien.jpg&amp;width=96')" title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" alt="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/doanh-nghiep/thuong-vu-thua-lo-5-trieu-usd-cua-bo-chong-ha-tang-p1034c1037n20150930195900195.vnn" title="Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng">Thương vụ thua lỗ 5 triệu USD của bố chồng Hà Tăng</a></div>
+							</li>
+							<li>
+								<span><a title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/12/40/balinh_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f12%2f40%2fbalinh.jpg&amp;width=96')" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" alt="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/doanh-nghiep/ven-man-bi-an-cai-chet-nu-dai-gia-che-o-trung-quoc-p1034c1037n20150930124120622.vnn" title="Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc">Vén màn bí ẩn cái chết nữ đại gia chè ở Trung Quốc</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span471 fixbgrboxsk fixmgt10">
+					<div class="boxsk">
+						<div>
+							<a href="http://tintuconline.com.vn/song-khoe/p0c1069.vnn">SỐNG KHỎE</a>
+						</div>
+					</div>
+					<div class="span47 boxsks">
+						<ul class="nav15">
+							<li><span><a title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" href="http://tintuconline.com.vn/song-khoe/xu-ly-the-nao-khi-cho-tre-uong-nham-thuoc-tay-p0c1069n20150930154301937.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/41/thuoc_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f41%2fthuoc.jpg&amp;width=135')" title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" alt="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/xu-ly-the-nao-khi-cho-tre-uong-nham-thuoc-tay-p0c1069n20150930154301937.vnn" title="Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?" class="askhoe">Xử lý thế nào khi cho trẻ uống nhầm thuốc tây?</a></li>
+							<li><span><a title="Nghiền thuốc thành bột: Rất nguy hiểm" href="http://tintuconline.com.vn/song-khoe/nghien-thuoc-thanh-bot-rat-nguy-hiem-p0c1069n20150930151716286.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/16/nghien_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f16%2fnghien.jpg&amp;width=135')" title="Nghiền thuốc thành bột: Rất nguy hiểm" alt="Nghiền thuốc thành bột: Rất nguy hiểm" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nghien-thuoc-thanh-bot-rat-nguy-hiem-p0c1069n20150930151716286.vnn" title="Nghiền thuốc thành bột: Rất nguy hiểm" class="askhoe">Nghiền thuốc thành bột: Rất nguy hiểm</a></li>
+							<li><span><a title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/32/andam_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f32%2fandam.jpg&amp;width=135')" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" alt="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nhung-mon-an-me-van-tuong-bo-ma-hoa-hai-con-p0c1069n20150930143337821.vnn" title="Những món ăn mẹ vẫn tưởng bổ mà hóa hại con" class="askhoe">Những món ăn mẹ vẫn tưởng bổ mà hóa hại con</a></li>
+							<li><span><a title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " href="http://tintuconline.com.vn/song-khoe/muoi-tu-bien-va-nhung-ung-dung-trong-cham-soc-suc-khoe-p0c1069n20150930142915366.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/28/muoi_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f28%2fmuoi.jpg&amp;width=135')" title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " alt="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/muoi-tu-bien-va-nhung-ung-dung-trong-cham-soc-suc-khoe-p0c1069n20150930142915366.vnn" title="Muối từ biển và những ứng dụng trong chăm sóc sức khỏe " class="askhoe">Muối từ biển và những ứng dụng trong chăm sóc sức khỏe </a></li>
+							<li><span><a title="Nghệ đen trị đầy bụng, ăn không tiêu " href="http://tintuconline.com.vn/song-khoe/nghe-den-tri-day-bung-an-khong-tieu-p0c1069n20150930142623407.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/25/nghe_135.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f25%2fnghe.jpg&amp;width=135')" title="Nghệ đen trị đầy bụng, ăn không tiêu " alt="Nghệ đen trị đầy bụng, ăn không tiêu " border="0"></a></span><a href="http://tintuconline.com.vn/song-khoe/nghe-den-tri-day-bung-an-khong-tieu-p0c1069n20150930142623407.vnn" title="Nghệ đen trị đầy bụng, ăn không tiêu " class="askhoe">Nghệ đen trị đầy bụng, ăn không tiêu </a></li>
+						</ul>
+						<div>
+							<ul class="nav16">
+								<li><a href="http://2sao.vn/">
+									<img src="http://tintuconline.com.vn/images/logo2sao.png">
+									</a>
+								</li>
+								<li class="logottol"><a href="index.html">
+									<img src="http://tintuconline.com.vn/images/logottol.png">
+									</a>
+								</li>
+								<li><a href="http://vietnamnet.vn/">
+									<img src="http://tintuconline.com.vn/images/vland finnal(1).png">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="span471 fixleft">
+					<div class="lineRow">
+					</div>
+					<div class="boxThoisu">
+						<div>
+							<a href="http://tintuconline.com.vn/giai-tri/p0c1086.vnn" title="Giải trí">Giải trí</a>
+						</div>
+						<ul class="nav10">
+							<li><a href="http://tintuconline.com.vn/showbiz/p1086c1044.vnn" title="Showbiz">Showbiz</a></li>
+							<li><a href="http://tintuconline.com.vn/thoi-trang/p1086c1067.vnn" title="Thời trang">Thời trang</a></li>
+							<li><a href="http://tintuconline.com.vn/dien-anh/p1086c1046.vnn" title="Điện ảnh">Điện ảnh</a></li>
+							<li><a href="http://tintuconline.com.vn/am-nhac/p1086c1045.vnn" title="Âm nhạc">Âm nhạc</a></li>
+						</ul>
+					</div>
+					<div class="span47 fixtop fixbdt fixmgt5">
+						<div class="fixborder"><span><a title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/46/tuanhung_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f46%2ftuanhung.jpg&amp;width=321')" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " alt="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng " border="0"></a></span></div>
+						<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/showbiz/tuan-hung-tau-xe-moi-gia-hon-3-ty-dong-p1086c1044n20150930154716451.vnn" title="Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng ">Tuấn Hưng tậu xe mới giá hơn 3 tỷ đồng </a></h4>
+						<p>Sau nhiều lùm xùm cá nhân, Tuấn Hưng "đánh tan" tin đồn khi tậu xe mới tiền tỷ. </p>
+						<ul class="nav14">
+							<li>
+								<span><a title="Sao Việt cực sexy với váy... khoét lưng" href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/12/58/vay_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f12%2f58%2fvay.jpg&amp;width=96')" title="Sao Việt cực sexy với váy... khoét lưng" alt="Sao Việt cực sexy với váy... khoét lưng" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/thoi-trang/sao-viet-cuc-sexy-voi-vay-khoet-lung-p1086c1067n20150811124627302.vnn" title="Sao Việt cực sexy với váy... khoét lưng">Sao Việt cực sexy với váy... khoét lưng</a></div>
+							</li>
+							<li>
+								<span><a title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/58/sn_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f58%2fsn.jpg&amp;width=96')" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" alt=" 8 diễn viên nhí tiềm năng của màn ảnh Việt" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/giai-tri/8-dien-vien-nhi-tiem-nang-cua-man-anh-viet-p0c1086n20150930155833679.vnn" title=" 8 diễn viên nhí tiềm năng của màn ảnh Việt"> 8 diễn viên nhí tiềm năng của màn ảnh Việt</a></div>
+							</li>
+							<li>
+								<span><a title="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" href="http://tintuconline.com.vn/showbiz/bi-va-bom-hien-tuong-cua-bo-oi-minh-di-dau-the-2-mua-p1086c1044n20150930152808648.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/27/bibao_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f27%2fbibao.jpg&amp;width=96')" title="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" alt="Bi và Bờm - &quot;hiện tượng&quot; của &quot;Bố ơi mình đi đâu thế?&quot; 2 mùa" border="0"></a></span>
+								<div><a href="http://tintuconline.com.vn/showbiz/bi-va-bom-hien-tuong-cua-bo-oi-minh-di-dau-the-2-mua-p1086c1044n20150930152808648.vnn" title="Bi và Bờm - " hiện="" tượng"="" của="" "bố="" ơi="" mình="" đi="" đâu="" thế?"="" 2="" mùa"="">Bi và Bờm - "hiện tượng" của "Bố ơi mình đi đâu thế?" 2 mùa</a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="lineRow"></div>
+				<div class="span85 boxDSong">
+					<div class="boxDSongMenu">
+						<div>
+							<a href="http://tintuconline.com.vn/doi-song/p0c1087.vnn" title="Đời sống">Đời sống</a>
+						</div>
+						<ul class="nav101">
+							<li><a href="http://tintuconline.com.vn/gia-dinh/p1087c1073.vnn" title="Gia đình">Gia đình</a></li>
+							<li><a href="http://tintuconline.com.vn/tinh-yeu/p1087c1071.vnn" title="Tình yêu">Tình yêu</a></li>
+							<li><a href="http://tintuconline.com.vn/nhip-song-tre/p1087c1074.vnn" title="Nhịp sống trẻ">Nhịp sống trẻ</a></li>
+							<li><a href="http://tintuconline.com.vn/cong-so/p1087c1072.vnn" title="Công sở">Công sở</a></li>
+						</ul>
+					</div>
+					<div class="span85">
+						<div class="fixlineRow01">
+						</div>
+						<div class="row">
+							<div class="span47 fixpdt5">
+								<div class="fixborder"><span><a title="Cách giải phóng nỗi đau bị vợ phản bội " href="http://tintuconline.com.vn/gia-dinh/cach-giai-phong-noi-dau-bi-vo-phan-boi-p1087c1073n20150930145203068.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/51/phanboi_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f51%2fphanboi.jpg&amp;width=321')" title="Cách giải phóng nỗi đau bị vợ phản bội " alt="Cách giải phóng nỗi đau bị vợ phản bội " border="0"></a></span></div>
+								<h4 class="fixpdBt7 boxTheGioi"><a href="http://tintuconline.com.vn/gia-dinh/cach-giai-phong-noi-dau-bi-vo-phan-boi-p1087c1073n20150930145203068.vnn" title="Cách giải phóng nỗi đau bị vợ phản bội ">Cách giải phóng nỗi đau bị vợ phản bội </a></h4>
+								<p>Đàn ông hiếm người biết tha thứ cho “tội lỗi” của vợ, bởi họ không nhận ra được nguyên nhân sâu xa khiến cho ...</p>
+							</div>
+							<div class="span472 fixleft">
+								<ul class="nav17">
+									<li>
+										<span><a title="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" href="http://tintuconline.com.vn/gia-dinh/chieu-ha-hoa-con-nong-gian-cua-chong-chi-trong-vai-phut-p1087c1073n20150930153411458.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/33/hahoa_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f33%2fhahoa.jpg&amp;width=96')" title="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" alt="Chiêu &quot;hạ hỏa&quot; cơn nóng giận của chồng chỉ trong vài phút" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/gia-dinh/chieu-ha-hoa-con-nong-gian-cua-chong-chi-trong-vai-phut-p1087c1073n20150930153411458.vnn" title="Chiêu " hạ="" hỏa"="" cơn="" nóng="" giận="" của="" chồng="" chỉ="" trong="" vài="" phút"="">Chiêu "hạ hỏa" cơn nóng giận của chồng chỉ trong vài phút</a></div>
+									</li>
+									<li>
+										<span><a title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/04/gaysoc_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f04%2fgaysoc.jpg&amp;width=96')" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" alt="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/tinh-yeu/40-su-that-gay-soc-ve-chuyen-ay-co-the-ban-chua-tung-nghe-qua!-p1087c1071n20150930150437828.vnn" title="40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!">40 sự thật gây sốc về “chuyện ấy” có thể bạn chưa từng nghe qua!</a></div>
+									</li>
+									<li>
+										<span><a title="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" href="http://tintuconline.com.vn/nhip-song-tre/nguoi-xem-tim-mat-vi-clip-nu-sinh-danh-ban-roi-lot-ao-giua-duong-p1087c1074n20150930152252108.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/22/danhghen_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f22%2fdanhghen.jpg&amp;width=96')" title="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" alt="Người xem &quot;tím mặt&quot; vì clip nữ sinh đánh bạn rồi lột áo giữa đường" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/nhip-song-tre/nguoi-xem-tim-mat-vi-clip-nu-sinh-danh-ban-roi-lot-ao-giua-duong-p1087c1074n20150930152252108.vnn" title="Người xem " tím="" mặt"="" vì="" clip="" nữ="" sinh="" đánh="" bạn="" rồi="" lột="" áo="" giữa="" đường"="">Người xem "tím mặt" vì clip nữ sinh đánh bạn rồi lột áo giữa đường</a></div>
+									</li>
+									<li>
+										<span><a title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" href="http://tintuconline.com.vn/gia-dinh/con-om-nam-vien-chong-van-tranh-thu-di-voi-bo-p1087c1073n20150930143140572.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/30/namvien_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f30%2fnamvien.jpg&amp;width=96')" title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" alt="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/gia-dinh/con-om-nam-vien-chong-van-tranh-thu-di-voi-bo-p1087c1073n20150930143140572.vnn" title="Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ">Con ốm nằm viện, chồng vẫn tranh thủ đi với bồ</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span215 itemsbox fixmgtr12">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/buon-chuyen/p0c1079.vnn" title="Buôn chuyện">Buôn chuyện</a>
+					</h3>
+					<div><span><a title="Mẹ chồng ơi, đừng biến con thành người ngoài" href="http://tintuconline.com.vn/buon-chuyen/me-chong-oi-dung-bien-con-thanh-nguoi-ngoai-p0c1079n20150930084612581.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/08/45/mechong_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f08%2f45%2fmechong.jpg&amp;width=321')" title="Mẹ chồng ơi, đừng biến con thành người ngoài" alt="Mẹ chồng ơi, đừng biến con thành người ngoài" border="0"></a></span></div>
+					<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/buon-chuyen/me-chong-oi-dung-bien-con-thanh-nguoi-ngoai-p0c1079n20150930084612581.vnn" title="Mẹ chồng ơi, đừng biến con thành người ngoài">Mẹ chồng ơi, đừng biến con thành người ngoài</a></h4>
+					<p></p>
+				</div>
+				<div class="span215 itemsbox ">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/di-an-choi/p0c1078.vnn" title="Đi - Ăn - Chơi">Đi - Ăn - Chơi</a>
+					</h3>
+					<div><span><a title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" href="http://tintuconline.com.vn/di-an-choi/ngay-ngat-voi-4-hon-dao-nho-hoang-so-it-biet-o-viet-nam-p0c1078n20150930145659687.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/54/dao_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f54%2fdao.jpg&amp;width=321')" title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" alt="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam" border="0"></a></span></div>
+					<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/di-an-choi/ngay-ngat-voi-4-hon-dao-nho-hoang-so-it-biet-o-viet-nam-p0c1078n20150930145659687.vnn" title="Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam">Ngây ngất với 4 hòn đảo nhỏ, hoang sơ, ít biết ở Việt Nam</a></h4>
+					<p></p>
+				</div>
+				<div class="span215 itemsbox fixleft">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/lam-dep/p0c1068.vnn" title="Làm đẹp">Làm đẹp</a>
+					</h3>
+					<div><span><a title="12 cách mặc gợi cảm mà không phô trương" href="http://tintuconline.com.vn/lam-dep/12-cach-mac-goi-cam-ma-khong-pho-truong-p0c1068n20150930111743949.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/11/16/trevai1_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f11%2f16%2ftrevai1.jpg&amp;width=321')" title="12 cách mặc gợi cảm mà không phô trương" alt="12 cách mặc gợi cảm mà không phô trương" border="0"></a></span></div>
+					<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/lam-dep/12-cach-mac-goi-cam-ma-khong-pho-truong-p0c1068n20150930111743949.vnn" title="12 cách mặc gợi cảm mà không phô trương">12 cách mặc gợi cảm mà không phô trương</a></h4>
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="lineRow"></div>
+				<div class="span85 boxDSong">
+					<div class="boxDSongMenu">
+						<div>
+							<a href="http://tintuconline.com.vn/the-gioi/p0c1051.vnn" title="Thế giới">Thế giới</a>
+						</div>
+						<ul class="nav101">
+							<li><a href="http://tintuconline.com.vn/tin-tuc/p1051c1054.vnn" title="Tin tức">Tin tức</a></li>
+							<li><a href="http://tintuconline.com.vn/xfile/p1051c1053.vnn" title="X-File">X-File</a></li>
+							<li><a href="http://tintuconline.com.vn/chuyen-4-phuong/p1051c1052.vnn" title="Chuyện 4 phương">Chuyện 4 phương</a></li>
+						</ul>
+					</div>
+					<div class="span85">
+						<div class="fixlineRow01">
+						</div>
+						<div class="row">
+							<div class="span47 fixpdt5">
+								<div class="fixborder"><span><a title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" href="http://tintuconline.com.vn/chuyen-4-phuong/nu-sinh-14-tuoi-bi-danh-da-man-suot-3-tieng-dong-ho-p1051c1052n20150930094958956.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/09/48/danh_321.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f09%2f48%2fdanh.jpg&amp;width=321')" title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" alt="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ" border="0"></a></span></div>
+								<h4 class="fixpdBt7 boxTheGioi"><a href="http://tintuconline.com.vn/chuyen-4-phuong/nu-sinh-14-tuoi-bi-danh-da-man-suot-3-tieng-dong-ho-p1051c1052n20150930094958956.vnn" title="Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ">Nữ sinh 14 tuổi bị đánh dã man suốt 3 tiếng đồng hồ</a></h4>
+								<p>Trong clip, có một bé gái chưa rõ danh tính đã tát Li Xiaoyan 32 lần chỉ trong vòng 99 giây</p>
+							</div>
+							<div class="span472 fixleft">
+								<ul class="nav17">
+									<li>
+										<span><a title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/45/lag_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f45%2flag.jpg&amp;width=96')" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" alt="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/tin-tuc/duong-quoc-lo-chet-choc-tao-ra-ngoi-lang-toan-goa-phu-p1051c1054n20150930144818224.vnn" title="Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ">Đường quốc lộ chết chóc tạo ra ngôi làng toàn góa phụ</a></div>
+									</li>
+									<li>
+										<span><a title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" href="http://tintuconline.com.vn/chuyen-4-phuong/co-be-15-tuoi-lam-trau-bo-ngoai-duong-pho-de-kiem-tien-cuu-cha-p1051c1052n20150930003342791.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/00/32/trau_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f00%2f32%2ftrau.jpg&amp;width=96')" title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" alt="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/chuyen-4-phuong/co-be-15-tuoi-lam-trau-bo-ngoai-duong-pho-de-kiem-tien-cuu-cha-p1051c1052n20150930003342791.vnn" title="Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha">Cô bé 15 tuổi làm trâu bò ngoài đường phố để kiếm tiền cứu cha</a></div>
+									</li>
+									<li>
+										<span><a title="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" href="http://tintuconline.com.vn/chuyen-4-phuong/phai-dep-me-met-chang-nam-lun-co-bap-cuon-cuon-p1051c1052n20150930143450283.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/33/chag_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f33%2fchag.jpg&amp;width=96')" title="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" alt="Phái đẹp mê mệt chàng &quot;nấm lùn&quot; cơ bắp cuồn cuộn" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/chuyen-4-phuong/phai-dep-me-met-chang-nam-lun-co-bap-cuon-cuon-p1051c1052n20150930143450283.vnn" title="Phái đẹp mê mệt chàng " nấm="" lùn"="" cơ="" bắp="" cuồn="" cuộn"="">Phái đẹp mê mệt chàng "nấm lùn" cơ bắp cuồn cuộn</a></div>
+									</li>
+									<li>
+										<span><a title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" href="http://tintuconline.com.vn/chuyen-4-phuong/nguoi-mau-bikini-nhan-nheo-nhu-ba-gia-o-tuoi-39-p1051c1052n20150930143017470.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/29/xapxe_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f29%2fxapxe.jpg&amp;width=96')" title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" alt="Người mẫu bikini nhăn nheo như bà già ở tuổi 39" border="0"></a></span>
+										<div><a href="http://tintuconline.com.vn/chuyen-4-phuong/nguoi-mau-bikini-nhan-nheo-nhu-ba-gia-o-tuoi-39-p1051c1052n20150930143017470.vnn" title="Người mẫu bikini nhăn nheo như bà già ở tuổi 39">Người mẫu bikini nhăn nheo như bà già ở tuổi 39</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Box giáo dục-->
+			<div class="row">
+				<div class="lineRow"></div>
+				<div class="span85 boxDSong">
+					<div class="boxDSongMenu">
+						<div>
+							<a href="http://tintuconline.com.vn/giao-duc/p0c1092.vnn" title="Giáo dục">Giáo dục</a>
+						</div>
+						<ul class="nav101">
+							<li><a href="http://tintuconline.com.vn/gia-tri/p1092c1162.vnn" title="Giá trị">Giá trị</a></li>
+							<li><a href="http://tintuconline.com.vn/ky-nang/p1092c1163.vnn" title="Kỹ năng">Kỹ năng</a></li>
+							<li><a href="http://tintuconline.com.vn/du-hoc/p1092c1164.vnn" title="Du học">Du học</a></li>
+						</ul>
+					</div>
+					<div class="span85">
+						<div class="fixlineRow01 fixmgbt10">
+						</div>
+						<div class="row">
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Luyện thói quen tốt cho con từ những ngày đầu tiên" href="http://tintuconline.com.vn/ky-nang/luyen-thoi-quen-tot-cho-con-tu-nhung-ngay-dau-tien-p1092c1163n20150930082625310.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/08/22/30_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f08%2f22%2f30.jpg&amp;width=213')" title="Luyện thói quen tốt cho con từ những ngày đầu tiên" alt="Luyện thói quen tốt cho con từ những ngày đầu tiên" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/ky-nang/luyen-thoi-quen-tot-cho-con-tu-nhung-ngay-dau-tien-p1092c1163n20150930082625310.vnn" title="Luyện thói quen tốt cho con từ những ngày đầu tiên">Luyện thói quen tốt cho con từ những ngày đầu tiên</a></h4>
+							</div>
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Những thói quen cần thiết giúp trẻ trở thành người giàu có" href="http://tintuconline.com.vn/giao-duc/nhung-thoi-quen-can-thiet-giup-tre-tro-thanh-nguoi-giau-co-p0c1092n20150930164850491.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/16/47/37_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f16%2f47%2f37.jpg&amp;width=213')" title="Những thói quen cần thiết giúp trẻ trở thành người giàu có" alt="Những thói quen cần thiết giúp trẻ trở thành người giàu có" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/giao-duc/nhung-thoi-quen-can-thiet-giup-tre-tro-thanh-nguoi-giau-co-p0c1092n20150930164850491.vnn" title="Những thói quen cần thiết giúp trẻ trở thành người giàu có">Những thói quen cần thiết giúp trẻ trở thành người giàu có</a></h4>
+							</div>
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/16/56/38_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f16%2f56%2f38.jpg&amp;width=213')" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" alt="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/gia-tri/a-khoa-dien-trai-dh-thuong-mai-kiem-moi-thang-60-trieu-p1092c1162n20150930165848159.vnn" title="Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu">Á khoa điển trai ĐH Thương mại kiếm mỗi tháng 60 triệu</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Box Công nghệ-->
+			<div class="row">
+				<div class="lineRow"></div>
+				<div class="span85 boxDSong">
+					<div class="boxDSongMenu">
+						<div>
+							<a href="http://tintuconline.com.vn/cong-nghe/p0c1056.vnn" title="Công nghệ">Công nghệ</a>
+						</div>
+					</div>
+					<div class="span85">
+						<div class="fixlineRow01 fixmgbt10">
+						</div>
+						<div class="row">
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Nhiều người Việt ác cảm với iPhone?" href="http://tintuconline.com.vn/cong-nghe/nhieu-nguoi-viet-ac-cam-voi-iphone-p0c1056n20150930201800401.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/16/iPhone6S_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f16%2fiPhone6S.jpg&amp;width=213')" title="Nhiều người Việt ác cảm với iPhone?" alt="Nhiều người Việt ác cảm với iPhone?" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/nhieu-nguoi-viet-ac-cam-voi-iphone-p0c1056n20150930201800401.vnn" title="Nhiều người Việt ác cảm với iPhone?">Nhiều người Việt ác cảm với iPhone?</a></h4>
+							</div>
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Cách tắt tính năng tự chạy video của Facebook" href="http://tintuconline.com.vn/cong-nghe/cach-tat-tinh-nang-tu-chay-video-cua-facebook-p0c1056n20150930195312486.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/19/52/anh5_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f19%2f52%2fanh5.jpg&amp;width=213')" title="Cách tắt tính năng tự chạy video của Facebook" alt="Cách tắt tính năng tự chạy video của Facebook" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/cach-tat-tinh-nang-tu-chay-video-cua-facebook-p0c1056n20150930195312486.vnn" title="Cách tắt tính năng tự chạy video của Facebook">Cách tắt tính năng tự chạy video của Facebook</a></h4>
+							</div>
+							<div class="span215 itemsbox fixmgtr12">
+								<div><span><a title="Những status phản cảm và bị ghét nhất trên Facebook" href="http://tintuconline.com.vn/cong-nghe/nhung-status-phan-cam-va-bi-ghet-nhat-tren-facebook-p0c1056n20150929225328185.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/29/22/52/fb_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f29%2f22%2f52%2ffb.jpg&amp;width=213')" title="Những status phản cảm và bị ghét nhất trên Facebook" alt="Những status phản cảm và bị ghét nhất trên Facebook" border="0"></a></span></div>
+								<h4 class="fixpdBt7 fixpdTop5"><a href="http://tintuconline.com.vn/cong-nghe/nhung-status-phan-cam-va-bi-ghet-nhat-tren-facebook-p0c1056n20150929225328185.vnn" title="Những status phản cảm và bị ghét nhất trên Facebook">Những status phản cảm và bị ghét nhất trên Facebook</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="fixBoxEmtry">
+				</div>
+			</div>
+			<div class="row">
+				<div class="span215 itemsbox fixmgtr12">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/the-thao/p0c1047.vnn" title="Thể thao">Thể thao</a>
+					</h3>
+					<div class="fixborder"><span><a title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/20/24/congphuongkhongthesang_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f20%2f24%2fcongphuongkhongthesang.jpg&amp;width=213')" title="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" alt="&quot;Quả ngọt&quot; Công Phượng và giấc mơ còn dang dở của &quot;bầu&quot; Đức" border="0"></a></span></div>
+					<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/trong-nuoc/qua-ngot-cong-phuong-va-giac-mo-con-dang-do-cua-bau-duc-p1047c1161n20150930202634469.vnn" title="" quả="" ngọt"="" công="" phượng="" và="" giấc="" mơ="" còn="" dang="" dở="" của="" "bầu"="" Đức"="">"Quả ngọt" Công Phượng và giấc mơ còn dang dở của "bầu" Đức</a></h4>
+					<ul class="nav18">
+						<li>
+							<div><a href="http://tintuconline.com.vn/quoc-te/messi-chan-thuong-ronaldo-huong-toi-sieu-ky-luc-p1047c1048n20150930202126836.vnn" title="Messi chấn thương, Ronaldo hướng tới “siêu kỷ lục”">Messi chấn thương, Ronaldo hướng tới “siêu kỷ lục”</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/hau-truong/goc-cua-sao-309-sieu-mau-nga-tung-‘anh-nong’-dong-vien-james-rodriguez-p1047c1049n20150930201907840.vnn" title="Góc của Sao (30.9): Siêu mẫu Nga tung ‘ảnh nóng’ động viên James Rodriguez">Góc của Sao (30.9): Siêu mẫu Nga tung ‘ảnh nóng’ động viên ...</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/trong-nuoc/lo-chi-tiet-khien-cong-phuong-khong-the-sang-nhat-p1047c1161n20150930153752744.vnn" title="Lộ chi tiết khiến Công Phượng không thể sang Nhật ">Lộ chi tiết khiến Công Phượng không thể sang Nhật </a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/video/soc-trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu-p0c1085n20150930152131861.vnn" title="Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ">Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class="span215 itemsbox ">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/phap-luat/p0c1002.vnn" title="Pháp luật">Pháp luật</a>
+					</h3>
+					<div class="fixborder"><span><a title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" href="http://tintuconline.com.vn/phap-luat/hanh-trinh-pha-vu-an-thi-the-trong-bao-nylon-o-mien-tay-p0c1002n20150930185209147.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/18/49/1_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f18%2f49%2f1.jpg&amp;width=213')" title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" alt="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây" border="0"></a></span></div>
+					<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/phap-luat/hanh-trinh-pha-vu-an-thi-the-trong-bao-nylon-o-mien-tay-p0c1002n20150930185209147.vnn" title="Hành trình phá vụ án thi thể trong bao nylon ở miền Tây">Hành trình phá vụ án thi thể trong bao nylon ở miền Tây</a></h4>
+					<ul class="nav18">
+						<li>
+							<div><a href="http://tintuconline.com.vn/thoi-su/ke-giet-4-nguoi-than-nhien-cuoi-truoc-gio-den-toi-p0c1001n20150930112335699.vnn" title="Kẻ giết 4 người thản nhiên cười trước giờ đền tội">Kẻ giết 4 người thản nhiên cười trước giờ đền tội</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/phap-luat/lo-man-kich-lam-nguoi-vo-dung-cam-dem-cuoi-nam-p0c1002n20150930103445109.vnn" title="Lộ màn kịch làm người vợ " dũng="" cảm"="" đêm="" cuối="" năm"="">Lộ màn kịch làm người vợ "dũng cảm" đêm cuối năm</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/thoi-su/tuyen-tu-hinh-ke-giet-4-nguoi-o-nghe-an-p0c1001n20150930094514458.vnn" title="Tuyên tử hình kẻ giết 4 người ở Nghệ An">Tuyên tử hình kẻ giết 4 người ở Nghệ An</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/phap-luat/nhieu-quy-ba-dinh-lua-chang-trai-ngoai-quoc-p0c1002n20150930064505917.vnn" title="Nhiều quý bà dính lừa chàng trai ngoại quốc">Nhiều quý bà dính lừa chàng trai ngoại quốc</a></div>
+						</li>
+					</ul>
+				</div>
+				<div class="span215 itemsbox fixleft">
+					<h3 class="fixmgbt5">
+						<a href="http://tintuconline.com.vn/v-quiz/p0c1160.vnn" title="V-quiz">V-quiz</a>
+					</h3>
+					<div class="fixborder"><span><a title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/01/06/thongminh_213.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f01%2f06%2fthongminh.jpg&amp;width=213')" title="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" alt="Tiết lộ 5 cung Hoàng đạo &quot;thông minh vốn sẵn tính trời&quot;" border="0"></a></span></div>
+					<h4 class="fixpdBt7"><a href="http://tintuconline.com.vn/v-quiz/tiet-lo-5-cung-hoang-dao-thong-minh-von-san-tinh-troi-p0c1160n20150930010726302.vnn" title="Tiết lộ 5 cung Hoàng đạo " thông="" minh="" vốn="" sẵn="" tính="" trời""="">Tiết lộ 5 cung Hoàng đạo "thông minh vốn sẵn tính trời"</a></h4>
+					<ul class="nav18">
+						<li>
+							<div><a href="http://tintuconline.com.vn/v-quiz/top-5-con-giap-nam-coi-gia-dinh-la-so-1-p0c1160n20150929140539162.vnn" title="Top 5 con giáp nam coi gia đình là số 1">Top 5 con giáp nam coi gia đình là số 1</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/v-quiz/top-5-co-nang-hoang-dao-khien-dan-ong-me-met-p0c1160n20150928143755840.vnn" title="Top 5 cô nàng Hoàng đạo khiến đàn ông " mê="" mệt""="">Top 5 cô nàng Hoàng đạo khiến đàn ông "mê mệt"</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/v-quiz/diem-danh-5-cung-hoang-dao-nuoc-den-chan-moi-nhay-p0c1160n20150925104054117.vnn" title="Điểm danh 5 cung Hoàng đạo " nước="" đến="" chân="" mới="" nhảy""="">Điểm danh 5 cung Hoàng đạo "nước đến chân mới nhảy"</a></div>
+						</li>
+						<li>
+							<div><a href="http://tintuconline.com.vn/v-quiz/diem-mat-top-5-cung-hoang-dao-sinh-ra-de-giau-co-p0c1160n20150924100448222.vnn" title="" Điểm="" mặt"="" top="" 5="" cung="" hoàng="" đạo="" sinh="" ra="" để="" giàu="" có"="">"Điểm mặt" top 5 cung Hoàng đạo sinh ra để giàu có</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span85">
+					<div style="width: 100%; float: left; margin: 10px 0; padding-bottom: 0;">
+						<div class="lineRow">
+						</div>
+						<p style="margin: 0; background: url('../public/upload/2sao.vn/images/dienanh.png') no-repeat scroll left 0 transparent;
+							height: 32px; float: left; width: 100%;">
+							<a href="http://2sao.vn/" class="ttolalink" target="_blank">2Sao</a>
+						</p>
+						<div id="divClip" class="ttolline2sao">
+							<div style="width:100%;float:left; background-color:#ededed; padding-top: 3px;">
+								<div style="width:651px; margin:0 auto; padding-left:10px;" class="clipEmbed ttolclipEmbed">
+									<div>
+										<div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/sao/con-trai-khanh-thi-duoc-dua-ve-tham-ong-ba-noi-p0c1000n20150930201434291.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/22/15/ok.jpg"></a></div>
+										<p><a target="_blank" href="http://2sao.vn/sao/con-trai-khanh-thi-duoc-dua-ve-tham-ong-ba-noi-p0c1000n20150930201434291.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">Con trai Khánh Thi được đưa về thăm ông bà nội?</a></p>
+									</div>
+									<div>
+										<div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/gioi-tre/hot-girl-tra-sua-bat-ngo-cuoi-dai-gia-tai-uc-p0c1049n20150930222417571.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/22/24/resize7041746131634528ava.jpg"></a></div>
+										<p><a target="_blank" href="http://2sao.vn/gioi-tre/hot-girl-tra-sua-bat-ngo-cuoi-dai-gia-tai-uc-p0c1049n20150930222417571.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">“Hot girl trà sữa” bất ngờ cưới đại gia tại Úc</a></p>
+									</div>
+									<div>
+										<div class="thumbClip ttolthumbClip" style="position:relative"><a target="_blank" href="http://2sao.vn/sao/cuoc-song-sau-anh-den-san-khau-cua-cac-ba-me-bim-sua-v-biz-p0c1000n20150929120138360.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung" class="bdimg"><img src="http://2sao.vietnamnetjsc.vn/2015/09/30/06/59/ava.jpg"></a></div>
+										<p><a target="_blank" href="http://2sao.vn/sao/cuoc-song-sau-anh-den-san-khau-cua-cac-ba-me-bim-sua-v-biz-p0c1000n20150929120138360.vnn?utm_source=BoxNhung_&amp;utm_medium=BoxNhung_&amp;utm_campaign=BoxNhung">Cuộc sống sau ánh đèn sân khấu của các "bà mẹ bỉm sữa" V-biz</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="span4 fixleft  ">
+			<div class="row fixpdBt7">
+				<div class="span205 icsendUser">
+					<a href="http://tintuconline.com.vn/upload.vnn">
+					<img src="http://tintuconline.com.vn/Images/docgiaguibaiviet.gif" alt="Độc giả gửi bài viết"></a>
+				</div>
+				<div class="span1 icRss">
+					<a href="http://tintuconline.com.vn/rss.vnn" title="RSS">RSS</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="vmcadszone" id="data67" data="http://tracking.vietnamnetad.vn/Dout/tracking.ashx?action=0e9043c1-4f14-4cc5-ac07-b832adf03391&amp;ext=8e269091-a362-4b97-a59d-9c122d4dc25a&amp;domain=http://tintuconline.com.vn/cat0">
+					<div class="vmc_ads_viewport" advid="2332" style="z-index:555; margin:0 0 0px 0; padding:0;width:300px;"><iframe id="ifr" width="300" height="250" src="http://img.vietnamnetad.vn/html/2015/09/mobifone/300x250_mobifone.html" marginwidth="0" allowtransparency="true" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe><a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a></div>
+					<div class="vmc_ads_viewport" advid="1053" style="z-index:555; margin:0 0 0px 0; padding:0;width:300px;">
+						<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<div style="display: none" id="__document_write_ajax_div-22"></div>
+						<!-- Google adsend_VNN_300x250 -->
+						<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0771410550134874" data-ad-slot="7487373184"></ins>
+						<div style="display: none" id="__document_write_ajax_div-23"></div>
+						<a href="http://vads.vn" target="_blank"><img class="vadslogo" onmouseover="vadsHover(this)" onmouseout="vadsOut(this)" border="0" src="http://img.vietnamnetad.vn/Images/logo/vads-logo-bottom.png"></a>
+					</div>
+					<div style="display: none" id="__document_write_ajax_div-15"></div>
+					<div style="display: none" id="__document_write_ajax_div-16"></div>
+					<div style="display: none" id="__document_write_ajax_div-17"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="itVideo">
+					<h4 class="icvideo fixpdTop0">
+						<a href="http://tintuconline.com.vn/video/p0c1085.vnn">VIDEO</a>
+					</h4>
+					<div id="videoDeck_wrapper" style="position: relative; width: 300px; height: 240px;">
+						<object type="application/x-shockwave-flash" data="http://clip.vietnamnetjsc.vn/Images/swfplayer.swf" width="100%" height="100%" bgcolor="#000000" id="videoDeck" name="videoDeck" tabindex="0">
+							<param name="allowfullscreen" value="true">
+							<param name="allowscriptaccess" value="always">
+							<param name="seamlesstabbing" value="true">
+							<param name="wmode" value="opaque">
+							<param name="flashvars" value="netstreambasepath=file%3A%2F%2F%2FC%3A%2FUsers%2FJames%2FDesktop%2Ftin%2520tuc%2520online%2Ftintuconline%2Ftintuconline.com.vn%2Findex.html&amp;id=videoDeck&amp;className=videoDeck&amp;starttime=0&amp;autostart=false&amp;skin=%2FImages%2Fnewtubedark%2Fnewtubedark.xml&amp;image=..%2Fttol.vietnamnetjsc.vn%2F2015%2F09%2F30%2F15%2F20%2Ftrithuc.jpg&amp;file=http%3A%2F%2Fttol.vietnamnetjsc.vn%2F2015%2F09%2F30%2F15%2F20%2FSoc-Trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu.mp4&amp;plugins=http%3A%2F%2Fplugins.longtailvideo.com%2F5%2Fova%2Fova-jw.swf&amp;ova.canFireEventAPICalls=true&amp;ova.ads=%5B%5BJSON%5D%5D%7B%22skipAd%22%3A%7B%22enabled%22%3A%22true%22%2C%22minimumAdDuration%22%3A6%2C%22showAfterSeconds%22%3A3%2C%22image%22%3A%22http%3A%2F%2Fclip.vietnamnetjsc.vn%2FImages%2Fskip-ad.png%22%2C%22width%22%3A75%2C%22height%22%3A20%7D%2C%22schedule%22%3A%5B%7B%22position%22%3A%22pre-roll%22%2C%22tag%22%3A%22http%3A%2F%2Fclient.vads.net.vn%2Fvast.ashx%3Fflash%3Dtrue%26posid%3D23%26catid%3D0%26vnncatname%3Dhttp%3A%2F%2Ftintuconline.com.vn%2Fcat1085%26webid%3D17%26width%3D300%26height%3D385%26json%3Dtrue%26items%3D4%26ref%3Dhttp%253A%252F%252Fvietnamnet.vn%252F%26host%3Dvietnamnet.vn%26url%3Dhttp%253A%252F%252Fvietnamnet.vn%252F%26iframe%3Dfalse%26time%3D815%26d%3DWed%20Sep%2030%202015%2022%3A30%3A22%20GMT%2B0700%20(SE%20Asia%20Standard%20Time)%22%7D%5D%7D&amp;ova.pluginmode=HYBRID&amp;controlbar.position=bottom&amp;playlist.position=none&amp;playlist.size=0&amp;logo.file=http%3A%2F%2Fvietnamnettv.vn%2FImages%2Flogo-player.png&amp;logo.link=http%3A%2F%2Fvietnamnettv.vn&amp;logo.hide=false&amp;logo.position=top-left">
+						</object>
+					</div>
+					<a href="http://tintuconline.com.vn/video/soc-trong-tai-xach-sung-vao-san-dinh-giai-quyet-cau-thu-p0c1085n20150930152131861.vnn" class="tvideo" title="Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ">Sốc: Trọng tài xách súng vào sân định... giải quyết cầu thủ</a>
+					<ul class="nav12">
+						<li>
+							<span><a title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" href="http://tintuconline.com.vn/video/meo-hoc-thuoc-bang-cuu-chuong-9-danh-cho-cac-be-p0c1085n20150930145649609.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/56/cuoi_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f56%2fcuoi.jpg&amp;width=96')" title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" alt="Mẹo học thuộc bảng cửu chương 9 dành cho các bé" border="0"></a></span>
+							<div><a href="http://tintuconline.com.vn/video/meo-hoc-thuoc-bang-cuu-chuong-9-danh-cho-cac-be-p0c1085n20150930145649609.vnn" title="Mẹo học thuộc bảng cửu chương 9 dành cho các bé">Mẹo học thuộc bảng cửu chương 9 dành cho các bé</a></div>
+						</li>
+						<li>
+							<span><a title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" href="http://tintuconline.com.vn/video/clip-9x-nguoi-viet-cong-khai-toan-bo-qua-trinh-chuyen-gioi-tu-nu-sang-nam-p0c1085n20150930150402884.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/15/03/choang_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f15%2f03%2fchoang.jpg&amp;width=96')" title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" alt="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam" border="0"></a></span>
+							<div><a href="http://tintuconline.com.vn/video/clip-9x-nguoi-viet-cong-khai-toan-bo-qua-trinh-chuyen-gioi-tu-nu-sang-nam-p0c1085n20150930150402884.vnn" title="Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam">Clip: 9x người Việt công khai toàn bộ quá trình chuyển giới từ nữ sang nam</a></div>
+						</li>
+						<li>
+							<span><a title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" href="http://tintuconline.com.vn/video/dan-mang-tranh-cai-thi-sinh-hoa-hau-hvvn-vi-minh-giong-cho-p0c1085n20150930141440221.vnn"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/14/lacho_96.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f14%2flacho.jpg&amp;width=96')" title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" alt="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó" border="0"></a></span>
+							<div><a href="http://tintuconline.com.vn/video/dan-mang-tranh-cai-thi-sinh-hoa-hau-hvvn-vi-minh-giong-cho-p0c1085n20150930141440221.vnn" title="Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó">Dân mạng tranh cãi thí sinh Hoa hậu HVVN ví mình giống… chó</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--Box Slide Image-->
+			<div class="row">
+				<script>
+					jssor_slider1_starter = function (containerId) {
+					
+					    var options = {
+					        $AutoPlay: true,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+					        $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+					
+					        $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+					            $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+					            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+					            $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+					            $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+					            $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+					            $SpacingX: 10,                                  //[Optional] Horizontal space between each item in pixel, default value is 0
+					            $SpacingY: 10,                                  //[Optional] Vertical space between each item in pixel, default value is 0
+					            $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+					        }
+					    };
+					
+					    var jssor_slider1 = new $JssorSlider$(containerId, options);
+					}
+				</script>
+				<!-- Jssor Slider Begin -->
+				<!-- You can move inline styles to css file or css block. -->
+				<div class="itsimages">
+					<a href="http://tintuconline.com.vn/photo/p0c1084.vnn" class="APhoto">PHOTO</a>
+					<div class="lineRow1">
+					</div>
+					<h3 class="fixpdTop0">
+					</h3>
+					<div id="slider1_container" style="width: 300px; height: 280px; overflow: hidden;">
+						<!-- bullet navigator container -->
+						<div style="position: absolute; top: 0px; left: 0px; width: 300px; height: 280px; transform-origin: 0px 0px 0px; transform: scale(1);">
+							<div class="" style="width: 300px; height: 280px; overflow: visible; display: block; position: relative; top: 0px; left: 0px;">
+								<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 40px; width: 300px; height: 280px; overflow: hidden; z-index: 0;">
+									<div debug-id="slide_container" style="position: absolute; z-index: 0; pointer-events: none; left: -300px; top: 0px;"></div>
+								</div>
+								<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 40px; width: 300px; height: 280px; overflow: hidden; z-index: 0;" debug-id="slide-board">
+									<div style="width: 300px; height: 280px; top: 0px; left: 0px; position: absolute; opacity: 0; background-color: rgb(0, 0, 0);"></div>
+									<div class="imgSlide" debug-id="slide-0" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+										<a title="Xúc động với tình mẫu tử tuyệt vời của động vật" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/29/16/58/dv_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f29%2f16%2f58%2fdv.jpg&amp;width=300')" title="Xúc động với tình mẫu tử tuyệt vời của động vật" alt="Xúc động với tình mẫu tử tuyệt vời của động vật" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/xuc-dong-voi-tinh-mau-tu-tuyet-voi-cua-dong-vat-p0c1084n20150929111734477.vnn" title="Xúc động với tình mẫu tử tuyệt vời của động vật" style="transform: perspective(2000px);">Xúc động với tình mẫu tử tuyệt vời của động vật</a>
+										<div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div>
+									</div>
+									<div class="imgSlide" debug-id="slide-1" style="width: 300px; height: 280px; top: 0px; left: 0px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+										<a title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" href="http://tintuconline.com.vn/photo/kim-ly-dien-trai-lanh-lung-hut-hon-phai-nu-p0c1084n20150930142122592.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/20/1j_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f20%2f1j.jpg&amp;width=300')" title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" alt="Kim Lý điển trai lạnh lùng hút hồn phái nữ" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/kim-ly-dien-trai-lanh-lung-hut-hon-phai-nu-p0c1084n20150930142122592.vnn" title="Kim Lý điển trai lạnh lùng hút hồn phái nữ" style="transform: perspective(2000px);">Kim Lý điển trai lạnh lùng hút hồn phái nữ</a>
+										<div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div>
+									</div>
+									<div class="imgSlide" debug-id="slide-2" style="width: 300px; height: 280px; top: 0px; left: 300px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+										<a title="10 Đường Tăng điển trai nhất màn ảnh" href="http://tintuconline.com.vn/photo/10-duong-tang-dien-trai-nhat-man-anh-p0c1084n20150930141746438.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/14/14/1f_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f14%2f14%2f1f.jpg&amp;width=300')" title="10 Đường Tăng điển trai nhất màn ảnh" alt="10 Đường Tăng điển trai nhất màn ảnh" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/10-duong-tang-dien-trai-nhat-man-anh-p0c1084n20150930141746438.vnn" title="10 Đường Tăng điển trai nhất màn ảnh" style="transform: perspective(2000px);">10 Đường Tăng điển trai nhất màn ảnh</a>
+										<div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div>
+									</div>
+									<div class="imgSlide" debug-id="slide-3" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+										<a title="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" href="http://tintuconline.com.vn/photo/ngan-ngo-ngam-eo-con-kien-cua-hoa-hau-ky-duyen-p0c1084n20150930100128836.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/10/00/2a_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f10%2f00%2f2a.jpg&amp;width=300')" title="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" alt="Ngẩn ngơ ngắm eo &quot;con kiến&quot; của hoa hậu Kỳ Duyên" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/ngan-ngo-ngam-eo-con-kien-cua-hoa-hau-ky-duyen-p0c1084n20150930100128836.vnn" title="Ngẩn ngơ ngắm eo " con="" kiến"="" của="" hoa="" hậu="" kỳ="" duyên"="" style="transform: perspective(2000px);">Ngẩn ngơ ngắm eo "con kiến" của hoa hậu Kỳ Duyên</a>
+										<div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div>
+									</div>
+									<div class="imgSlide" debug-id="slide-4" style="width: 300px; height: 280px; top: 0px; left: -300px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+										<a title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" href="http://tintuconline.com.vn/photo/nguoi-vo-nong-bong-tung-khong-dam-cong-bo-cua-dang-khoi-p0c1084n20150930095631624.vnn" style="transform: perspective(2000px);"><img src="../public/upload/ttol.vietnamnetjsc.vn/ThumbImages/2015/09/30/09/54/3s_300.jpg" onerror="LoadImage(this,'http://imgthumb.ttol.vietnamnetjsc.vn/GetThumbNail.ashx?ImgFilePath=http%3a%2f%2fttol.vietnamnetjsc.vn%2f2015%2f09%2f30%2f09%2f54%2f3s.jpg&amp;width=300')" title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" alt="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" border="0" style="transform: perspective(2000px);"></a><a class="AboxSm300" href="http://tintuconline.com.vn/photo/nguoi-vo-nong-bong-tung-khong-dam-cong-bo-cua-dang-khoi-p0c1084n20150930095631624.vnn" title="Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi" style="transform: perspective(2000px);">Người vợ nóng bỏng, từng không dám công bố của Đăng Khôi</a>
+										<div style="width: 300px; height: 280px; top: 0px; left: 0px; z-index: 1000; display: none;"></div>
+									</div>
+								</div>
+								<style>
+									/*
+									.jssorb01 div           (normal)
+									.jssorb01 div:hover     (normal mouseover)
+									.jssorb01 .av           (active)
+									.jssorb01 .av:hover     (active mouseover)
+									.jssorb01 .dn           (mousedown)
+									*/.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av
+									{
+									filter: alpha(opacity=70);
+									opacity: .7;
+									overflow: hidden;
+									cursor: pointer;
+									border: #000 1px solid;
+									}
+									.imgSlide img
+									{
+									width: 300px;
+									max-height: 200px;
+									}
+									.AboxSm300
+									{
+									color: #222;
+									float: left;
+									font-size: 15px;
+									font-weight: bold;
+									line-height: 20px;
+									margin-top: 5px;
+									width: 300px;
+									}
+									.jssorb01 div
+									{
+									background-color: #d3d3d3;
+									}
+									.jssorb01 div:hover, .jssorb01 .av:hover
+									{
+									background-color: rgba(55, 162, 234, 0.9);
+									}
+									.jssorb01 .av
+									{
+									background-color: rgba(55, 162, 234, 0.9);
+									}
+									.jssorb01 .dn, .jssorb01 .dn:hover
+									{
+									background-color: rgba(55, 162, 234, 0.9);
+									}
+									.jssorb01
+									{
+									left: 198px !important;
+									}
+								</style>
+								<div u="navigator" class="jssorb01" style="position: absolute; top: 12px; left: 100px; width: 100px; height: 12px;">
+									<!-- bullet navigator item prototype -->
+									<div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 0px; top: 0px;" class="">
+									</div>
+									<div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 22px; top: 0px;" class="av">
+									</div>
+									<div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 44px; top: 0px;" class="">
+									</div>
+									<div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 66px; top: 0px;" class="">
+									</div>
+									<div u="prototype" style="position: absolute; width: 12px; height: 12px; left: 88px; top: 0px;" class="">
+									</div>
+								</div>
+								<script>
+									jssor_slider1_starter('slider1_container');
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Box Thăm dò-->
+			<div class="row">
+				<div id="MainContent_BoxVote3001_boxVote" class="span4 boxThamDo fixmgt15">
+					<h4 class="icvideo fixpdTop5">
+						Thăm dò
+					</h4>
+					<div class="survey">
+						Bạn thấy cách tính đồng giá điện của EVN có hợp lý
+						<p><input type="radio" name="Bạn thấy cách tính đồng giá điện của EVN có hợp lý" id="801">1. Hợp lý</p>
+						<p><input type="radio" name="Bạn thấy cách tính đồng giá điện của EVN có hợp lý" id="802">2. Không hợp lý</p>
+						<div class="pnl-content" style="line-height: 60px;">
+							<a onclick="pollVote()" href="javascript:void(0)" class="opView">Gửi</a> <a onclick="pollResult()" href="javascript:void(0)" class="opResult">Kết quả</a>
+							<input type="hidden" id="poll_id" value="214">
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">    jQuery.noConflict() </script>
+				<script type="text/javascript">
+					var isVote = false;
+					
+					function pollVote() {
+					    var poll_id = $(".survey #poll_id").val();
+					
+					    var vote_id = $(".survey input[type='radio']:checked").attr("id");
+					    if (poll_id != 0 && vote_id != undefined) {
+					
+					        var src = "/Pages/Vote.aspx?poll_id=" + poll_id + "&vote_id=" + vote_id + "&is_vote=1";
+					        $.modal('<iframe src="' + src + '" height="220" width="480" style="border:0">', {
+					            containerCss: {
+					                backgroundColor: "#f0f0f0",
+					                height: 220,
+					                padding: 0,
+					                width: 480
+					            },
+					            overlayClose: true
+					
+					        });
+					
+					    }
+					    else {
+					        alert("Bạn chưa chọn câu trả lời.");
+					    }
+					}
+					function pollResult() {
+					    var poll_id = $(".survey #poll_id").val();
+					    var src = "/Pages/Vote.aspx?poll_id=" + poll_id + "&is_vote=0";
+					    $.modal('<iframe src="' + src + '" height="220" width="480" style="border:0">', {
+					        containerCss: {
+					            backgroundColor: "#f0f0f0",
+					            height: 220,
+					            padding: 0,
+					            width: 480
+					        },
+					        overlayClose: true
+					    });
+					
+					}
+				</script>
+			</div>
+			<div class="row">
+				<div class=" fixpdBt7 fixpdTop5">
+					<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/tintuconlinevnn" data-width="300" data-height="345" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=300&amp;header=false&amp;height=345&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftintuconlinevnn&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=300"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f310e032e" width="300px" height="345px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/v2.3/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F6brUqVNoWO3.js%3Fversion%3D41%23cb%3Df2abc8cc0c%26domain%3D%26origin%3Dfile%253A%252F%252F%252Ff25370a438%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=300&amp;header=false&amp;height=345&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftintuconlinevnn&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=300" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="item45" data="http://tracking.vietnamnetad.vn/Dout/tracking.ashx?action=0e9043c1-4f14-4cc5-ac07-b832adf03391&amp;ext=be7599e2-9b43-4d4a-ad1e-5c5d4e8de87e&amp;domain=http://tintuconline.com.vn/cat0" class="vmcadszone"></div>
+			</div>
+		</div>
+		<!--Item Down-->
+	</div>
 </div>
-
-                </div>
-                <!--Box Thăm dò-->
-                <div class="row">
-                    <div id="MainContent_BoxVote3001_boxVote" class="span4 boxThamDo fixmgt15">
-    <h4 class="icvideo fixpdTop5">
-        Thăm dò</h4>
-    <div class="survey">
-        Bạn thấy cách tính đồng giá điện của EVN có hợp lý
-        <p><input type="radio" name="Bạn thấy cách tính đồng giá điện của EVN có hợp lý" id="801">1. Hợp lý</p><p><input type="radio" name="Bạn thấy cách tính đồng giá điện của EVN có hợp lý" id="802">2. Không hợp lý</p>
-        <div class="pnl-content" style="line-height: 60px;">
-            <a onclick="pollVote()" href="javascript:void(0)" class="opView">Gửi</a> <a onclick="pollResult()" href="javascript:void(0)" class="opResult">Kết quả</a>
-            <input type="hidden" id="poll_id" value="214">
-        </div>
-    </div>
-</div>
-<script type="text/javascript">    jQuery.noConflict() </script>
-<script type="text/javascript">
-
-    var isVote = false;
-
-    function pollVote() {
-        var poll_id = $(".survey #poll_id").val();
-
-        var vote_id = $(".survey input[type='radio']:checked").attr("id");
-        if (poll_id != 0 && vote_id != undefined) {
-
-            var src = "/Pages/Vote.aspx?poll_id=" + poll_id + "&vote_id=" + vote_id + "&is_vote=1";
-            $.modal('<iframe src="' + src + '" height="220" width="480" style="border:0">', {
-                containerCss: {
-                    backgroundColor: "#f0f0f0",
-                    height: 220,
-                    padding: 0,
-                    width: 480
-                },
-                overlayClose: true
-
-            });
-
-        }
-        else {
-            alert("Bạn chưa chọn câu trả lời.");
-        }
-    }
-    function pollResult() {
-        var poll_id = $(".survey #poll_id").val();
-        var src = "/Pages/Vote.aspx?poll_id=" + poll_id + "&is_vote=0";
-        $.modal('<iframe src="' + src + '" height="220" width="480" style="border:0">', {
-            containerCss: {
-                backgroundColor: "#f0f0f0",
-                height: 220,
-                padding: 0,
-                width: 480
-            },
-            overlayClose: true
-        });
-
-    }
-</script>
-
-
-                </div>
-                <div class="row">
-                    
-<div class=" fixpdBt7 fixpdTop5">
-    <div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/tintuconlinevnn" data-width="300" data-height="345" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=300&amp;header=false&amp;height=345&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftintuconlinevnn&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=300"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f310e032e" width="300px" height="345px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/v2.3/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F6brUqVNoWO3.js%3Fversion%3D41%23cb%3Df2abc8cc0c%26domain%3D%26origin%3Dfile%253A%252F%252F%252Ff25370a438%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=300&amp;header=false&amp;height=345&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftintuconlinevnn&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=300" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
-</div>
-
-                </div>
-                <div class="row">
-                    
-<div id="item45" data="http://tracking.vietnamnetad.vn/Dout/tracking.ashx?action=0e9043c1-4f14-4cc5-ac07-b832adf03391&amp;ext=be7599e2-9b43-4d4a-ad1e-5c5d4e8de87e&amp;domain=http://tintuconline.com.vn/cat0" class="vmcadszone">
-</div>
-
-
-                </div>
-            </div>
-            <!--Item Down-->
-        </div>
-    </div>

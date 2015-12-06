@@ -2,7 +2,7 @@
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA5NTU1MTQ2OGRk">
 <div class="navbar-wrapper">
         
-<div class="container">
+<div class="container header">
     <div class="row">
         <div class="span3 fixspan3">
             <a href="index.html" title="Tin tức online">
@@ -46,8 +46,20 @@
             search();
         }
     });
+
+	<?php $request = Zend_Controller_Front::getInstance()->getRequest();?>
+	<?php $controller_action = $request->getControllerName() . '-' . $request->getActionName();?>
+	var eles = $('.<?php echo $controller_action ?>')
+	eles.each(element){
+			var parent = element.getAttribute('parent');
+			if(document.getElementById(parent))
+				document.getElementById(parent).setAttribute('class','active');
+		}
+	}
 </script>
 <!-- Begin nav -->
-<?php echo $this->render('includes/nav.phtml') ?>
+<div class="headerBlue">
+<?php echo $this->partial('includes/nav.phtml', array('displaySubMenu' => true));?>
+</div>
 <!-- End nav -->
 </div></form>

@@ -2,7 +2,7 @@
  ul.nav li ul { display: none; padding: 0; margin: 0; list-style: none; position: absolute; top: 37px; left: 0; width: 150px; background-color: #0564a3; z-index: 5555; }
  ul.nav li ul li { padding: 5px 0; width: 100%; border-bottom: 1px solid #37a2ea; }
  ul.nav li ul li a { padding: 5px; width: 100%; color: #fff; }
-.navbar-wrapper { background: #eaf5f8; position: absolute; border-bottom: 1px solid #cbcbcb; top: 0; left: 0; right: 0; z-index: 10;}
+.navbar-wrapper { background: #eaf5f8; border-bottom: 1px solid #cbcbcb; top: 0; left: 0; right: 0; z-index: 10;}
 .headerBlue { background: #136189; height: 44px;}
 /* .headbt { box-shadow: 1px 1px 1px #0e76bc; height: 2px; }
 .headbt { box-shadow: 1px 1px 1px #0e76bc; height: 2px; }
@@ -103,7 +103,7 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
 .nav1 > li { border-bottom: 1px dotted #a19c9c; padding-bottom: 9px; padding-top: 3px; float: left; width: 100%;}
  .nav1 > li:last-child { border-bottom: none; }
  .nav1 > li > span { width: 90px; margin-top: 4px; height: 50px; float:left; overflow:hidden; }
- .nav1 > li > span img { width: 90px; }
+ .nav1 > li > span img { width: 90px; height: 50px;}
  .nav1 > li > div { float: right; width: 115px; }
  .nav1 > li > div > a { float: right; font-family: arial; font-size: 13px;  width: 115px; padding-top: 2px; color: #222; line-height: 16px; }
 .nav14 > li { border-top: 1px dotted #a19c9c; padding-bottom: 7px; float: left;width: 100%; padding-top: 2px;}
@@ -148,7 +148,8 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
 .nav10 > li:last-child> a {   padding-right:0;  border-right:none; }
  .nav101 > li > span { font-size: 11px; font-weight: bold; color: #222222; font-family: arial; padding: 0 4px; }
 .nav11 > li { border-top: 1px dotted #a19c9c; padding-top: 4px; padding-bottom: 8px; float:left;}
- .nav11 > li > span { width: 96px; margin-top: 4px; margin-right: 7px; height: 54px; float:left; overflow:hidden; }
+ .nav11 > li > span { width: 96px; margin-top: 4px; margin-right: 7px; height: 75px; float:left; overflow:hidden; }
+ .nav11 > li > span img { width: 96px; height: 75px;}
  .nav11 > li > a> img { width: 96px; }
  .nav11 > li > div { float: right; width: 347px;/*height: 63px; */}
  .nav11 > li > div > a { float: left; font-family: arial; font-size: 13px; font-weight: bold; color: #222; padding-top: 2px;width: 100%;}
@@ -421,7 +422,7 @@ h2.sapo{color: #222; float: left; font-family: arial; font-size: 14px; font-weig
 .cn1056{ background: url('/Images/menu/congnghe.png') no-repeat scroll center center transparent; width: 74px;height: 20px; }
 .pl1002{ background: url('/Images/menu/phapluat.png') no-repeat scroll center center transparent; width: 67px;height: 20px;}
 .vq1100{ background: url('/Images/menu/v-quiz.png') no-repeat scroll center center transparent; width: 48px;height: 20px;}
-*/.footerBlue{height: 32px !important;}
+*/
 .navbar .fnav > li > a { padding: 6px 10px 6px !important;}
 
 

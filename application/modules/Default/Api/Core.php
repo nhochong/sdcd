@@ -83,7 +83,8 @@ class Default_Api_Core extends Khcn_Api_Abstract
     return $this;
   }
   
-  public function subPhrase($string,$length = 0){
+  public function subPhrase($string,$length = 0, $stripTags = true){
+	if($stripTags) $string = strip_tags($string);
 	if(strlen($string)<=$length) return $string;
 	$pos = $length;
 	for($i=$length-1;$i>=0;$i--){
@@ -94,4 +95,26 @@ class Default_Api_Core extends Khcn_Api_Abstract
 	}
 	return substr($string,0,$pos)."...";
   }
+  
+	public function getTinTucNoiBat(){
+		$data = array();
+		
+		// Table Arr
+		$tableNames = array('su_diep', 'tin_tuc', 'dgh', 'bai_viet', 'thong_tin', 'bai_giang', 'chien_dich_cau_nguyen');
+		foreach($tableNames as $tableName){
+			$table = Khcn_Api::_()->getDbTable($tableName, 'default');
+			$select = $table->select()->where('noi_bat = 1')->order('ngay_tao DESC');
+			$items = $table->fetchAll($select);
+			foreach($items as $item){
+				$data[] = array(
+					'item' => $item,
+					'time' => strtotime($item->ngay_tao)
+				);
+			}
+		}
+		usort($data, function($a, $b) {
+			return $a['time'] - $b['time'];
+		});
+		return $data;
+	}
 }

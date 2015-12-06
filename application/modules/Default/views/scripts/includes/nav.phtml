@@ -1,156 +1,157 @@
-<?php $viewer = Khcn_Api::_()->getViewer();?>
+<?php 
+	$viewer = Khcn_Api::_()->getViewer();
+	$displaySubMenu = $this->displaySubMenu;
+?>
 <?php 
 $loaiSuDieps = Khcn_Api::_()->getDbTable('loai_su_diep', 'default')->getParents();
 $loaiTinTucs = Khcn_Api::_()->getDbTable('loai_tin_tuc', 'default')->getParents();
 $loaiDghs = Khcn_Api::_()->getDbTable('loai_dgh', 'default')->getListAssoc();
 $loaiBaiViets = Khcn_Api::_()->getDbTable('loai_bai_viet', 'default')->getListAssoc();
 $loaiThongTins = Khcn_Api::_()->getDbTable('loai_thong_tin', 'default')->getParents();
-
+$youtubeChannels = Khcn_Api::_()->getDbTable('youtube_channel', 'default')->fetchAll();
+$videoLienKets = Khcn_Api::_()->getDbTable('video_lien_ket', 'default')->fetchAll();
+$loaiVideos = Khcn_Api::_()->getDbTable('loai_video', 'default')->getListAssoc();
+$loaiAudios = Khcn_Api::_()->getDbTable('loai_audio', 'default')->getListAssoc();
 ?>
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="<?php echo $this->baseUrl() . '/../application/templates/default/css/menu.css'?>">
 	
-<div class="headerBlue">
-    <div class="container">
-		<nav class="nav">
-			<ul class="menu" id="menuhlng1">
-				<li class="mhome"><a href="<?php echo $this->baseUrl()?>">Home</a></li>
-				<li id="menu-item">
-					<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>">Sứ Điệp</a>
-					<ul class="mega-nav links">
-						<?php foreach($loaiSuDieps as $loaiSuDiep):?>
-							<li>
-								<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'loai' => $loaiSuDiep->getIdentity()),null,true);?>"><?php echo $loaiSuDiep->getTitle()?></a>
-								<?php $subCats = $loaiSuDiep->getChilds();?>
-								<?php if(count($subCats) > 0):?>
-									<ul class="sub-menu">
-										<?php foreach($subCats as $subCat): ?>
-											<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
-										<?php endforeach;?>
-									</ul>
-								<?php endif;?>
-							</li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li id="menu-item">
-					<a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index'),null,true);?>">Tin Tức</a>
-					<ul class="mega-nav links">
-						<?php foreach($loaiTinTucs as $loaiTinTuc):?>
-							<li>
-								<a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index', 'loai' => $loaiTinTuc->getIdentity()),null,true);?>"><?php echo $loaiTinTuc->getTitle()?></a>
-								<?php $subCats = $loaiTinTuc->getChilds();?>
-								<?php if(count($subCats) > 0):?>
-									<ul class="sub-menu">
-										<?php foreach($subCats as $subCat): ?>
-											<li><a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
-										<?php endforeach;?>
-									</ul>
-								<?php endif;?>
-							</li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index'),null,true);?>">Đức Giáo Hoàng</a>
-					<ul class="sub-menu">
-						<?php foreach($loaiDghs as $key => $value):?>
-							<li><a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index'),null,true);?>">Bài Viết</a>
-					<ul class="sub-menu">
-						<?php foreach($loaiBaiViets as $key => $value):?>
-							<li><a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li id="menu-item">
-					<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index'),null,true);?>">Mọi Thứ</a>
-					<ul class="mega-nav links">
-						<?php foreach($loaiThongTins as $loaiThongTin):?>
-							<li>
-								<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $loaiThongTin->getIdentity()),null,true);?>"><?php echo $loaiThongTin->getTitle()?></a>
-								<?php $subCats = $loaiThongTin->getChilds();?>
-								<?php if(count($subCats) > 0):?>
-									<ul class="sub-menu">
-										<?php foreach($subCats as $subCat): ?>
-											<li><a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
-										<?php endforeach;?>
-									</ul>
-								<?php endif;?>
-							</li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li id="menu-item">
-					<a href="#">Video-Audio</a>
-					<ul class="mega-nav links">
+<div class="container">
+	<nav class="nav">
+		<ul class="menu" id="menuhlng1">
+			<li class="mhome"><a href="<?php echo $this->baseUrl()?>">Home</a></li>
+			<li id="menu-item">
+				<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>">Sứ Điệp</a>
+				<?php if($displaySubMenu):?>
+				<ul class="mega-nav links">
+					<?php foreach($loaiSuDieps as $loaiSuDiep):?>
 						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Tin Công Giáo">Video 1</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.blogspot.com">Video Hot 1</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Video">Video Hot 2</a></li>
-								<li><a href="https://www.youtube.com/channel/UCYb-_FPIYqkBwXBZMP1Ji0Q/videos">Video Hot 3</a></li>
-								<li><a href="https://www.youtube.com/channel/UCBxnRDj2jhY6GzWny4vm5Ow/videos">Video Hot 4</a></li>
-							</ul>
+							<a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'loai' => $loaiSuDiep->getIdentity()),null,true);?>"><?php echo $loaiSuDiep->getTitle()?></a>
+							<?php $subCats = $loaiSuDiep->getChilds();?>
+							<?php if(count($subCats) > 0):?>
+								<ul class="sub-menu">
+									<?php foreach($subCats as $subCat): ?>
+										<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
+									<?php endforeach;?>
+								</ul>
+							<?php endif;?>
 						</li>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li id="menu-item">
+				<a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index'),null,true);?>">Tin Tức</a>
+				<?php if($displaySubMenu):?>
+				<ul class="mega-nav links">
+					<?php foreach($loaiTinTucs as $loaiTinTuc):?>
 						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Tin The Gioi">Video 2</a>
-							<ul class="sub-menu">
-								<li><a href="https://www.youtube.com/channel/UCkhVQtUWAri7v5TOaOfF6mw">Video Tổng Hợp</a></li>
-								<li><a href="https://www.youtube.com/channel/UCyqK1mlfiBp9mzHLV4C7_Ug">Video Sứ Điệp Cũ</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Video Sứ Điệp">Video Sứ Điệp Mới</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Phép Lạ">Video Bài Giảng</a></li>
-							</ul>
+							<a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index', 'loai' => $loaiTinTuc->getIdentity()),null,true);?>"><?php echo $loaiTinTuc->getTitle()?></a>
+							<?php $subCats = $loaiTinTuc->getChilds();?>
+							<?php if(count($subCats) > 0):?>
+								<ul class="sub-menu">
+									<?php foreach($subCats as $subCat): ?>
+										<li><a href="<?php echo $this->url(array('controller' => 'tin-tuc','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
+									<?php endforeach;?>
+								</ul>
+							<?php endif;?>
 						</li>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index'),null,true);?>">Đức Giáo Hoàng</a>
+				<?php if($displaySubMenu):?>
+				<ul class="sub-menu">
+					<?php foreach($loaiDghs as $key => $value):?>
+						<li><a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index'),null,true);?>">Bài Viết</a>
+				<?php if($displaySubMenu):?>
+				<ul class="sub-menu">
+					<?php foreach($loaiBaiViets as $key => $value):?>
+						<li><a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li id="menu-item">
+				<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index'),null,true);?>">Mọi Thứ</a>
+				<?php if($displaySubMenu):?>
+				<ul class="mega-nav links">
+					<?php foreach($loaiThongTins as $loaiThongTin):?>
 						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Audio">Audio</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Sứ Điệp">Audio Sứ Điệp</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Bài Giảng">Audio Bài Giảng</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Đọc Sách">Audio Đọc Sách</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Audio Nên Thánh">Audio Nên Thánh</a></li>
-							</ul>
+							<a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $loaiThongTin->getIdentity()),null,true);?>"><?php echo $loaiThongTin->getTitle()?></a>
+							<?php $subCats = $loaiThongTin->getChilds();?>
+							<?php if(count($subCats) > 0):?>
+								<ul class="sub-menu">
+									<?php foreach($subCats as $subCat): ?>
+										<li><a href="<?php echo $this->url(array('controller' => 'thong-tin','action' => 'index', 'loai' => $subCat->getIdentity()),null,true);?>"><?php echo $subCat->getTitle()?></a></li>
+									<?php endforeach;?>
+								</ul>
+							<?php endif;?>
 						</li>
-						<li>
-							<a href="http://www.sudiepchuaden.com/search/label/Video">Video</a>
-							<ul class="sub-menu">
-								<li><a href="http://www.sudiepchuaden.com/search/label/Hình Ảnh">Hình Ảnh</a></li>
-								<li><a href="http://www.sudiepchuaden.com/p/lien-he-gop-y-chia-se-goi-bai.html">Liên Hệ</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Guong Sang">Gương Sáng</a></li>
-								<li><a href="http://www.sudiepchuaden.com/search/label/Download">Download - Tải Về</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'chien-dich-cau-nguyen','action' => 'index'),null,true);?>">Chiến Dịch Cầu Nguyện</a>
-				</li>
-				<li>
-					<a href="http://sudiepchuadenanh.blogspot.com/">Ảnh Hot</a>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'download','action' => 'index'),null,true);?>">Download</a>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'bai-giang','action' => 'index'),null,true);?>">Bài Giảng</a>
-				</li>
-				<li>
-					<a href="<?php echo $this->url(array('controller' => 'lien-he','action' => 'index'),null,true);?>">Liên Hệ</a>
-				</li>
-			</ul>
-		</nav>
-    </div>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li id="menu-item">
+				<a href="#">Video-Audio</a>
+				<?php if($displaySubMenu):?>
+				<ul class="mega-nav links">
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'video','action' => 'youtube-channel'),null,true);?>">Youtube Channel</a>
+						<ul class="sub-menu">
+						<?php foreach($youtubeChannels as $youtubeChannel):?>
+							<li><a href="<?php echo $youtubeChannel->getLink()?>" target="_blank"><?php echo $youtubeChannel->getTitle()?></a></li>
+						<?php endforeach;?>
+						</ul>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'video','action' => 'lien-ket'),null,true);?>">Liên Kết</a>
+						<ul class="sub-menu">
+							<?php foreach($videoLienKets as $videoLienKet):?>
+								<li><a href="<?php echo $videoLienKet->getLink()?>" target="_blank"><?php echo $videoLienKet->getTitle()?></a></li>
+							<?php endforeach;?>
+						</ul>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'video','action' => 'index'),null,true);?>">Video</a>
+						<ul class="sub-menu">
+							<?php foreach($loaiVideos as $key => $value):?>
+								<li><a href="<?php echo $this->url(array('controller' => 'video','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+							<?php endforeach;?>
+						</ul>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'audio','action' => 'index'),null,true);?>">Audio</a>
+						<ul class="sub-menu">
+							<?php foreach($loaiAudios as $key => $value):?>
+								<li><a href="<?php echo $this->url(array('controller' => 'audio','action' => 'index', 'loai' => $key),null,true);?>"><?php echo $value;?></a></li>
+							<?php endforeach;?>
+						</ul>
+					</li>
+				</ul>
+				<?php endif;?>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'chien-dich-cau-nguyen','action' => 'index'),null,true);?>">Chiến Dịch Cầu Nguyện</a>
+			</li>
+			<li>
+				<a href="http://sudiepchuadenanh.blogspot.com/">Ảnh Hot</a>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'download','action' => 'index'),null,true);?>">Download</a>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'bai-giang','action' => 'index'),null,true);?>">Bài Giảng</a>
+			</li>
+			<li>
+				<a href="<?php echo $this->url(array('controller' => 'lien-he','action' => 'index'),null,true);?>">Liên Hệ</a>
+			</li>
+		</ul>
+	</nav>
 </div>
-
-<?php $request = Zend_Controller_Front::getInstance()->getRequest();?>
-<?php $controller_action = $request->getControllerName() . '-' . $request->getActionName();?>
-<script type="text/javascript">
-	if(document.getElementById('<?php echo $controller_action ?>')){
-		var parent = document.getElementById('<?php echo $controller_action ?>').getAttribute('parent');
-		document.getElementById(parent).setAttribute('class','active');
-	}
-</script>

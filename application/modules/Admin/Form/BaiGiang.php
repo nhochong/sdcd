@@ -93,7 +93,38 @@ class Admin_Form_BaiGiang extends Zend_Form{
 							    array(array('data' => 'HtmlTag'), array('tag' => 'td')),
 							    array('Label', array('tag' => 'td')),
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));
-								
+
+		$noi_bat = new Zend_Form_Element_Select('noi_bat');
+		$noi_bat->setLabel('Nổi Bật')
+				->setRequired(true)
+				->setValue(0)
+				->addMultiOptions(array(
+						0 => 'Không',
+						1 => 'Có'
+				))
+				->setDecorators(array(
+						'ViewHelper',
+						'Errors',
+						array(array('data' => 'HtmlTag'), array('tag' => 'td')),
+						array('Label', array('tag' => 'td')),
+						array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));
+
+		$photo = new Zend_Form_Element_File('photo');
+		$photo->setLabel('Upload hình')
+				->setDescription('(*.jgp, *.gif, *.png , < 10MB )')
+				->setDestination(BASE_PATH . '/upload/files/bai_giang')
+				->addValidator(new Zend_Validate_File_Extension(array('jpg,gif,png')))
+				->addValidator(new Zend_Validate_File_FilesSize(array('min' => 1,
+						'max' => 10485760,
+						'bytestring' => true)))
+				->setDecorators(array(
+						'File',
+						'Errors',
+						array('Description', array('escape' => false, 'tag' => 'div', 'placement' => 'append')),
+						array('HtmlTag', array('tag' => 'td')),
+						array('Label', array('tag' => 'td')),
+						array(array('row' => 'HtmlTag'), array('tag' => 'tr'))));
+
 		$submitCon = new Zend_Form_Element_Submit('submitCon');
         $submitCon->setDecorators(array(
 							        'ViewHelper',
@@ -118,7 +149,7 @@ class Admin_Form_BaiGiang extends Zend_Form{
 							    ))
 			->setAttribs(array('class' => 'button','onclick' => 'window.location.href="' . $_SERVER['HTTP_REFERER'] . '"'));
 			   
-		$this->addElements(array($tieu_de, $noi_dung, $soundcloud_embed, $youtube_embed, $link_nct, $link_mp3, $trang_thai, $submitCon, $submitExit, $cancel));						
+		$this->addElements(array($tieu_de, $noi_dung, $soundcloud_embed, $youtube_embed, $link_nct, $link_mp3, $trang_thai, $noi_bat, $photo, $submitCon, $submitExit, $cancel));
 
 		$this->addDisplayGroup(array('submitCon','submitExit','cancel'),'submit',array(
             'decorators' => array(

@@ -184,6 +184,8 @@ CREATE TABLE `thong_tin` (
   `thong_tin_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -196,10 +198,11 @@ CREATE TABLE `chien_dich_cau_nguyen` (
   `chien_dich_cau_nguyen_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
-  `ten_file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`chien_dich_cau_nguyen_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -218,6 +221,8 @@ CREATE TABLE `bai_giang` (
   `bai_giang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `link_nct` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -310,4 +315,5 @@ INSERT IGNORE INTO `searchtypes` (`type`, `title`, `enabled`, `order`) VALUES
 ('default_chien_dich_cau_nguyen', 'Chiến dịch cầu nguyện', 1, 6),
 ('default_download', 'Download', 1, 7),
 ('default_bai_giang', 'Bài giảng', 1, 8),
-('default_audio', 'Bài giảng', 1, 9);
+('default_audio', 'Audio', 1, 9),
+('default_video', 'Video', 1, 10);
