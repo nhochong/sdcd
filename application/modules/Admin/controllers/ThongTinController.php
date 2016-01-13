@@ -12,7 +12,7 @@ class Admin_ThongTinController extends Khcn_Controller_Action_Admin
     public function indexAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $data = Khcn_Api::_()->getDbTable('thong_tin', 'default')->fetchAll();
+        $data = Khcn_Api::_()->getDbTable('thong_tin', 'default')->fetchAll(null, "ngay_tao DESC");
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1

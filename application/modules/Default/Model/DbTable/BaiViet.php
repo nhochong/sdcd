@@ -12,6 +12,10 @@ class Default_Model_DbTable_BaiViet extends Khcn_Db_Table{
 			$select->where('loai_bai_viet_id = ?', $params['loai_bai_viet_id']);
 		}
 		
+		if(isset($params['limit']) && !empty($params['limit'])){
+			$select->limit($params['limit']);
+		}
+		
 		return $this->fetchAll($select);
 	}
 }

@@ -1,0 +1,49 @@
+<?php if($this->no_data):?>
+	<div class="tip"><span>Không có dữ liệu</span></div>
+	<script type="text/javascript">
+		noMoreData = true;
+	</script>
+<?php else:?>
+<div class="span85 boxDetail">
+	<h4>
+		<?php echo $this->su_diep->getTitle()?>
+	</h4>
+	<div class="datetime">
+		<?php echo $this->locale()->toDateTime($this->su_diep->ngay_tao);?>
+	</div>
+	<div class="newRelate">
+		<ul>
+			<?php foreach($this->related_news as $item):?>
+			<li><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo $item->getTitle()?></a></li>
+			<?php endforeach;?>
+		</ul>
+	</div>
+	<div class="ctDetatilS" id="vmcEmbed">
+		<?php if(!empty($this->su_diep->soundcloud_embed)):?>
+			<div class="soundcloud-embeb">
+				<div class="embed-title">SoundCloud</div>
+				<div class="embed-content"><?php echo $this->su_diep->soundcloud_embed;?></div>
+			</div>
+		<?php endif;?>
+		<?php if(!empty($this->su_diep->youtube_embed)):?>
+			<div class="youtube-embeb">
+				<div class="embed-title">Youtube</div>
+				<div class="embed-content"><?php echo $this->su_diep->youtube_embed;?></div>
+			</div>
+		<?php endif;?>
+	</div>
+	<div class="ctDetatilS" id="vmcContent">
+		<?php echo $this->su_diep->noi_dung;?>
+	</div>
+	<div class="newRelate">
+		<ul>
+			<?php foreach($this->related_news as $item):?>
+			<li><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo $item->getTitle()?></a></li>
+			<?php endforeach;?>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	$('#last_id').val(<?php echo $this->su_diep->getIdentity();?>);
+</script>
+<?php endif;?>

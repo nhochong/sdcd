@@ -12,7 +12,7 @@ class Admin_BaiGiangController extends Khcn_Controller_Action_Admin
     public function indexAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $data = Khcn_Api::_()->getDbTable('bai_giang', 'default')->fetchAll();
+        $data = Khcn_Api::_()->getDbTable('bai_giang', 'default')->fetchAll(null, "ngay_tao DESC");
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
@@ -173,7 +173,7 @@ class Admin_BaiGiangController extends Khcn_Controller_Action_Admin
 			if($oldFile != '' && file_exists( APPLICATION_PATH . '/../public/upload/files/bai_giang/' . $oldFile))
 				unlink(APPLICATION_PATH . '/../public/upload/files/bai_giang/' . $oldFile);
 
-			$su_diep->file = $file;
+			$bai_giang->file = $file;
 		}
 
         $values = $form->getValues();

@@ -1,0 +1,70 @@
+<div class="row" id="page_content">
+	<div class="span85 boxDetail">
+		<h4>
+			<?php echo $this->su_diep->getTitle()?>
+		</h4>
+		<div class="datetime">
+			<?php echo $this->locale()->toDateTime($this->su_diep->ngay_tao);?>
+		</div>
+		<div class="newRelate">
+			<ul>
+				<?php foreach($this->related_news as $item):?>
+				<li><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo $item->getTitle()?></a></li>
+				<?php endforeach;?>
+			</ul>
+		</div>
+		<div class="ctDetatilS" id="vmcEmbed">
+			<?php if(!empty($this->su_diep->soundcloud_embed)):?>
+				<div class="soundcloud-embeb">
+					<div class="embed-title">SoundCloud</div>
+					<div class="embed-content"><?php echo $this->su_diep->soundcloud_embed;?></div>
+				</div>
+			<?php endif;?>
+			<?php if(!empty($this->su_diep->youtube_embed)):?>
+				<div class="youtube-embeb">
+					<div class="embed-title">Youtube</div>
+					<div class="embed-content"><?php echo $this->su_diep->youtube_embed;?></div>
+				</div>
+			<?php endif;?>
+		</div>
+		<div class="ctDetatilS" id="vmcContent">
+			<?php echo $this->su_diep->noi_dung;?>
+		</div>
+		<div class="newRelate">
+			<ul>
+				<?php foreach($this->related_news as $item):?>
+				<li><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo $item->getTitle()?></a></li>
+				<?php endforeach;?>
+			</ul>
+		</div>
+	</div>
+</div>
+<input type="hidden" value="<?php echo $this->su_diep->getIdentity()?>" id="last_id"/>
+<div class="loading_more" style="display: none;"><img src="<?php echo $this->baseUrl() . '/images/ajax-loader.gif'?>"/></div>
+<script type="text/javascript">
+	var isCalling = false;
+	var noMoreData = false;
+	$(window).scroll(function() {
+		if($(window).scrollTop() == $(document).height() - $(window).height()) {
+			// ajax call get data from server and append to the div
+			if(!isCalling && !noMoreData){
+				$.ajax({
+					url: "<?php echo $this->url(array('controller' => 'su-diep','action' => 'load-more'),null,true);?>",
+					data: {
+						id: $('#last_id').val(),
+					},
+					beforeSend:function(){
+						// this is where we append a loading image
+						$('.loading_more').show();
+						isCalling = true;
+					},
+					success:function(data){
+						$('.loading_more').hide();
+						$('#page_content').append(data);
+						isCalling = false;
+					}
+				});
+			}
+		}
+	});
+</script>

@@ -35,9 +35,12 @@ class Default_Model_DbTable_LoaiSuDiep extends Khcn_Db_Table
 		return false;
 	}
 	
-	public function getParentListAssoc(){
+	public function getParentListAssoc($default_option = true){
 		$select = $this->select()->where('parent_id = 0');
-		$results = array(0 => '');
+		if($default_option)
+			$results = array(0 => '');
+		else
+			$results = array();
 		foreach($this->fetchAll($select) as $row){
 			$results[$row->getIdentity()] = $row->getTitle();
 		}
@@ -47,5 +50,15 @@ class Default_Model_DbTable_LoaiSuDiep extends Khcn_Db_Table
 	public function getParents(){
 		$select = $this->select()->where('parent_id = 0');
 		return $this->fetchAll($select);
+	}
+	
+	function getListChildIds($parent_id){
+		$childs = $this->getByParent($parent_id);
+		$data = array();
+		$data[] = $parent_id;
+		foreach($childs as $child){
+			$data[] = $child->getIdentity();
+		}
+		return $data;
 	}
 }

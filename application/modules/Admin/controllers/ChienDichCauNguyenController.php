@@ -12,7 +12,7 @@ class Admin_ChienDichCauNguyenController extends Khcn_Controller_Action_Admin
     public function indexAction() 
     {
         //Set the properties for the pagination
-		$data = Khcn_Api::_()->getDbTable('chien_dich_cau_nguyen', 'default')->fetchAll();
+		$data = Khcn_Api::_()->getDbTable('chien_dich_cau_nguyen', 'default')->fetchAll(null, "ngay_tao DESC");
         $this->view->paginator = $paginator = Zend_Paginator::factory($data);
         $paginator->setItemCountPerPage(20);
         $paginator->setPageRange(10);

@@ -12,7 +12,7 @@ class Admin_VideoController extends Khcn_Controller_Action_Admin
     public function indexAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $data = Khcn_Api::_()->getDbTable('video', 'default')->fetchAll();
+        $data = Khcn_Api::_()->getDbTable('video', 'default')->fetchAll(null, "ngay_tao DESC");
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
@@ -142,7 +142,7 @@ class Admin_VideoController extends Khcn_Controller_Action_Admin
 	public function youtubeListAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $data = Khcn_Api::_()->getDbTable('youtube_channel', 'default')->fetchAll();
+        $data = Khcn_Api::_()->getDbTable('youtube_channel', 'default')->fetchAll(null, "ngay_tao DESC");
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1
@@ -272,7 +272,7 @@ class Admin_VideoController extends Khcn_Controller_Action_Admin
 	public function lienKetListAction() 
     {
         // TODO Auto-generated {0}::indexAction() default action
-        $data = Khcn_Api::_()->getDbTable('video_lien_ket', 'default')->fetchAll();
+        $data = Khcn_Api::_()->getDbTable('video_lien_ket', 'default')->fetchAll(null, "ngay_tao DESC");
         $paginator = Zend_Paginator::factory($data);
         $currentPage = 1;
         //Check if the user is not on page 1

@@ -33,8 +33,8 @@ CREATE TABLE `su_diep` (
   `su_diep_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
-  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` MEDIUMTEXT COLLATE utf8_unicode_ci NOT NULL,
+  `youtube_embed` MEDIUMTEXT COLLATE utf8_unicode_ci NOT NULL,
   `file` varchar(255) DEFAULT NULL,
   `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_tao` datetime NOT NULL,
@@ -160,7 +160,6 @@ INSERT INTO `loai_thong_tin` (`ten`, `parent_id`) VALUES
 ('Sống Đạo', 0),
 ('Công Giáo', 0),
 ('Đời Sống', 0),
-('Video', 0),
 ('Sống đạo tốt', 1),
 ('Kinh nguyện', 1),
 ('Cầu nguyện', 1),
@@ -172,11 +171,7 @@ INSERT INTO `loai_thong_tin` (`ten`, `parent_id`) VALUES
 ('Phá thai', 3),
 ('Lẽ sống', 3),
 ('Tiên tri', 3),
-('Các thánh', 3),
-('Hình ảnh', 4),
-('Liên Hệ', 4),
-('Gương Sáng', 4),
-('Download - Tải về', 4);
+('Các thánh', 3);
 
 
 DROP TABLE IF EXISTS `thong_tin`;
@@ -223,8 +218,8 @@ CREATE TABLE `bai_giang` (
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
   `file` varchar(255) DEFAULT NULL,
   `noi_bat` tinyint(1) NOT NULL DEFAULT '0',
-  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `youtube_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` MEDIUMTEXT COLLATE utf8_unicode_ci NOT NULL,
+  `youtube_embed` MEDIUMTEXT COLLATE utf8_unicode_ci NOT NULL,
   `link_nct` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `link_mp3` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ngay_tao` datetime NOT NULL,
@@ -251,7 +246,7 @@ CREATE TABLE `audio` (
   `audio_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tieu_de` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `noi_dung` text COLLATE utf8_unicode_ci NOT NULL,
-  `soundcloud_embed` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `soundcloud_embed` MEDIUMTEXT COLLATE utf8_unicode_ci NOT NULL,
   `ngay_tao` datetime NOT NULL,
   `so_lan_xem` int(10) NOT NULL DEFAULT '1',
   `trang_thai` tinyint(4) NOT NULL DEFAULT '1',
@@ -267,8 +262,8 @@ CREATE TABLE `loai_video` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO `loai_video` (`ten`) VALUES
-('Video Sứ Điệp Mới'),
-('Video Bài Giảng');
+('Video Xã Hội'),
+('Video Công Giáo');
 
 DROP TABLE IF EXISTS `video`;
 CREATE TABLE `video` (

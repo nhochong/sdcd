@@ -327,4 +327,64 @@ class Default_Bootstrap extends Khcn_Application_Bootstrap_Abstract
 
 		return $bootstraps;
 	}
+	
+	protected function _initLocale()
+	{
+		// Translate needs to be initialized before Modules, so _initTranslate() could
+		// not load the "User" couldn't be initialized then.  Thus, we must assign
+		// the language over here if it is a user.
+		
+		// Try to pull from various sources
+		$timezone = 'Asia/Saigon';
+		if( !empty($_COOKIE['en4_language']) && !empty($_COOKIE['en4_locale']) ) {
+		  $locale = $_COOKIE['en4_locale'];
+		  $language = $_COOKIE['en4_language'];
+		} else {
+		  $locale = 'vi_VN';
+		  $language = 'vi_VN';
+		 }
+		Zend_Registry::set('timezone', $timezone);
+
+		// Make sure it's valid
+		try {
+		  $locale = Zend_Locale::findLocale($locale);
+		} catch( Exception $e ) {
+		  $locale = 'vi_VN';
+		}
+		try {
+		  $language = Zend_Locale::findLocale($language);
+		} catch( Exception $e ) {
+		  $language = 'vi_VN';
+		}
+
+		// Set in locale and language
+		$this->getContainer()->translate->setLocale($language);
+
+		$localeObject = new Zend_Locale($locale);
+		Zend_Registry::set('Locale', $localeObject);
+		
+		// Set in locale and language
+		$translate = $this->getContainer()->translate;
+		$defaultLanguage  = 'vi_VN';
+		$selectedLanguage = $localeObject->getLanguage();
+		if ( ($selectedLocale = $localeObject->getRegion()) ) {
+		  $selectedLanguage .= "_$selectedLocale";
+		}
+		
+		if (!$translate->isAvailable($selectedLanguage)) {
+		  if( !$translate->isAvailable($defaultLanguage) ){
+			$translate->setLocale('en_US');
+		  } else {
+			$translate->setLocale($defaultLanguage);
+		  }
+		} else {
+		  $translate->setLocale($language);
+		}
+
+		// Get orientation
+		$localeData = Zend_Locale_Data::getList($localeObject->__toString(), 'layout');
+		$this->getContainer()->layout->orientation = $localeData['characters'];
+		
+		return $localeObject;
+	}
 }

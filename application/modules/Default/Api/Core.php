@@ -103,7 +103,7 @@ class Default_Api_Core extends Khcn_Api_Abstract
 		$tableNames = array('su_diep', 'tin_tuc', 'dgh', 'bai_viet', 'thong_tin', 'bai_giang', 'chien_dich_cau_nguyen');
 		foreach($tableNames as $tableName){
 			$table = Khcn_Api::_()->getDbTable($tableName, 'default');
-			$select = $table->select()->where('noi_bat = 1')->order('ngay_tao DESC');
+			$select = $table->select()->where('noi_bat = 1')->where('trang_thai = 1')->order('ngay_tao DESC');
 			$items = $table->fetchAll($select);
 			foreach($items as $item){
 				$data[] = array(

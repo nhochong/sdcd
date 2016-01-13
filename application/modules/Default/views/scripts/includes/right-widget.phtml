@@ -1,0 +1,87 @@
+<!-- Bai Giang -->
+<div class="row">
+	<div class="itVideo boxBaiGiang">
+		<h4 class="icvideo fixpdTop0">
+			<a href="<?php echo $this->url(array('controller' => 'bai-giang','action' => 'index'),null,true);?>">Bài Giảng</a>
+		</h4>
+		<?php $baiGiangs = Khcn_Api::_()->getDbTable('bai_giang', 'default')->getDanhSachBaiGiang(array('limit' => 5));?>
+		<?php if(count($baiGiangs) > 0): ?>
+		<div id="videoDeck_wrapper" style="position: relative;">
+			<img src="<?php echo $baiGiangs[0]->getPhotoUrl()?>" border="0">
+		</div>
+		<a href="<?php echo $baiGiangs[0]->getHref()?>" class="tvideo" title="<?php echo $baiGiangs[0]->getTitle()?>"><?php echo $baiGiangs[0]->getTitle()?></a>
+		<ul class="nav12">
+			<?php foreach($baiGiangs as $index => $bai_giang):if($index == 0)continue;?>
+			<li>
+				<span><a title="<?php echo $bai_giang->getTitle()?>" href="<?php echo $bai_giang->getHref()?>"><img src="<?php echo $bai_giang->getPhotoUrl()?>"></a></span>
+				<div><a href="<?php echo $bai_giang->getHref()?>" title="<?php echo $bai_giang->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($bai_giang->getTitle(), 80);?></a></div>
+			</li>
+			<?php endforeach;?>
+		</ul>
+		<?php endif;?>
+	</div>
+</div>
+<!-- Duc Giao Hoang -->
+<div class="row">
+	<div class="itVideo boxBaiGiang">
+		<h4 class="icvideo fixpdTop0">
+			<a href="<?php echo $this->url(array('controller' => 'dgh','action' => 'index'),null,true);?>">Đức Giáo Hoàng</a>
+		</h4>
+		<?php $dghs = Khcn_Api::_()->getDbTable('dgh', 'default')->getDanhSachDgh(array('limit' => 5));?>
+		<?php if(count($dghs) > 0): ?>
+		<div id="videoDeck_wrapper" style="position: relative;">
+			<img src="<?php echo $dghs[0]->getPhotoUrl()?>" border="0">
+		</div>
+		<a href="<?php echo $dghs[0]->getHref()?>" class="tvideo" title="<?php echo $dghs[0]->getTitle()?>"><?php echo $dghs[0]->getTitle()?></a>
+		<ul class="nav12">
+			<?php foreach($dghs as $index => $dgh):if($index == 0)continue;?>
+			<li>
+				<span><a title="<?php echo $dgh->getTitle()?>" href="<?php echo $dgh->getHref()?>"><img src="<?php echo $dgh->getPhotoUrl()?>"></a></span>
+				<div><a href="<?php echo $dgh->getHref()?>" title="<?php echo $dgh->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($dgh->getTitle(), 80);?></a></div>
+			</li>
+			<?php endforeach;?>
+		</ul>
+		<?php endif;?>
+	</div>
+</div>
+<!-- Bai Viet -->
+<div class="row">
+	<div class="itVideo boxBaiGiang">
+		<h4 class="icvideo fixpdTop0">
+			<a href="<?php echo $this->url(array('controller' => 'bai-viet','action' => 'index'),null,true);?>">Bài Viết</a>
+		</h4>
+		<?php $baiViets = Khcn_Api::_()->getDbTable('bai_viet', 'default')->getDanhSachBaiViets(array('limit' => 5));?>
+		<?php if(count($baiViets) > 0): ?>
+		<div id="videoDeck_wrapper" style="position: relative;">
+			<img src="<?php echo $baiViets[0]->getPhotoUrl()?>" border="0">
+		</div>
+		<a href="<?php echo $baiViets[0]->getHref()?>" class="tvideo" title="<?php echo $baiViets[0]->getTitle()?>"><?php echo $baiViets[0]->getTitle()?></a>
+		<ul class="nav12">
+			<?php foreach($baiViets as $index => $bai_viet):if($index == 0)continue;?>
+			<li>
+				<span><a title="<?php echo $bai_viet->getTitle()?>" href="<?php echo $bai_viet->getHref()?>"><img src="<?php echo $bai_viet->getPhotoUrl()?>"></a></span>
+				<div><a href="<?php echo $bai_viet->getHref()?>" title="<?php echo $bai_viet->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($bai_viet->getTitle(), 80);?></a></div>
+			</li>
+			<?php endforeach;?>
+		</ul>
+		<?php endif;?>
+	</div>
+</div>
+<!-- Audio -->
+<div class="row">
+	<div class="itVideo boxBaiGiang">
+		<h4 class="icvideo fixpdTop0">
+			<a href="<?php echo $this->url(array('controller' => 'audio','action' => 'index'),null,true);?>">Audio</a>
+		</h4>
+		<?php $audios = Khcn_Api::_()->getDbTable('audio', 'default')->getDanhSachAudio(array('limit' => 5));?>
+		<?php if(count($audios) > 0): ?>
+		<ul class="nav18">
+			<?php foreach($audios as $index => $audio):?>
+			<li>
+				<div><a href="<?php echo $audio->getHref()?>" title="<?php echo $audio->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($audio->getTitle(), 80);?></a></div>
+			</li>
+			<?php endforeach;?>
+		</ul>
+		<?php endif;?>
+	</div>
+</div>

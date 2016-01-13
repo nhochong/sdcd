@@ -15,20 +15,16 @@
 <?php
 if($this->pageCount){
 ?>
-<table>
-<tr>
 <!-- First page link -->
 <?php if (isset($this->previous)){ ?>
-   <td><a class="pagenav" href="<?= $this->url(array('page' => $this->first)); ?><?= $url_params ?>">Trang đầu</a>
-   </td>
+   <a class="pagenav" href="<?= $this->url(array('page' => $this->first)); ?><?= $url_params ?>">Trang đầu</a>
 <?php }?>
 
 <!-- ADD PREVIOUS BUTTON -->
 <?php
 if(isset($this->previous)){
 ?>
-   <td><a class="pagenav" href="<?= $this->url(array('page' => $this->previous)); ?><?= $url_params ?>">Trang trước</a>
-   </td>
+   <a class="pagenav" href="<?= $this->url(array('page' => $this->previous)); ?><?= $url_params ?>">Trang trước</a>
 <?php }?>
 
 <!-- SHOW THE AVAILABLE PAGES -->
@@ -36,13 +32,11 @@ if(isset($this->previous)){
 foreach($this->pagesInRange as $page){
    if($page != $this->current){
 ?>
-   <td>
-      <a class="pagenav" href="<?= $this->url(array('page' => $page)); ?><?= $url_params ?>"><?php echo $page; ?></a>
-   </td>
+	<a class="pagenav" href="<?= $this->url(array('page' => $page)); ?><?= $url_params ?>"><?php echo $page; ?></a>
 <?php
    }else{
 ?>
-      <td><b class="pagecureent"><?php echo $this->current; ?></b></td>
+	<a class="pagenav pagecureent" href="<?= $this->url(array('page' => $page)); ?><?= $url_params ?>"><?php echo $page; ?></a>
 <?php
    }
 }
@@ -51,18 +45,13 @@ foreach($this->pagesInRange as $page){
 <?php
 if(isset($this->next)){
 ?>
-	<td><a class="pagenav" href="<?= $this->url(array('page' => $this->next)); ?><?= $url_params ?>">Trang sau</a>
-	</td>
+	<a class="pagenav" href="<?= $this->url(array('page' => $this->next)); ?><?= $url_params ?>">Trang sau</a>
 <?php } ?>
 
 <!-- Last page link -->
 <?php if (isset($this->next)){ ?>
-	<td>
-    	<a class="pagenav" href="<?= $this->url(array('page' => $this->last)); ?><?= $url_params ?>">Trang cuối</a>
-    </td>
+	<a class="pagenav" href="<?= $this->url(array('page' => $this->last)); ?><?= $url_params ?>">Trang cuối</a>
 <?php }?>
-</tr>
-</table>
 <?php
 }
 ?>

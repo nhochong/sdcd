@@ -716,3 +716,271 @@ Stack trace:
 #8 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
 #9 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
 #10 {main}
+2015-12-06T13:31:21+00:00 CRIT (2): 
+Error Code: 66d012
+exception 'Zend_Db_Table_Row_Exception' with message 'Specified column "file" is not in the row' in D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php:179
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\application\modules\Admin\controllers\ThongTinController.php(172): Zend_Db_Table_Row_Abstract->__get('file')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(516): Admin_ThongTinController->suaAction()
+#2 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('suaAction')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#5 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#6 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#7 {main}
+2015-12-06T13:33:51+00:00 CRIT (2): 
+Error Code: f8ae3f
+exception 'Zend_Db_Table_Row_Exception' with message 'Specified column "file" is not in the row' in D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php:179
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\application\modules\Admin\controllers\BaiGiangController.php(172): Zend_Db_Table_Row_Abstract->__get('file')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(516): Admin_BaiGiangController->suaAction()
+#2 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('suaAction')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#5 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#6 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#7 {main}
+2015-12-06T16:28:50+00:00 CRIT (2): 
+Error Code: 260026
+exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: Unknown column 'creation_date' in 'order clause'' in D:\xampp\htdocs\sdcd\library\Zend\Db\Statement\Mysqli.php:77
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\Db\Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `bai_vie...')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `bai_vie...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT `bai_vie...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1529): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select))
+#4 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1344): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#5 D:\xampp\htdocs\sdcd\application\modules\Default\Api\Core.php(114): Zend_Db_Table_Abstract->fetchAll(Object(Zend_Db_Table_Select))
+#6 D:\xampp\htdocs\sdcd\application\modules\Default\Api\Core.php(102): Default_Api_Core->getTinTucNoiBatSelect(Array, 'bai_viet')
+#7 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\index\index.phtml(4): Default_Api_Core->getTinTucNoiBat()
+#8 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#9 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('index/index.pht...')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('index/index.pht...', NULL)
+#12 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#13 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#14 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#15 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#16 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#17 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#18 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#19 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#20 {main}
+2015-12-07T15:23:31+00:00 CRIT (2): 
+Error Code: 881d55
+exception 'Zend_Db_Table_Row_Exception' with message 'Specified column "item" is not in the row' in D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php:179
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php(280): Zend_Db_Table_Row_Abstract->__get('item')
+#1 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\index\index.phtml(105): Zend_Db_Table_Row_Abstract->offsetGet('item')
+#2 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('index/index.pht...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('index/index.pht...', NULL)
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#12 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#13 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#14 {main}
+2015-12-28T14:42:26+00:00 CRIT (2): 
+Error Code: 001481
+exception 'Zend_View_Exception' with message 'script 'su-diep/index.phtml' not found in path (D:/xampp/htdocs/sdcd/application/modules/Default/views\scripts/;D:\xampp\htdocs\sdcd\application/)' in D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php:988
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(884): Zend_View_Abstract->_script('su-diep/index.p...')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/index.p...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/index.p...', NULL)
+#3 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#4 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#9 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#10 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#11 {main}
+2015-12-28T14:47:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireAdmin failed check for: admin.index.index
+2015-12-28T14:47:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: admin.index.index
+2015-12-28T14:47:53+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: default.error.requireuser
+2015-12-28T14:51:20+00:00 CRIT (2): 
+Error Code: c21336
+exception 'Zend_Db_Table_Row_Exception' with message 'Specified column "bai_bao_id" is not in the row' in D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Row\Abstract.php:179
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\index.phtml(12): Zend_Db_Table_Row_Abstract->__get('bai_bao_id')
+#1 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/index.p...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/index.p...', NULL)
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#11 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#12 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#13 {main}
+2015-12-30T16:42:29+00:00 CRIT (2): 
+Error Code: 9ee0df
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(7): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T16:51:19+00:00 CRIT (2): 
+Error Code: 1747ed
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(7): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T16:51:38+00:00 CRIT (2): 
+Error Code: c9802e
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(7): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T16:51:54+00:00 CRIT (2): 
+Error Code: 91fe67
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(7): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T16:52:55+00:00 CRIT (2): 
+Error Code: e18327
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(7): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T17:05:46+00:00 CRIT (2): 
+Error Code: 0f4036
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(8): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2015-12-30T17:07:37+00:00 CRIT (2): 
+Error Code: bca401
+exception 'Zend_Exception' with message 'No entry is registered for key 'Locale'' in D:\xampp\htdocs\sdcd\library\Zend\Registry.php:147
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(83): Zend_Registry::get('Locale')
+#1 D:\xampp\htdocs\sdcd\library\Khcn\View\Helper\Locale.php(216): Khcn_View_Helper_Locale->getLocale()
+#2 D:\xampp\htdocs\sdcd\application\modules\Default\views\scripts\su-diep\chi-tiet.phtml(8): Khcn_View_Helper_Locale->toDateTime('2015-12-28 17:2...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\View.php(108): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\sdcd\library\Zend\View\Abstract.php(888): Zend_View->_run('D:/xampp/htdocs...')
+#5 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(900): Zend_View_Abstract->render('su-diep/chi-tie...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(921): Zend_Controller_Action_Helper_ViewRenderer->renderScript('su-diep/chi-tie...', NULL)
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\Helper\ViewRenderer.php(960): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(527): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('chiTietAction')
+#11 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#13 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#14 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#15 {main}
+2016-01-13T15:33:07+00:00 CRIT (2): 
+Error Code: eca7ec
+exception 'Zend_Db_Statement_Mysqli_Exception' with message 'Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order ngay_tao DESC)' at line 1' in D:\xampp\htdocs\sdcd\library\Zend\Db\Statement\Mysqli.php:77
+Stack trace:
+#0 D:\xampp\htdocs\sdcd\library\Zend\Db\Statement.php(115): Zend_Db_Statement_Mysqli->_prepare('SELECT `su_diep...')
+#1 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Mysqli.php(381): Zend_Db_Statement->__construct(Object(Zend_Db_Adapter_Mysqli), 'SELECT `su_diep...')
+#2 D:\xampp\htdocs\sdcd\library\Zend\Db\Adapter\Abstract.php(478): Zend_Db_Adapter_Mysqli->prepare('SELECT `su_diep...')
+#3 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1529): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select))
+#4 D:\xampp\htdocs\sdcd\library\Zend\Db\Table\Abstract.php(1344): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#5 D:\xampp\htdocs\sdcd\application\modules\Admin\controllers\SuDiepController.php(15): Zend_Db_Table_Abstract->fetchAll('order ngay_tao ...')
+#6 D:\xampp\htdocs\sdcd\library\Zend\Controller\Action.php(516): Admin_SuDiepController->indexAction()
+#7 D:\xampp\htdocs\sdcd\library\Zend\Controller\Dispatcher\Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#8 D:\xampp\htdocs\sdcd\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 D:\xampp\htdocs\sdcd\application\modules\Default\Bootstrap.php(40): Zend_Controller_Front->dispatch()
+#10 D:\xampp\htdocs\sdcd\library\Khcn\Application.php(160): Default_Bootstrap->run()
+#11 D:\xampp\htdocs\sdcd\public\index.php(170): Khcn_Application->run()
+#12 {main}
+2016-01-13T17:12:06+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireAdmin failed check for: admin.index.index
+2016-01-13T17:12:07+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: admin.index.index
+2016-01-13T17:12:07+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: default.error.requireuser
+2016-01-13T17:12:45+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireAdmin failed check for: admin.index.index
+2016-01-13T17:12:45+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: admin.index.index
+2016-01-13T17:12:45+00:00 DEBUG (7): Require class Khcn_Controller_Action_Helper_RequireUser failed check for: default.error.requireuser

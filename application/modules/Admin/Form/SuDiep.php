@@ -64,9 +64,11 @@ class Admin_Form_SuDiep extends Zend_Form{
 		
 		$soundcloud_embed = new Zend_Form_Element_Text('soundcloud_embed');       
         $soundcloud_embed->setLabel('SoundCloud')
+				->setDescription('How to get SoundCloud embed code? <a href="http://help.soundcloud.com/customer/portal/articles/243751-how-can-i-put-my-track-or-playlist-on-my-site-or-blog-" target="_blank">Click here</a>')
         		->setDecorators(array(
 							    'ViewHelper',
 							    'Errors',
+								array('Description', array('tag' => 'div','escape' => false, 'placement' => 'append')),
 							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
 							    array('Label', array('tag' => 'td')),
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))
@@ -74,9 +76,11 @@ class Admin_Form_SuDiep extends Zend_Form{
 				
 		$youtube_embed = new Zend_Form_Element_Text('youtube_embed');       
         $youtube_embed->setLabel('Youtube')
+				->setDescription('How to get Youtube embed code? <a href="https://support.google.com/youtube/answer/171780?hl=en" target="_blank">Click here</a>')
         		->setDecorators(array(
 							    'ViewHelper',
 							    'Errors',
+								array('Description', array('tag' => 'div','escape' => false, 'placement' => 'append')),
 							    array(array('data' => 'HtmlTag'), array('tag' => 'td','style' => 'width: 90%')),
 							    array('Label', array('tag' => 'td')),
 							    array(array('row' => 'HtmlTag'), array('tag' => 'tr'))))

@@ -103,20 +103,20 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
 .nav1 > li { border-bottom: 1px dotted #a19c9c; padding-bottom: 9px; padding-top: 3px; float: left; width: 100%;}
  .nav1 > li:last-child { border-bottom: none; }
  .nav1 > li > span { width: 90px; margin-top: 4px; height: 50px; float:left; overflow:hidden; }
- .nav1 > li > span img { width: 90px; height: 50px;}
+ .nav1 > li > span img { width: 90px; height: 50px; }
  .nav1 > li > div { float: right; width: 115px; }
  .nav1 > li > div > a { float: right; font-family: arial; font-size: 13px;  width: 115px; padding-top: 2px; color: #222; line-height: 16px; }
 .nav14 > li { border-top: 1px dotted #a19c9c; padding-bottom: 7px; float: left;width: 100%; padding-top: 2px;}
  .nav14 > li > span { width: 96px; margin-top : 7px; height: 54px; overflow:hidden; float:left; }
- .nav14 > li > span img { width: 96px; }
+ .nav14 > li > span img { width: 96px; height: 50px; }
  .nav14 > li > div { float: right; width: 220px; }
  .nav14 > li > div > a { float: left; font-family: arial; font-size: 13px; font-weight: bold; padding-top: 2px; color: #222; line-height: 16px; }
 .nav17 > li { border-top: 1px dotted #a19c9c; padding-bottom: 10px; padding-top: 5px; float: left;width: 100%;}
  .nav17 > li:first-child { border-top: none; padding-top: 0px; }
  .nav17 > li > span { width: 96px; margin-top : 5px; height: 54px; overflow:hidden; float:left; }
- .nav17 > li > span img { width: 96px; }
+ .nav17 > li > span img { width: 96px; height: 50px; }
  .nav17 > li > div { float: right; width: 220px; }
- .nav17 > li > div > a { float: left; font-family: arial; font-size: 13px; font-weight: bold; padding-top: 2px; color: #222; line-height: 16px; }
+ .nav17 > li > div > a { float: left; font-family: arial; font-size: 13px; font-weight: bold; padding-top: 2px; color: #222; line-height: 16px; width: 100%; word-wrap: break-word;}
  .nav17 > li > div > a:hover {  color: #cf2129;  }
 .nav18 > li { border-top: 1px dotted #a19c9c; margin-bottom: 6px; padding-top: 4px; float: left; width: 100%;height: 34px;overflow:hidden;}
  .nav18 > li:first-child { padding-top: 3px; }
@@ -158,19 +158,19 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
 .nav12{ float: left;}
 .nav12 > li { border-top: 1px dotted #a19c9c; padding-top: 6px; padding-bottom: 10px; float:left;}
  .nav12 > li >span { width: 96px; height: 54px; overflow:hidden; float:left; margin-right:6px; margin-top:4px; }
- .nav12 > li >span img { width: 96px; }
+ .nav12 > li >span img { width: 96px; height: 54px; }
  .nav12 > li > div { float: right; width: 197px; }
  .nav12 > li > div > a { float: left; font-family: arial; font-size: 13px; font-weight: bold; color: #222; padding-top: 2px; line-height: 16px; }
 .nav19 > li { padding-top: 6px; padding-bottom: 6px; background: url('../images/option.png') no-repeat scroll center left transparent; padding-left: 20px;}
  .nav19 > li > a { float: left; font-family: arial; font-size: 12px; font-weight: bold; color: #222; padding-top: 2px; }
 .nav20 > li { border-top: 1px dotted #a19c9c; padding-bottom: 8px; padding-top: 2px; float: left; width: 100%;}
- .nav20 > li >span { width: 213px;  border: 1px solid #a19c9c; margin-top:9px; height: 120px; float:left; overflow:hidden; }
+ .nav20 > li >span { width: 213px; margin-top:9px; height: 120px; float:left; overflow:hidden; }
  .nav20 > li >span img { width: 213px; }
  .nav20 > li > div { float: right; width: 440px; }
  .nav20 > li > div > a { float: left; font-family: arial; font-size: 14px; font-weight: bold; padding-top: 4px; color: #0e76bc; line-height: 20px;  margin-bottom:6px; }
  .nav20 > li > div > p { float: left; font-family: arial; font-size: 14px; color: #222; line-height: 16px; }
  .nav21 > li { border-top: 1px dotted #a19c9c; padding-bottom: 8px; padding-top: 2px; float: left; width: 100%;}
- .nav21 > li >span { width: 159px;  border: 1px solid #a19c9c; height: 89px; overflow:hidden; float:left; margin-top:9px; }
+ .nav21 > li >span { width: 159px;  height: 89px; overflow:hidden; float:left; margin-top:9px; }
  .nav21 > li >span img { width: 159px; }
  .nav21 > li > div { float: right; width: 279px; }
  .nav21 > li > div > a { float: left; font-family: arial; font-size: 14px; font-weight: bold; padding-top: 4px; color: #0e76bc; line-height: 20px;  margin-bottom:6px; }
@@ -200,7 +200,7 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
 .span185 >div>span img { width: 183px;}
 .span185 >div { width: 183px; }
 .span215 >div>span { width: 213px; height: 120px; overflow:hidden; display:block;}
-.span215 >div> span img { width: 213px;}
+.span215 >div> span img { width: 213px; height: 120px; }
 .span215 >div { width: 213px; }
 .span185 > a.aThread { font-family: arial; font-size: 13px; font-weight: bold; color: #202020; padding-top: 6px; float: left; width: 100%;}
 .span215 > a.aThread { font-family: arial; font-size: 13px; font-weight: bold; color: #202020; padding-top: 6px;}
@@ -243,6 +243,9 @@ a.aCatActive{ background: #eee;border-radius: 6px; }
  .fixposition > div > h4 > a { color: #fff; line-height: 18px; }
 .boxThamDo { background: #eeeeee;}
  .boxThamDo > h4.icvideo { margin-top: 0; }
+ .boxBaiGiang { margin-bottom: 20px; overflow: hidden; }
+ .boxBaiGiang > h4.icvideo { margin-top: 0; }
+ .boxBaiGiang > #videoDeck_wrapper img { width: 300px; }
  .boxThamDo > div { background: #fff; margin: 10px; padding: 6px 10px 10px 10px; }
 .boxsk { background: url("../images/icOther.png") no-repeat scroll right center #266C1C; border-bottom: 2px solid #1A391A; border-radius: 6px 6px 0 0;}
  .boxsk > div > a { color: #fff; font-family: arial; font-size: 14px; font-weight: bold; height: 26px; line-height: 26px; padding-left: 10px; }

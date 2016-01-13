@@ -25,4 +25,14 @@ class Default_Model_LoaiThongTin extends Khcn_Model_Item_Abstract
 		$select = $table->select()->where('parent_id = ?',$this->getIdentity());
 		return $table->fetchAll($select);
 	}
+	
+	public function getRecursiveListIDs(){
+		$childs = $this->getChilds();
+		$arr = array();
+		$arr[] = $this->getIdentity();
+		foreach($childs as $child){
+			$arr[] = $child->getIdentity();
+		}
+		return $arr;
+	}
 }

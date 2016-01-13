@@ -1,0 +1,80 @@
+<div class="row">
+	<div class="navItem ">
+		<div class=""><h3><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index'),null,true);?>" title="Giải trí">Sứ Điệp</a></h3></div>
+		<div class="">
+			<?php if($this->is_parent):?>
+			<ul>
+				<?php foreach($this->categories as $key => $value):?>
+					<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'category_id' => $key),null,true);?>" title="Showbiz" class="<?php if($this->category_id == $key) echo "aCatActive";?>"><?php echo $value?></a></li>
+				<?php endforeach;?>
+			</ul>
+			<?php else:?>
+				<ul>
+					<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'category_id' => $this->parentCat->getIdentity()),null,true);?>" title="Showbiz"><?php echo $this->parentCat->getTitle()?></a></li>
+					<li><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'category_id' => $this->category->getIdentity()),null,true);?>" title="Showbiz" class="aCatActive"><?php echo $this->category->getTitle()?></a></li>
+				</ul>
+			<?php endif;?>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<?php if(count($this->recentlyData)):?>
+    <div class="row">
+        <div class="span85 boxDSong">
+            <div class="span85">
+                <div class="row">
+                    <div class="span47 fixtop">
+                        <div><span><a title="<?php echo $this->recentlyData[0]->getTitle()?>" href="<?php echo $this->recentlyData[0]->getHref()?>"><img src="<?php echo $this->recentlyData[0]->getPhotoUrl()?>"></a></span></div><h4 class="fixpdBt7 catTop"><a title="<?php echo $this->recentlyData[0]->getTitle()?>" href="<?php echo $this->recentlyData[0]->getHref()?>"><?php echo Khcn_Api::_()->default()->subPhrase($this->recentlyData[0]->getTitle(), 150)?></a></h4><p><?php echo Khcn_Api::_()->default()->subPhrase($this->recentlyData[0]->getDescription(), 200);?></p>
+                    </div>
+                    <div class="span472 fixleft">
+                        <ul class="nav17 listTop">
+							<?php foreach($this->recentlyData as $index => $item):if($index == 0)continue;?>
+                            <li><span><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><img src="<?php echo $item->getPhotoUrl()?>" ></a></span><div><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo Khcn_Api::_()->default()->subPhrase($item->getTitle(), 150)?></a></div></li>
+							<?php endforeach;?>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<?php endif;?>
+    
+    <div id="MainContent_ListItems_listItem02" class="row">
+        <div class="span85">
+            <div class="span450 fixmgtr10">
+				<?php if(count($this->paginator)):?>
+                <ul class="nav21">
+					<?php foreach($this->paginator as $item):?>
+                    <li><span><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><img src="<?php echo $item->getPhotoUrl()?>"></a></span><div><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo Khcn_Api::_()->default()->subPhrase($item->getTitle(), 150)?></a><p><?php echo Khcn_Api::_()->default()->subPhrase($item->getDescription(), 300);?></p></div></li>
+					<?php endforeach;?>
+                </ul>
+				<?php endif;?>
+            </div>
+			
+            <div class="span210">
+				<?php foreach($this->categories as $category_id => $category_title):?>
+				<?php if($this->category_id && $this->category_id == $category_id) continue;?>
+				<?php $items = Khcn_Api::_()->getDbTable('su_diep', 'default')->getDanhSachSuDiep(array('loai_su_diep_id' => $category_id, 'limit' => 5));?>
+				<?php if(count($items)):?>
+                <div class="row">
+					<div class="itCatChild">
+						<h4><a href="<?php echo $this->url(array('controller' => 'su-diep','action' => 'index', 'category_id' => $category_id),null,true);?>" title="<?php echo $category_title;?>"><?php echo $category_title;?></a></h4>
+						<div class="itemChildTop"><span><a title="<?php echo $items[0]->getTitle()?>" href="<?php echo $items[0]->getHref()?>"><img src="<?php echo $items[0]->getPhotoUrl()?>"></a></span><a class="alTitle" href="<?php echo $items[0]->getHref()?>" title="<?php echo $items[0]->getTitle()?>"><?php echo Khcn_Api::_()->default()->subPhrase($items[0]->getTitle(), 100)?></a></div>
+						<ul class="nav22">
+							<?php foreach($items as $index => $item):if($index == 0)continue;?>
+							<li><a title="<?php echo $item->getTitle()?>" href="<?php echo $item->getHref()?>"><?php echo Khcn_Api::_()->default()->subPhrase($item->getTitle(), 100)?></a></li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+				</div>
+				<?php endif;?>
+				<?php endforeach;?>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+		<div class="pagination">
+			<?php echo $this->paginator?>
+		</div>
+	</div>
+</div>
